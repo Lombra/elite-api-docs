@@ -2,7 +2,7 @@ site_name: Elite Dangerous Player Journal
 theme: readthedocs
 extra_css: 
     - custom.css
-nav:
+pages:
     - Introduction: index.md
     - File format: File Format.md
     - Startup.md
