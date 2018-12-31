@@ -3,7 +3,7 @@ theme: readthedocs
 extra_css: 
     - custom.css
 pages:
-    - Introduction.md
+    - Introduction: index.md
     - File Format.md
     - Startup.md
     - Travel.md
