@@ -30,7 +30,10 @@ Parameters:
 
 The IsNewEntry and NewTraitsDiscovered fields are optional depending on the results of the scan, and the Traits field is only available for entries that have unlocked traits.
 
-Example:{ "timestamp": "2018-10-09T07:10:25Z", "event": "CodexEntry", "EntryID": 2401001, "Name": "$Codex_Ent_L_Phn_Part_Cld_001_Name;", "Name_Localised": "L_Phn_Part_Cld_001", "SubCategory": "$Codex_SubCategory_Micro_Organisms;", "SubCategory_Localised": "Micro Organisms", "Category": "$Codex_Category_Biology;", "Category_Localised": "Biological and Geological", "Region": "Region 18", "System": "Shinrarta Dezhra", "SystemAddress":3932277478106 "IsNewEntry": true, "NewTraitsDiscovered": true, "Traits": ["Trait1", "Trait2", "Trait3"] }
+Example:
+```
+{ "timestamp": "2018-10-09T07:10:25Z", "event": "CodexEntry", "EntryID": 2401001, "Name": "$Codex_Ent_L_Phn_Part_Cld_001_Name;", "Name_Localised": "L_Phn_Part_Cld_001", "SubCategory": "$Codex_SubCategory_Micro_Organisms;", "SubCategory_Localised": "Micro Organisms", "Category": "$Codex_Category_Biology;", "Category_Localised": "Biological and Geological", "Region": "Region 18", "System": "Shinrarta Dezhra", "SystemAddress":3932277478106 "IsNewEntry": true, "NewTraitsDiscovered": true, "Traits": ["Trait1", "Trait2", "Trait3"] }
+```
 
 
 
@@ -78,7 +81,7 @@ Parameters(star)
 
 - Age_MY: age in millions of years
 
-- * Rings: [ array ] – if present
+- Rings: [ array ] – if present
 
 
 
@@ -94,31 +97,31 @@ Parameters(Planet/Moon)
 
 - DistanceFromArrivalLS
 
-- * TidalLock: 1 if tidally locked
+- TidalLock: 1 if tidally locked
 
-- * TerraformState: Terraformable, Terraforming, Terraformed, or null
+- TerraformState: Terraformable, Terraforming, Terraformed, or null
 
 - PlanetClass – see §13.3
 
-- * Atmosphere – see §13.4
+- Atmosphere – see §13.4
 
-- * AtmosphereType
+- AtmosphereType
 
-- * AtmosphereComposition: [ array of info ]
+- AtmosphereComposition: [ array of info ]
 
-- * Volcanism – see §13.5
+- Volcanism – see §13.5
 
 - SurfaceGravity
 
-- * SurfaceTemperature
+- SurfaceTemperature
 
-- * SurfacePressure
+- SurfacePressure
 
-- * Landable: true (if landable)
+- Landable: true (if landable)
 
-- * Materials: JSON array with objects with material names and percentage occurrence
+- Materials: JSON array with objects with material names and percentage occurrence
 
-- *Composition: structure containing info on solid composition
+- Composition: structure containing info on solid composition
 
 	- Ice
 
@@ -126,9 +129,9 @@ Parameters(Planet/Moon)
 
 	- Metal
 
-- * Rings: [ array of info ] – if rings present
+- Rings: [ array of info ] – if rings present
 
-- * ReserveLevel: (Pristine/Major/Common/Low/Depleted) – if rings present
+- ReserveLevel: (Pristine/Major/Common/Low/Depleted) – if rings present
 
 If rotating:
 
@@ -178,7 +181,7 @@ The "Parents" property provides the body's hierarchical position within the syst
 
 
 
-*Entries in the list above marked with an asterisk are only included for a detailed scan*
+_Entries in the list above marked with an asterisk are only included for a detailed scan_
 
 **ScanType**: one of Basic, Detailed, NavBeacon, NavBeaconDetail, AutoScan
 

@@ -80,8 +80,10 @@ The Progress value actually represents pending progress for goods in transit: (I
 
 
 
-Example:{ "timestamp":"2018-03-07T15:47:03Z", "event":"CargoDepot", "MissionID":65394170, "UpdateType":"Deliver", "CargoType":"BasicMedicines", "Count":8, "StartMarketID":3228867072, "EndMarketID":3534964736, "ItemsCollected":16, "ItemsDelivered":16, "TotalItemsToDeliver":3020, "Progress":0.000000 }
-
+Example:
+```
+{ "timestamp":"2018-03-07T15:47:03Z", "event":"CargoDepot", "MissionID":65394170, "UpdateType":"Deliver", "CargoType":"BasicMedicines", "Count":8, "StartMarketID":3228867072, "EndMarketID":3534964736, "ItemsCollected":16, "ItemsDelivered":16, "TotalItemsToDeliver":3020, "Progress":0.000000 }
+```
 
 
 ### CommunityGoal
@@ -126,17 +128,17 @@ Parameters:
 
 If the community goal is constructed with a fixed-size top rank (ie max reward for top 10 players)
 
-	- TopRankSize: (integer)
+- TopRankSize: (integer)
 
-	- PlayerInTopRank: (Boolean)
+- PlayerInTopRank: (Boolean)
 
 
 
 If the community goal has reached the first success tier:
 
-	- TierReached
+- TierReached
 
-	- Bonus
+- Bonus
 
 
 
@@ -350,7 +352,7 @@ The new "quality" value represents the quality or progress of the blueprint. The
 
 
 
-When applying an experimental effect, the *ApplyExperimentalEffect* property will show the name of the effect applied, and the ingredient list will hold the ingredients for that effect.
+When applying an experimental effect, the _ApplyExperimentalEffect_ property will show the name of the effect applied, and the ingredient list will hold the ingredients for that effect.
 
 
 
@@ -456,7 +458,7 @@ Parameters:
 
 When written: when accessing the commodity market in a station
 
-A separate file ***market.json*** is written to the same folder as the journal, containing full market price info
+A separate file _**market.json**_ is written to the same folder as the journal, containing full market price info
 
 Parameters:
 
@@ -510,21 +512,16 @@ Example: in the journal:
 
 Separate file:
 
+```
 { "timestamp":"2017-10-05T10:10:34Z", "event":"Market", "MarketID":128678535, "StationName":"Black Hide", "StarSystem":"Wyrd", "Items":[
-
 { "id":128049152, "Name":"$platinum_name;", "Name_Localised":"Platinum", "Category":"$MARKET_category_metals;", "Category_Localised":"Metals", "BuyPrice":0, "SellPrice":42220, "MeanPrice":19756, "StockBracket":0, "DemandBracket":3, "Stock":0, "Demand":9182, "Consumer":true, "Producer":false, "Rare":false },
-
 { "id":128049153, "Name":"$palladium_name;", "Name_Localised":"Palladium", "Category":"$MARKET_category_metals;", "Category_Localised":"Metals", "BuyPrice":0, "SellPrice":13999, "MeanPrice":13244, "StockBracket":0, "DemandBracket":3, "Stock":0, "Demand":123183, "Consumer":true, "Producer":false, "Rare":false },
-
 { "id":128049154, "Name":"$gold_name;", "Name_Localised":"Gold", "Category":"$MARKET_category_metals;", "Category_Localised":"Metals", "BuyPrice":0, "SellPrice":10831, "MeanPrice":9373, "StockBracket":0, "DemandBracket":3, "Stock":0, "Demand":151492, "Consumer":true, "Producer":false, "Rare":false },
-
 { "id":128049155, "Name":"$silver_name;", "Name_Localised":"Silver", "Category":"$MARKET_category_metals;", "Category_Localised":"Metals", "BuyPrice":0, "SellPrice":5512, "MeanPrice":4759, "StockBracket":0, "DemandBracket":3, "Stock":0, "Demand":266258, "Consumer":true, "Producer":false, "Rare":false },   :
-
-*: (about 100 lines later)*
-
+_: (about 100 lines later)_
 :
-
 ]}
+```
 
 ### MassModuleStore
 
@@ -726,7 +723,7 @@ Optional parameters (depending on mission type)
 
 
 
-*TrendValue* can be UpGood, UpBad, DownGood, or DownBad
+_TrendValue_ can be UpGood, UpBad, DownGood, or DownBad
 
 
 
@@ -740,8 +737,9 @@ Example:
 
 Example of MaterialsReward:
 
+```
 ... "MaterialsReward":[ { "Name":"DisruptedWakeEchoes", "Name_Localised":"Atypical Disrupted Wake Echoes", "Category":"$MICRORESOURCE_CATEGORY_Encoded;", "Category_Localised":"Encoded", "Count":4 } ] ...
-
+```
 
 
 ### MissionFailed
@@ -882,8 +880,10 @@ Parameters:
 
 
 
-Example:{ "timestamp":"2016-06-10T14:32:03Z","event":"ModuleSell", "Slot":"Slot06_Size2", "SellItem":"int_cargorack_size1_class1", "SellPrice":877, "Ship":"asp", "ShipID":1 }
-
+Example:
+```
+{ "timestamp":"2016-06-10T14:32:03Z","event":"ModuleSell", "Slot":"Slot06_Size2", "SellItem":"int_cargorack_size1_class1", "SellPrice":877, "Ship":"asp", "ShipID":1 }
+```
 
 
 
@@ -984,7 +984,7 @@ Examples:
 
 Written when accessing the outfitting menu
 
-The full parts pricelist is written to a separate file ***Outfitting.json***
+The full parts pricelist is written to a separate file _**Outfitting.json**_
 
 Parameters:
 
@@ -1020,27 +1020,19 @@ Example: (in journal)
 
 (In separate file)
 
+```
 { "timestamp":"2017-10-05T10:11:38Z", "event":"Outfitting", "MarketID":128678535, "StationName":"Black Hide", "StarSystem":"Wyrd", "Horizons":true, "Items":[
-
 { "id":128049382, "Name":"hpt_pulselaser_fixed_medium", "BuyPrice":16731 },
-
 { "id":128049383, "Name":"hpt_pulselaser_fixed_large", "BuyPrice":66924 },
-
 { "id":128049385, "Name":"hpt_pulselaser_gimbal_small", "BuyPrice":6275 },
-
 { "id":128049386, "Name":"hpt_pulselaser_gimbal_medium", "BuyPrice":33653 },
-
 { "id":128049388, "Name":"hpt_pulselaser_turret_small", "BuyPrice":24717 },
-
 { "id":128681995, "Name":"hpt_pulselaser_gimbal_huge", "BuyPrice":834269 },
-
-*:*
-
-*: (50 lines later)*
-
-*:*
-
+_:_
+_: (50 lines later)_
+_:_
 ] }
+```
 
 
 
@@ -1086,8 +1078,10 @@ Parameters:
 
 
 
-Example:{ "timestamp":"2018-03-19T10:24:21Z", "event":"PayFines", "Amount":250, "AllFines":false, "Faction":"Batz Transport Commodities", "ShipID":9 }
-
+Example:
+```
+{ "timestamp":"2018-03-19T10:24:21Z", "event":"PayFines", "Amount":250, "AllFines":false, "Faction":"Batz Transport Commodities", "ShipID":9 }
+```
 
 
 ### PayLegacyFines
@@ -1114,15 +1108,18 @@ Parameters:
 
 - Amount: (Net amount received, after any broker fee)
 
-- Faction: name of faction *(for types other than Bounty)*
+- Faction: name of faction _(for types other than Bounty)_
 
 - BrokerPercentage (if redeemed through a broker)
 
-- Factions: array of faction/amount pairs *(for Type=Bounty)*
+- Factions: array of faction/amount pairs _(for Type=Bounty)_
 
 
 
-Example:{ "timestamp":"2016-06-10T14:32:03Z","event":"RedeemVoucher", "Type":"bounty", Factions: [ { "Faction":"Ed's 38", "Amount":1000 }, { "Faction":"Zac's Lads", "Amount": 2000 } ] }
+Example:
+```
+{ "timestamp":"2016-06-10T14:32:03Z","event":"RedeemVoucher", "Type":"bounty", Factions: [ { "Faction":"Ed's 38", "Amount":1000 }, { "Faction":"Zac's Lads", "Amount": 2000 } ] }
+```
 
 
 
@@ -1340,7 +1337,7 @@ Parameters:
 
 
 
-The full price list is written to a separate file, in the same folder as the journal, ***Shipyard.json***
+The full price list is written to a separate file, in the same folder as the journal, _**Shipyard.json**_
 
 - Horizons: bool
 
@@ -1365,22 +1362,16 @@ Example: in the Journal:
 
 
 In the separate shipyard.json file:
-
-{ "timestamp":"2017-10-04T10:01:38Z", "event":"Shipyard", "MarketID: 128122104, "StationName":"Seven Holm", "StarSystem":"Tamor", "Horizons":true, "AllowCobraMkIV":true, "PriceList":[
-
+```
+{ "timestamp":"2017-10-04T10:01:38Z", "event":"Shipyard", "MarketID": 128122104, "StationName":"Seven Holm", "StarSystem":"Tamor", "Horizons":true, "AllowCobraMkIV":true, "PriceList":[
 { "id":128049249, "ShipType":"sidewinder", "ShipPrice":24336 },
-
 { "id":128049255, "ShipType":"eagle", "ShipPrice":34071 },
-
 { "id":128049261, "ShipType":"hauler", "ShipPrice":40094 },
-
 { "id":128049267, "ShipType":"adder", "ShipPrice":66779 },
-
 { "id":128672138, "ShipType":"empire_eagle", "ShipType_Localised":"Imperial Eagle", "ShipPrice":84283 },
-
 :
-
 ] }
+```
 
 
 
@@ -1566,11 +1557,9 @@ The InTransit value only appears (with value true) if the module is being transf
 
 
 
-{ "timestamp":"2018-01-31T10:55:16Z", "event":"StoredModules", "MarketID":128676487, "StationName":"Farseer Inc", "StarSystem":"Deciat", "Items":[
-
-{ "Name":"$int_engine_size3_class5_name;", "Name_Localised":"Thrusters", "StorageSlot":57, "StarSystem":"Deciat", "MarketID":128676487, "TransferCost":0, "TransferTime":0, "BuyPrice":495215, "Hot":false, "EngineerModifications":"Engine_Dirty", "Level":1, "Quality":0.000000 },
-
 ```
+{ "timestamp":"2018-01-31T10:55:16Z", "event":"StoredModules", "MarketID":128676487, "StationName":"Farseer Inc", "StarSystem":"Deciat", "Items":[
+{ "Name":"$int_engine_size3_class5_name;", "Name_Localised":"Thrusters", "StorageSlot":57, "StarSystem":"Deciat", "MarketID":128676487, "TransferCost":0, "TransferTime":0, "BuyPrice":495215, "Hot":false, "EngineerModifications":"Engine_Dirty", "Level":1, "Quality":0.000000 },
 { "Name":"$int_hyperdrive_size6_class5_name;", "Name_Localised":"FSD", "StorageSlot":59, "StarSystem":"Shinrarta Dezhra", "MarketID":128666762, "TransferCost":79680, "TransferTime":1317, "BuyPrice":12620035, "Hot":false, "EngineerModifications":"FSD_LongRange", "Level":5, "Quality":0.000000 } ] }
 ```
 
@@ -1614,8 +1603,6 @@ Parameters:
 
 	- Hot
 
-
-
 If the ship is in transit:
 
 - InTransit: true
@@ -1624,13 +1611,13 @@ If the ship is in transit:
 
 If the ship is not in transit:
 
-	- StarSystem
+- StarSystem
 
-	- ShipMarketID
+- ShipMarketID
 
-	- TransferPrice
+- TransferPrice
 
-	- TransferType
+- TransferType
 
 
 

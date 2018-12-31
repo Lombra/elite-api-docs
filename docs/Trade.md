@@ -68,7 +68,7 @@ Parameters:
 
 
 
-If the cargo is related to powerplay delivery *from outlying systems back to the centre*:
+If the cargo is related to powerplay delivery _from outlying systems back to the centre_:
 
 - PowerplayOrigin: starsystem name
 

@@ -12,7 +12,7 @@ The journal files are written into the user’s Saved Games folder, eg, for Wind
 
 C:\Users\User Name\Saved Games\Frontier Developments\Elite Dangerous\
 
-The filename is of the form ***Journal***.&lt;datestamp&gt;.&lt;part&gt;***.log***, similar to network log files
+The filename is of the form _**Journal**_.&lt;datestamp&gt;.&lt;part&gt;_**.log**_, similar to network log files
 
 In addition to the incremental player journal file, the following files are written into the same folder:
 
@@ -56,7 +56,7 @@ Example:
 
 Each event record is a json object.
 
-The object has a "timestamp" value with the time in ISO 8601 format, an "event":"*eventname*" key-value pair identifying the type of event, followed by other key-value pairs providing additional information.
+The object has a "timestamp" value with the time in ISO 8601 format, an "event":"_eventname_" key-value pair identifying the type of event, followed by other key-value pairs providing additional information.
 
 The rest of this document describes each type of event that might be written into the journal, and the data values for each event.
 
@@ -66,9 +66,9 @@ The rest of this document describes each type of event that might be written int
 
 Some values written into the log use internal symbol IDs, as used by the game to lookup localised text strings. These have the form "$symbolname;"
 
-When such values are written into the log, the iocalised version of the string will also be written *(UTF8 encoded),* as a separate key-value pair, with "_Localised" appended to the key name.
+When such values are written into the log, the iocalised version of the string will also be written _(UTF8 encoded),_ as a separate key-value pair, with "_Localised" appended to the key name.
 
-***Examples throughout this document have not been updated with this extra localised format ***
+_**Examples throughout this document have not been updated with this extra localised format **_
 
 "Government":"$government_PrisonColony;", "Government_Localised":"Colonie pénitentiaire"
 

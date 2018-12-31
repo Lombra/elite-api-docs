@@ -2,7 +2,7 @@
 
 ### Cargo
 
-When written: at startup, *note this is now written slightly later in startup, after we have initialised missions, so we can detect if any cargo came from an abandoned delivery mission*
+When written: at startup, _note this is now written slightly later in startup, after we have initialised missions, so we can detect if any cargo came from an abandoned delivery mission_
 
 The first "Cargo" event in the file will contain the full inventory, others just indicate a separate file has been written
 
@@ -140,7 +140,7 @@ Parameters:
 
 
 
-*(For a passenger cabin, AmmoInClip holds the number of places in the cabin)*
+_(For a passenger cabin, AmmoInClip holds the number of places in the cabin)_
 
 
 
@@ -324,15 +324,15 @@ Parameters:
 
 - Combat: percent progress to next rank
 
-- Trade: |"
+- Trade:	"
 
-- Explore: |"
+- Explore:	"
 
-- Empire: |"
+- Empire:	"
 
-- Federation: |"
+- Federation:	"
 
-- CQC: |"
+- CQC:	"
 
 
 

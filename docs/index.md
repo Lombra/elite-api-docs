@@ -8,37 +8,37 @@ There is a clear demand from players for third-party tools, and from tools devel
 
 The new Player Journal provides a stream of information about gameplay events which can be used by tools developers to provide richer, more detailed tools to enhance the player experience. The data records written to this journal are much more high-level then that written to the network log.
 
-A short example of a player journal file (***out of date, some events may have additional data***):
+A short example of a player journal file (_**out of date, some events may have additional data**_):
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+```
+{ "timestamp":"2016-06-10T14:31:00Z", "event":"FileHeader", "part":1, "gameversion":"2.2", "build":"r113684 " },
+{ "timestamp":"2016-06-10T14:32:03Z", "event":"LoadGame", "Commander":"HRC1", "Ship":"SideWinder", “ShipID”:1,
+"GameMode":"Open", "Credits":600120, "Loan":0 }
+{ "timestamp":"2016-06-10T14:32:03Z", "event":"Rank", "Combat":0, "Trade":0, "Explore":1, "Empire":0, "Federation":0, "CQC":0 }
+{ "timestamp":"2016-06-10T14:32:03Z", "event":"Progress", "Combat":0, "Trade":0, "Explore":73, "Empire":0, "Federation":0, "CQC":0
+}
+{ "timestamp":"2016-06-10T14:32:15Z", "event":"Location", "StarSystem":"Asellus Primus", "StarPos":[-23.938,40.875,-1.344] }
+{ "timestamp":"2016-06-10T14:32:16Z", "event":"Docked", "StationName":"Beagle 2 Landing", "StationType":"Coriolis" }
+{ "timestamp":"2016-06-10T14:32:38Z", "event":"RefuelAll", "Cost":12, "Amount":0.234493 }
+{ "timestamp":"2016-06-10T14:34:25Z", "event":"Undocked", "StationName":"Beagle 2 Landing", "StationType":"Coriolis" }
+{ "timestamp":"2016-06-10T14:35:00Z", "event":"FSDJump", "StarSystem":"HIP 78085", "StarPos":[120.250,40.219,268.594],
+"JumpDist":36.034 }
+{ ""timestamp":"2016-06-10T14:35:22Z", event":"Scan", "BodyName":"HIP 78085 A", "StarType":"G" }
+{ "timestamp":"2016-06-10T14:36:10Z", "event":"FSDJump", "StarSystem":"Praea Euq NW-W b1-3",
+"StarPos":[120.719,34.188,271.750], "JumpDist":6.823 }
+{ "timestamp":"2016-06-10T14:36:42Z", "event":"Scan", "BodyName":"Praea Euq NW-W b1-3", "StarType":"M" }
+{ "timestamp":"2016-06-10T14:38:50Z", "event":"Scan", "BodyName":"Praea Euq NW-W b1-3 3", "Description":"Icy body with neon
+rich atmosphere and major water geysers volcanism" }
+{ "timestamp":"2016-06-10T14:39:08Z", "event":"Scan", "BodyName":"Praea Euq NW-W b1-3 3 a", "Description":"Tidally locked Icy
+body" }
+{ "timestamp":"2016-06-10T14:41:03Z", "event":"FSDJump", "StarSystem":"Asellus Primus", "StarPos":[-23.938,40.875,-1.344],
+"JumpDist":39.112 }
+{ "timestamp":"2016-06-10T14:41:26Z", "event":"SupercruiseExit", "StarSystem":"Asellus Primus", "Body":"Beagle 2 Landing" }
+{ "timestamp":"2016-06-10T14:41:29Z", "event":"Docked", "StationName":"Beagle 2 Landing", "StationType":"Coriolis" }
+{ "timestamp":"2016-06-10T14:41:58Z", "event":"SellExplorationData", "Systems":[ "HIP 78085", "Praea Euq NW-W b1-3" ],
+"Discovered":[ "HIP 78085 A", "Praea Euq NW-W b1-3", "Praea Euq NW-W b1-3 3 a", "Praea Euq NW-W b1-3 3" ], "BaseValue":10822,
+"Bonus":3959 }
+```
 
 ### ChangeLog
 
@@ -100,7 +100,7 @@ Errata
 
 
 
-**Version 20 – for v3.3 (beta 1) ***(released 30**th** Oct 2018)*
+**Version 20 – for v3.3 (beta 1) **_(released 30th Oct 2018)_
 
 - Multiple faction activestates – in Location and FSDJump events (§4.8,§4.12)
 
@@ -116,9 +116,8 @@ Errata
 
 - Added several events for Squadrons(§10)
 
-- 
 
-**Version 19 – for v3.3 ***(preview released 20**th** Sept 2018)*
+**Version 19 – for v3.3 **_(preview released 20th Sept 2018)_
 
 - Simplify the "Category" in MaterialTrade
 
@@ -152,7 +151,7 @@ Errata
 
 - MissionCompleted now indicates correct destination after redirection
 
-**Version 18 – for v3.0.4 (27****th**** March 2018)**
+**Version 18 – for v3.0.4 (27th March 2018)**
 
 - Fix localisation where one text symbol redirects through another
 
@@ -162,7 +161,7 @@ Errata
 
 
 
-**Version 17 – for v3.0.3 (19****th**** March 2018)**
+**Version 17 – for v3.0.3 (19th March 2018)**
 
 - TechnologyBroker: distinguish between Commodities and Materials
 
@@ -184,7 +183,7 @@ Errata
 
 
 
-**Version 16 – for v3.0.2 (5****th**** March 2018)**
+**Version 16 – for v3.0.2 (5th March 2018)**
 
 - MissionCompleted: if rewards include materials, add category
 
@@ -208,7 +207,7 @@ Errata
 
 
 
-**Version 15 – for v3.0 – beta3 (6****th**** Feb 2018)**
+**Version 15 – for v3.0 – beta3 (6th Feb 2018)**
 
 - Add a property in the "Location" or "FSDJump" event indicating if the player is wanted locally
 
@@ -326,21 +325,21 @@ Errata
 
 
 
-**Version 13 - In 2.4 Open beta ***(24**th** Aug 2017)*
+**Version 13 - In 2.4 Open beta **_(24th Aug 2017)_
 
-**Version 12 - In 2.4 beta1 ***(17**th** Aug 2017)*
+**Version 12 - In 2.4 beta1 **_(17th Aug 2017)_
 
-**Version 11**|*published 26/Jun/2017*
+**Version 11**	_published 26/Jun/2017_
 
-**Version 10**|*published 29/Mar/2017 (for v2.3 beta 5)*
+**Version 10**	_published 29/Mar/2017 (for v2.3 beta 5)_
 
-**Version 9***published 20/Feb/2017 (for v2.3 beta)*
+**Version 9**_published 20/Feb/2017 (for v2.3 beta)_
 
-**Version 8**|*published 10/Jan/2017 (for v2.2.03)*
+**Version 8**	_published 10/Jan/2017 (for v2.2.03)_
 
-**Version 7**|*published 15/Nov/2016 (for release 2.2.02)*
+**Version 7**	_published 15/Nov/2016 (for release 2.2.02)_
 
-**Version 6**|*published 26/Oct/2016 (for 2.2 public release)*
+**Version 6**	_published 26/Oct/2016 (for 2.2 public release)_
 
 **Version 1** was published 20/July/2016
 

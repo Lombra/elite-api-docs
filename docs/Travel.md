@@ -124,7 +124,6 @@ Parameters:
 
 - LandingPad: pad number
 
-- 
 
 ### DockingRequested
 
@@ -228,7 +227,6 @@ If the player is pledged to a Power in Powerplay, and the star system is involve
 
 - PowerplayState: the system state – one of ("InPrepareRadius", "Prepared", "Exploited", "Contested", "Controlled", "Turmoil", "HomeSystem")
 
-- 
 
 Example:
 
@@ -248,7 +246,7 @@ Example:
 
 When written: when selecting a star system to jump to
 
-Note, when following a multi-jump route, this will typically appear for the *next* star, during a jump, ie after "StartJump" but before the "FSDJump"
+Note, when following a multi-jump route, this will typically appear for the _next_ star, during a jump, ie after "StartJump" but before the "FSDJump"
 
 Parameters:
 
@@ -343,8 +341,6 @@ Parameters:
 - Wanted
 
 - Factions: an array with info on local minor factions (similar to FSDJump)
-
-- 
 
 If the player is pledged to a Power in Powerplay, and the star system is involved in powerplay,
 
