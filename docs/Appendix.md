@@ -2,27 +2,27 @@
 
 ### Ranks
 
-**Combat ranks**: 0='Harmless', 1='Mostly Harmless', 2='Novice', 3='Competent', 4='Expert', 5='Master', 6='Dangerous', 7='Deadly', 8='Elite’
+***Combat ranks***: 0='Harmless', 1='Mostly Harmless', 2='Novice', 3='Competent', 4='Expert', 5='Master', 6='Dangerous', 7='Deadly', 8='Elite’
 
 
 
-**Trade ranks**: 0='Penniless', 1='Mostly Pennliess', 2='Peddler', 3='Dealer', 4='Merchant', 5='Broker', 6='Entrepreneur', 7='Tycoon', 8='Elite'
+***Trade ranks***: 0='Penniless', 1='Mostly Pennliess', 2='Peddler', 3='Dealer', 4='Merchant', 5='Broker', 6='Entrepreneur', 7='Tycoon', 8='Elite'
 
 
 
-**Exploration ranks**: 0='Aimless', 1='Mostly Aimless', 2='Scout', 3='Surveyor', 4='Explorer', 5='Pathfinder', 6='Ranger', 7='Pioneer', 8='Elite'
+***Exploration ranks***: 0='Aimless', 1='Mostly Aimless', 2='Scout', 3='Surveyor', 4='Explorer', 5='Pathfinder', 6='Ranger', 7='Pioneer', 8='Elite'
 
 
 
-**Federation ranks**: 0='None', 1='Recruit', 2='Cadet', 3='Midshipman', 4='Petty Officer', 5='Chief Petty Officer', 6='Warrant Officer', 7='Ensign', 8='Lieutenant', 9='Lt. Commander', 10='Post Commander', 11= 'Post Captain', 12= 'Rear Admiral', 13='Vice Admiral', 14=’Admiral’
+***Federation ranks***: 0='None', 1='Recruit', 2='Cadet', 3='Midshipman', 4='Petty Officer', 5='Chief Petty Officer', 6='Warrant Officer', 7='Ensign', 8='Lieutenant', 9='Lt. Commander', 10='Post Commander', 11= 'Post Captain', 12= 'Rear Admiral', 13='Vice Admiral', 14=’Admiral’
 
 
 
-**Empire ranks**: 0='None', 1='Outsider', 2='Serf', 3='Master', 4='Squire', 5='Knight', 6='Lord', 7='Baron',  8='Viscount ', 9=’Count', 10= 'Earl', 11='Marquis' 12='Duke', 13='Prince', 14=’King’
+***Empire ranks***: 0='None', 1='Outsider', 2='Serf', 3='Master', 4='Squire', 5='Knight', 6='Lord', 7='Baron',  8='Viscount ', 9=’Count', 10= 'Earl', 11='Marquis' 12='Duke', 13='Prince', 14=’King’
 
 
 
-**CQC ranks**: 0=’Helpless’, 1=’Mostly Helpless’, 2=’Amateur’, 3=’Semi Professional’, 4=’Professional’, 5=’Champion’, 6=’Hero’, 7=’Legend’, 8=’Elite’
+***CQC ranks***: 0=’Helpless’, 1=’Mostly Helpless’, 2=’Amateur’, 3=’Semi Professional’, 4=’Professional’, 5=’Champion’, 6=’Hero’, 7=’Legend’, 8=’Elite’
 
 
 
@@ -30,23 +30,23 @@
 
 ### Star Descriptions
 
-(Main sequence:) O B A F G K M L T Y
+(*Main sequence*:) O B A F G K M L T Y
 
-(Proto stars:) TTS AeBe
+(*Proto stars*:) TTS AeBe
 
-(Wolf-Rayet:) W WN WNC WC WO
+(*Wolf-Rayet*:) W WN WNC WC WO
 
-(Carbon stars:) CS C CN CJ CH CHd
+(*Carbon stars*:) CS C CN CJ CH CHd
 
 MS S
 
-(white dwarfs:) D DA DAB DAO DAZ DAV DB DBZ DBV DO DOV DQ DC DCV DX
+(*white dwarfs*:) D DA DAB DAO DAZ DAV DB DBZ DBV DO DOV DQ DC DCV DX
 
-N (=Neutron)
+N (=*Neutron*)
 
-H (=Black Hole)
+H (=*Black Hole*)
 
-X (=exotic)
+X (=*exotic*)
 
 SupermassiveBlackHole
 
@@ -342,7 +342,7 @@ VII,
 
 ### Engineer IDs
 
-300000
+300000|Didi Vatermann300010|Bill Turner300030|Broo Tarquin300040|The Sarge300050|Zachariah Nemo300080|Liz Ryder300090|Hera Tani300100|Felicity Farseer300110|Ram Tah300120|Lei Cheung300140|Col. Bris Dekker300160|Elvira Martuuk300180|The Dweller300200|Marco Quent300210|Selene Jean300220|Prof. Palin300230|Lori Jameson300250|Juri Ishmaak300260|Tod 'The Blaster' McQuinn300270|Tiana Fortune
 
 
 
@@ -626,7 +626,7 @@ The following module attributes have enum values, written as a string, all other
 
 WeaponMode should be one of:    ForwardFire, Gimbal, TargetOnly, FireAtWill, Manual, NoMode
 
-DamageType should be one of:
+DamageType should be one of: |Kinetic, Thermal, Explosive, Collision, Thargoid, AntiThargoid
 
-CabinClass should be one of:
+CabinClass should be one of: |Prison, Economy, Standard, Business, First, Luxury
 

@@ -25,7 +25,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"BuyTradeData", "System":"i Bootis", "Cost":100 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"BuyTradeData", "System":"i Bootis", "Cost":100 }
 ```
 
 
@@ -47,7 +47,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"CollectCargo", "Type":"agriculturalmedicines", "Stolen":false }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"CollectCargo", "Type":"agriculturalmedicines", "Stolen":false }
 ```
 
 
@@ -68,13 +68,13 @@ Parameters:
 
 
 
-If the cargo is related to powerplay delivery from outlying systems back to the centre:
+If the cargo is related to powerplay delivery *from outlying systems back to the centre*:
 
 - PowerplayOrigin: starsystem name
 
 
 
-Examples:{ "timestamp":"2016-06-10T14:32:03Z", "event":"EjectCargo", "Type":"tobacco", "Count":1, "Abandoned":true }
+Examples:{ "timestamp":"2016-06-10T14:32:03Z","event":"EjectCargo", "Type":"tobacco", "Count":1, "Abandoned":true }
 
 
 
@@ -107,7 +107,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"MarketBuy", "Type":"foodcartridges", "Count":10, "BuyPrice":39, "TotalCost":390 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"MarketBuy", "Type":"foodcartridges", "Count":10, "BuyPrice":39, "TotalCost":390 }
 ```
 
 
@@ -141,7 +141,7 @@ Parameters:
 Examples:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"MarketSell", "Type":"agriculturalmedicines", "Count":3, "SellPrice":1360, "TotalSale":4080, "AvgPricePaid":304 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"MarketSell", "Type":"agriculturalmedicines", "Count":3, "SellPrice":1360, "TotalSale":4080, "AvgPricePaid":304 }
 ```
 
 
@@ -165,6 +165,6 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"MiningRefined", "Type:"Gold" }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"MiningRefined", "Type:"Gold" }
 ```
 

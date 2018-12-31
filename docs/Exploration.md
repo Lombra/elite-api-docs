@@ -30,7 +30,7 @@ Parameters:
 
 The IsNewEntry and NewTraitsDiscovered fields are optional depending on the results of the scan, and the Traits field is only available for entries that have unlocked traits.
 
-Example:{ "timestamp": "2018-10-09T07:10:25Z", "event": "CodexEntry", "EntryID": 2401001, "Name": "$Codex_Ent_L_Phn_Part_Cld_001_Name;", "Name_Localised": "L_Phn_Part_Cld_001", "SubCategory": "$Codex_SubCategory_Micro_Organisms;", "SubCategory_Localised": "Micro Organisms", "Category": "$Codex_Category_Biology;", "Category_Localised": "Biological and Geological", "Region": "Region 18", "System": "Shinrarta Dezhra", “SystemAddress”: 3932277478106 "IsNewEntry": true, "NewTraitsDiscovered": true, "Traits": ["Trait1", "Trait2", "Trait3"] }
+Example:{ "timestamp": "2018-10-09T07:10:25Z", "event": "CodexEntry", "EntryID": 2401001, "Name": "$Codex_Ent_L_Phn_Part_Cld_001_Name;", "Name_Localised": "L_Phn_Part_Cld_001", "SubCategory": "$Codex_SubCategory_Micro_Organisms;", "SubCategory_Localised": "Micro Organisms", "Category": "$Codex_Category_Biology;", "Category_Localised": "Biological and Geological", "Region": "Region 18", "System": "Shinrarta Dezhra", "SystemAddress":3932277478106 "IsNewEntry": true, "NewTraitsDiscovered": true, "Traits": ["Trait1", "Trait2", "Trait3"] }
 
 
 
@@ -120,11 +120,11 @@ Parameters(Planet/Moon)
 
 - *Composition: structure containing info on solid composition
 
-    - Ice
+	- Ice
 
-    - Rock
+	- Rock
 
-    - Metal
+	- Metal
 
 - * Rings: [ array of info ] – if rings present
 
@@ -178,7 +178,7 @@ The "Parents" property provides the body's hierarchical position within the syst
 
 
 
-Entries in the list above marked with an asterisk are only included for a detailed scan
+*Entries in the list above marked with an asterisk are only included for a detailed scan*
 
 **ScanType**: one of Basic, Detailed, NavBeacon, NavBeaconDetail, AutoScan
 
@@ -208,7 +208,7 @@ Parameters:
 
 ### FSSDiscoveryScan
 
-When written: when performing a full system scan (“Honk”)
+When written: when performing a full system scan ("Honk")
 
 Parameters:
 
@@ -261,11 +261,11 @@ Parameters:
 Examples:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Count":2 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"MaterialCollected", "Category":"Raw", "Name":"sulphur", "Count":2 }
 ```
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"MaterialCollected", "Category":"Encoded", "Name":"disruptedwakeechoes", "Count":1 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"MaterialCollected", "Category":"Encoded", "Name":"disruptedwakeechoes", "Count":1 }
 ```
 
 
@@ -289,7 +289,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"MaterialDiscarded", "Category":"Raw", "Name":"sulphur", "Count": 5 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"MaterialDiscarded", "Category":"Raw", "Name":"sulphur", "Count": 5 }
 ```
 
 
@@ -311,7 +311,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"MaterialDiscovered", "Category":"Manufactured", "Name":"focuscrystals", "DiscoveryNumber":3 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"MaterialDiscovered", "Category":"Manufactured", "Name":"focuscrystals", "DiscoveryNumber":3 }
 ```
 
 
@@ -324,9 +324,9 @@ Parameters:
 
 - Discovered: (array of records, as follows)
 
-    - SystemName
+	- SystemName
 
-    - NumBodies
+	- NumBodies
 
 - BaseValue
 
@@ -371,14 +371,14 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"BuyExplorationData", "System":"Styx", "Cost":352 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"BuyExplorationData", "System":"Styx", "Cost":352 }
 ```
 
 
 
 ### SAAScanComplete
 
-When written: after using the “Surface Area Analysis” scanner
+When written: after using the "Surface Area Analysis" scanner
 
 Parameters:
 
@@ -425,7 +425,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"SellExplorationData", "Systems":[ "HIP 78085", "Praea Euq NW-W b1-3" ], "Discovered":[ "HIP 78085 A", "Praea Euq NW-W b1-3", "Praea Euq NW-W b1-3 3 a", "Praea Euq NW-W b1-3 3" ], "BaseValue":10822, "Bonus":3959, "TotalEarnings":44343 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"SellExplorationData", "Systems":[ "HIP 78085", "Praea Euq NW-W b1-3" ], "Discovered":[ "HIP 78085 A", "Praea Euq NW-W b1-3", "Praea Euq NW-W b1-3 3 a", "Praea Euq NW-W b1-3 3" ], "BaseValue":10822, "Bonus":3959, "TotalEarnings":44343 }
 ```
 
 

@@ -75,7 +75,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"Died", "KillerName":"$ShipName_Police_Independent;", "KillerShip":"viper", "KillerRank":"Deadly" }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"Died", "KillerName":"$ShipName_Police_Independent;", "KillerShip":"viper", "KillerRank":"Deadly" }
 ```
 
 
@@ -93,7 +93,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"Died", "Killers":[ { "Name":"Cmdr HRC1", "Ship":"Vulture", "Rank":"Competent" }, { "Name":"Cmdr HRC2", "Ship":"Python", "Rank":"Master" } ] }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"Died", "Killers":[ { "Name":"Cmdr HRC1", "Ship":"Vulture", "Rank":"Competent" }, { "Name":"Cmdr HRC2", "Ship":"Python", "Rank":"Master" } ] }
 ```
 
 
@@ -110,7 +110,7 @@ Parameters:
 
 
 
-Example:{"timestamp":"2016-06-10T14:32:03Z",  "event":"EscapeInterdiction", "Interdictor":"Hrc1", "IsPlayer":true }
+Example:{"timestamp":"2016-06-10T14:32:03Z", "event":"EscapeInterdiction", "Interdictor":"Hrc1", "IsPlayer":true }
 
 
 
@@ -131,7 +131,7 @@ Parameters:
 Example:
 
 ```
-{"timestamp":"2016-06-10T14:32:03Z",  "event":"FactionKillBond",  "Reward": 500, "AwardingFaction":"Jarildekald Public Industry", "VictimFaction": "Lencali Freedom Party" }
+{"timestamp":"2016-06-10T14:32:03Z", "event":"FactionKillBond",  "Reward": 500, "AwardingFaction":"Jarildekald Public Industry", "VictimFaction": "Lencali Freedom Party" }
 ```
 
 
@@ -197,7 +197,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"interdicted", "Submitted":false, "Interdictor":"Dread Pirate Roberts", "IsPlayer":false, "Faction": "Timocani Purple Posse"  }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"interdicted", "Submitted":false, "Interdictor":"Dread Pirate Roberts", "IsPlayer":false, "Faction":"Timocani Purple Posse"  }
 ```
 
 
@@ -225,7 +225,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"interdiction", "Success":true, "Interdicted":"Fred Flintstone", "IsPlayer":true, "CombatRank":5 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"interdiction", "Success":true, "Interdicted":"Fred Flintstone", "IsPlayer":true, "CombatRank":5 }
 ```
 
 
@@ -282,7 +282,7 @@ If target locked:
 
 
 
-If Scan stage >= 1
+If Scan stage &gt;= 1
 
 - PilotName: name
 
@@ -290,7 +290,7 @@ If Scan stage >= 1
 
 
 
-If scan stage >= 2
+If scan stage &gt;= 2
 
 - ShieldHealth
 
@@ -298,7 +298,7 @@ If scan stage >= 2
 
 
 
-If scan stage >= 3
+If scan stage &gt;= 3
 
 - Faction
 

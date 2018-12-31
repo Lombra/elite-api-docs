@@ -1,0 +1,11 @@
+li.toctree-l2:first-child {
+	display: none;
+}
+
+.wy-side-nav-search {
+	background-color: rgba(207, 91, 12, 1);
+}
+
+.wy-menu-vertical a:active {
+	background-color: rgba(207, 91, 12, 1);
+}

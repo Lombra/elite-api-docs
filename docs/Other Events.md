@@ -61,7 +61,7 @@ Parameters: none
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"CockpitBreached" }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"CockpitBreached" }
 ```
 
 
@@ -89,11 +89,11 @@ Optional parameters (depending on crime)
 Examples:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"CommitCrime", "CrimeType":"assault", "Faction":"The Pilots Federation", "Victim":"Potapinski", "Bounty":210 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"CommitCrime", "CrimeType":"assault", "Faction":"The Pilots Federation", "Victim":"Potapinski", "Bounty":210 }
 ```
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Jarildekald Public Industry", "Fine":100 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"CommitCrime", "CrimeType":"fireInNoFireZone", "Faction":"Jarildekald Public Industry", "Fine":100 }
 ```
 
 
@@ -203,7 +203,7 @@ Parameters: none
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"DockFighter" }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"DockFighter" }
 ```
 
 
@@ -251,7 +251,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"FuelScoop", "Scooped":0.498700, "Total":16.000000 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"FuelScoop", "Scooped":0.498700, "Total":16.000000 }
 ```
 
 
@@ -266,7 +266,7 @@ Also written at startup for friends who are already online (new in v2.4)
 
 Parameters:
 
-- Status: one of the following: Requested, Declined, Added, Lost, Offline, Online
+- Status: one of the following: *Requested, Declined, Added, Lost, Offline, Online*
 
 - Name: the friend's commander name
 
@@ -339,7 +339,7 @@ Parameters:
 
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"LaunchFighter", "Loadout":"starter", "PlayerControlled":true }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"LaunchFighter", "Loadout":"starter", "PlayerControlled":true }
 ```
 
 
@@ -420,7 +420,7 @@ Parameters:
 
 
 
-Possible track names are: NoTrack, MainMenu, CQCMenu, SystemMap, GalaxyMap, GalacticPowers
+Possible track names are: NoTrack, MainMenu, CQCMenu, SystemMap, GalaxyMap, GalacticPowersCQC, DestinationFromHyperspace, DestinationFromSupercruise, Supercruise, Combat_UnknownUnknown_Encounter, CapitalShip, CombatLargeDogFight, Combat_Dogfight, Combat_SRVUnknown_Settlement, DockingComputer, Starport, Unknown_Exploration, Exploration
 
 Note: Other music track names may be used in future
 
@@ -479,7 +479,7 @@ Parameters: one of the following
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"Promotion", "Explore":2 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"Promotion", "Explore":2 }
 ```
 
 
@@ -505,7 +505,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"RebootRepair", "Modules":[ "MainEngines", "TinyHardpoint1" ] }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"RebootRepair", "Modules":[ "MainEngines", "TinyHardpoint1" ] }
 ```
 
 
@@ -599,7 +599,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"SendText", "To":"HRC-2", "Message":"zoom" }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"SendText", "To":"HRC-2", "Message":"zoom" }
 ```
 
 
@@ -627,7 +627,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"Synthesis", "Name":"Repair Basic", "Materials":[ {"Name":"iron", "Count":2}, {"Name":"nickel", "Count":1 } ] }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"Synthesis", "Name":"Repair Basic", "Materials":[ {"Name":"iron", "Count":2}, {"Name":"nickel", "Count":1 } ] }
 ```
 
 
@@ -653,7 +653,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"USSDrop", "USSType":"Disrupted wake echoes", "USSThreat": 0 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"USSDrop", "USSType":"Disrupted wake echoes", "USSThreat": 0 }
 ```
 
 
@@ -671,11 +671,11 @@ Parameters:
 Examples:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"VehicleSwitch", "To":"Fighter" }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"VehicleSwitch", "To":"Fighter" }
 ```
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"VehicleSwitch", "To":"Mothership" }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"VehicleSwitch", "To":"Mothership" }
 ```
 
 
@@ -693,7 +693,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"WingAdd", "Name":"HRC-2" }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"WingAdd", "Name":"HRC-2" }
 ```
 
 
@@ -721,7 +721,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"WingJoin", "Others":[ "HRC1" ] }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"WingJoin", "Others":[ "HRC1" ] }
 ```
 
 
@@ -735,6 +735,6 @@ Parameters: none
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"WingLeave" }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"WingLeave" }
 ```
 

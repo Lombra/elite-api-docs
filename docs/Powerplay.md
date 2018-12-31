@@ -17,7 +17,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"PowerplayCollect", "Power":"Li Yong-Rui", "Type":"siriusfranchisepackage", "Count":10 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"PowerplayCollect", "Power":"Li Yong-Rui", "Type":"siriusfranchisepackage", "Count":10 }
 ```
 
 
@@ -37,7 +37,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"PowerplayDefect", "FromPower":"Zachary Hudson", "ToPower":"Li Yong-Rui" }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"PowerplayDefect", "FromPower":"Zachary Hudson", "ToPower":"Li Yong-Rui" }
 ```
 
 
@@ -59,7 +59,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"PowerplayDeliver", "Power":"Li Yong-Rui", "Type":"siriusfranchisepackage", "Count":10 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"PowerplayDeliver", "Power":"Li Yong-Rui", "Type":"siriusfranchisepackage", "Count":10 }
 ```
 
 
@@ -89,7 +89,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"PowerplayJoin", "Power":"Zachary Hudson" }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"PowerplayJoin", "Power":"Zachary Hudson" }
 ```
 
 
@@ -107,7 +107,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"PowerplayLeave", "Power":"Li Yong-Rui" }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"PowerplayLeave", "Power":"Li Yong-Rui" }
 ```
 
 

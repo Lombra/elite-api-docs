@@ -1,2 +1,18 @@
 site_name: Elite Dangerous Player Journal
 theme: readthedocs
+extra_css: 
+    - custom.css
+nav:
+    - Introduction.md
+    - File Format.md
+    - Startup.md
+    - Travel.md
+    - Combat.md
+    - Exploration.md
+    - Trade.md
+    - Station Services.md
+    - Powerplay.md
+    - Squadrons.md
+    - Other Events.md
+    - Status File.md
+    - Appendix.md

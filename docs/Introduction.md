@@ -8,7 +8,7 @@ There is a clear demand from players for third-party tools, and from tools devel
 
 The new Player Journal provides a stream of information about gameplay events which can be used by tools developers to provide richer, more detailed tools to enhance the player experience. The data records written to this journal are much more high-level then that written to the network log.
 
-A short example of a player journal file (**out of date, some events may have additional data**):
+A short example of a player journal file (***out of date, some events may have additional data***):
 
 
 
@@ -52,7 +52,7 @@ A short example of a player journal file (**out of date, some events may have ad
 
 - Add new FSSAllBodiesFound event (§6.4)
 
-- Scan events generated automatically when entering system now logged as “ScanType”:”AutoScan” (§6.3)
+- Scan events generated automatically when entering system now logged as "ScanType":"AutoScan" (§6.3)
 
 - Add new event MultiSellExplorationData (§6.10)
 
@@ -86,7 +86,7 @@ A short example of a player journal file (**out of date, some events may have ad
 
 - Status flags indicate if in Analysis mode, and GUI focus shows if in Orrery, FSS, SAA or Codex view (§12)
 
-- Fixed bug in MissionAccepted and MissionCompleted for donation missions, where the “Donated” key was written twice, one with a string, once with an int (§8.21,§8.22)
+- Fixed bug in MissionAccepted and MissionCompleted for donation missions, where the "Donated" key was written twice, one with a string, once with an int (§8.21,§8.22)
 
 Errata
 
@@ -100,29 +100,29 @@ Errata
 
 
 
-**Version 20 – for v3.3 (beta 1) **(released 30th Oct 2018)
+**Version 20 – for v3.3 (beta 1) ***(released 30**th** Oct 2018)*
 
 - Multiple faction activestates – in Location and FSDJump events (§4.8,§4.12)
 
-- The first “Cargo” event written to the journal contains full inventory (§3.1)
+- The first "Cargo" event written to the journal contains full inventory (§3.1)
 
-- Added “AsteroidCracked” event (§7.1)
+- Added "AsteroidCracked" event (§7.1)
 
-- Added “SAAScanComplete” (Surface Area Analysis) event (§6.13)
+- Added "SAAScanComplete" (Surface Area Analysis) event (§6.13)
 
-- Added “CodexDiscovery” event (§6.1)
+- Added "CodexDiscovery" event (§6.1)
 
-- Added “FSSDiscoveryScan” and “FSSSignalScan” events (§6.4,§6.6)
+- Added "FSSDiscoveryScan" and "FSSSignalScan" events (§6.4,§6.6)
 
 - Added several events for Squadrons(§10)
 
 - 
 
-**Version 19 – for v3.3 **(preview released 20th Sept 2018)
+**Version 19 – for v3.3 ***(preview released 20**th** Sept 2018)*
 
-- Simplify the “Category” in MaterialTrade
+- Simplify the "Category" in MaterialTrade
 
-- Clarify meaning of bit 14 in status file: was called “under ship” but actually indicates when turret is retracted
+- Clarify meaning of bit 14 in status file: was called "under ship" but actually indicates when turret is retracted
 
 - ApproachSettlement now includes Latitude and Longitude
 
@@ -136,11 +136,11 @@ Errata
 
 - Note a new ShipTargetted event is generated after using KillWarrantScanner, with updated bounty for target
 
-- Note the MissionRedirected mission name now has any trailing “_name” removed
+- Note the MissionRedirected mission name now has any trailing "_name" removed
 
 - Added MyReputation in faction list in FsdJump and Location events
 
-- Added “FSDTarget” event when selecting a starsystem to jump to
+- Added "FSDTarget" event when selecting a starsystem to jump to
 
 - Added MissionID to cargo to indicate if it is mission-related: in Cargo, CollectCargo, EjectCargo events
 
@@ -148,7 +148,7 @@ Errata
 
 - Cargo summary is now written to a separate file, and updated when data changes
 
-- Add “HullHealth” stat in the “Loadout” event
+- Add "HullHealth" stat in the "Loadout" event
 
 - MissionCompleted now indicates correct destination after redirection
 
@@ -200,11 +200,11 @@ Errata
 
 - Also fixed:
 
-    - Fix localisation of strings where we don't have any substitution parameters to insert into them
+	- Fix localisation of strings where we don't have any substitution parameters to insert into them
 
-    - Materials inventory at startup: omit items with a count of zero
+	- Materials inventory at startup: omit items with a count of zero
 
-    - SellDrones: fix sell price (was previously using buy price)
+	- SellDrones: fix sell price (was previously using buy price)
 
 
 
@@ -326,21 +326,21 @@ Errata
 
 
 
-**Version 13 - In 2.4 Open beta **(24th Aug 2017)
+**Version 13 - In 2.4 Open beta ***(24**th** Aug 2017)*
 
-**Version 12 - In 2.4 beta1 **(17th Aug 2017)
+**Version 12 - In 2.4 beta1 ***(17**th** Aug 2017)*
 
-**Version 11**published 26/Jun/2017
+**Version 11**|*published 26/Jun/2017*
 
-**Version 10**published 29/Mar/2017 (for v2.3 beta 5)
+**Version 10**|*published 29/Mar/2017 (for v2.3 beta 5)*
 
-**Version 9**published 20/Feb/2017 (for v2.3 beta)
+**Version 9***published 20/Feb/2017 (for v2.3 beta)*
 
-**Version 8**published 10/Jan/2017 (for v2.2.03)
+**Version 8**|*published 10/Jan/2017 (for v2.2.03)*
 
-**Version 7**published 15/Nov/2016 (for release 2.2.02)
+**Version 7**|*published 15/Nov/2016 (for release 2.2.02)*
 
-**Version 6**published 26/Oct/2016 (for 2.2 public release)
+**Version 6**|*published 26/Oct/2016 (for 2.2 public release)*
 
 **Version 1** was published 20/July/2016
 

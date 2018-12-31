@@ -13,7 +13,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"BuyAmmo", "Cost":80 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"BuyAmmo", "Cost":80 }
 ```
 
 
@@ -39,7 +39,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"BuyDrones", "Type":"Drones", "Count":2, "SellPrice":101, "TotalCost":202 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"BuyDrones", "Type":"Drones", "Count":2, "SellPrice":101, "TotalCost":202 }
 ```
 
 
@@ -94,31 +94,31 @@ Parameters:
 
 - CurrentGoals: an array with an entry for each CG, containing:
 
-    - CGID: a unique ID number for this CG
+	- CGID: a unique ID number for this CG
 
-    - Title: the description of the CG
+	- Title: the description of the CG
 
-    - SystemName
+	- SystemName
 
-    - MarketName
+	- MarketName
 
-    - Expiry: time and date
+	- Expiry: time and date
 
-    - IsComplete: Boolean
+	- IsComplete: Boolean
 
-    - CurrentTotal
+	- CurrentTotal
 
-    - PlayerContribution
+	- PlayerContribution
 
-    - NumContributors
+	- NumContributors
 
-    - PlayerPercentileBand
+	- PlayerPercentileBand
 
-    - TopTier:
+	- TopTier:
 
-        - Name: string
+		- Name: string
 
-        - Bonus: string
+		- Bonus: string
 
 
 
@@ -126,17 +126,17 @@ Parameters:
 
 If the community goal is constructed with a fixed-size top rank (ie max reward for top 10 players)
 
-    - TopRankSize: (integer)
+	- TopRankSize: (integer)
 
-    - PlayerInTopRank: (Boolean)
+	- PlayerInTopRank: (Boolean)
 
 
 
 If the community goal has reached the first success tier:
 
-    - TierReached
+	- TierReached
 
-    - Bonus
+	- Bonus
 
 
 
@@ -330,19 +330,19 @@ Parameters:
 
 - Modifiers: JSON array of modification data
 
-    - Label: string – (see §13.11 below)
+	- Label: string – (see §13.11 below)
 
-    - Value: float
+	- Value: float
 
-    - OriginalValue: float
+	- OriginalValue: float
 
-    - LessIsGood: bool
+	- LessIsGood: bool
 
 - Some modifications have string values:
 
-    - Label: string
+	- Label: string
 
-    - ValueStr: string
+	- ValueStr: string
 
 
 
@@ -350,7 +350,7 @@ The new "quality" value represents the quality or progress of the blueprint. The
 
 
 
-When applying an experimental effect, the ApplyExperimentalEffect property will show the name of the effect applied, and the ingredient list will hold the ingredients for that effect.
+When applying an experimental effect, the *ApplyExperimentalEffect* property will show the name of the effect applied, and the ingredient list will hold the ingredients for that effect.
 
 
 
@@ -388,15 +388,15 @@ Parameters (summary at startup)
 
 - Engineers: array
 
-    - Engineer: name
+	- Engineer: name
 
-    - EngineerID
+	- EngineerID
 
-    - Rank: rank reached (when unlocked)
+	- Rank: rank reached (when unlocked)
 
-    - Progress: progress stage (Invited/Acquainted/Unlocked/Barred)
+	- Progress: progress stage (Invited/Acquainted/Unlocked/Barred)
 
-    - RankProgress: percentage towards next rank
+	- RankProgress: percentage towards next rank
 
 
 
@@ -417,7 +417,7 @@ Parameters (update for one engineer)
 Example (update)
 
 ```
-{ "timestamp":"2018-01-16T09:34:36Z", "event":"EngineerProgress", "Engineer":"Zacariah Nemo", "EngineerID":300050, "Rank":4, “RankProgress”:0 }
+{ "timestamp":"2018-01-16T09:34:36Z", "event":"EngineerProgress", "Engineer":"Zacariah Nemo", "EngineerID":300050, "Rank":4, "RankProgress":0 }
 ```
 
 
@@ -456,7 +456,7 @@ Parameters:
 
 When written: when accessing the commodity market in a station
 
-A separate file **market.json** is written to the same folder as the journal, containing full market price info
+A separate file ***market.json*** is written to the same folder as the journal, containing full market price info
 
 Parameters:
 
@@ -472,31 +472,31 @@ The separate file also contains:
 
 - Items: array of objects
 
-    - id
+	- id
 
-    - Name
+	- Name
 
-    - Category
+	- Category
 
-    - BuyPrice
+	- BuyPrice
 
-    - SellPrice
+	- SellPrice
 
-    - MeanPrice
+	- MeanPrice
 
-    - StockBracket
+	- StockBracket
 
-    - DemandBracket
+	- DemandBracket
 
-    - Stock
+	- Stock
 
-    - Demand
+	- Demand
 
-    - Consumer: bool
+	- Consumer: bool
 
-    - Producer: bool
+	- Producer: bool
 
-    - Rare: bool
+	- Rare: bool
 
 
 
@@ -520,7 +520,7 @@ Separate file:
 
 { "id":128049155, "Name":"$silver_name;", "Name_Localised":"Silver", "Category":"$MARKET_category_metals;", "Category_Localised":"Metals", "BuyPrice":0, "SellPrice":5512, "MeanPrice":4759, "StockBracket":0, "DemandBracket":3, "Stock":0, "Demand":266258, "Consumer":true, "Producer":false, "Rare":false },   :
 
-: (about 100 lines later)
+*: (about 100 lines later)*
 
 :
 
@@ -540,17 +540,17 @@ Parameters:
 
 - Items: Array of records
 
-    - Slot
+	- Slot
 
-    - Name
+	- Name
 
-    - Hot
+	- Hot
 
-    - EngineerModifications (only present if modified)
+	- EngineerModifications (only present if modified)
 
-    - Level
+	- Level
 
-    - Quality
+	- Quality
 
 
 
@@ -566,19 +566,19 @@ Parameters:
 
 - Paid
 
-    - Material
+	- Material
 
-    - Category
+	- Category
 
-    - Quantity
+	- Quantity
 
 - Received
 
-    - Material
+	- Material
 
-    - Category
+	- Category
 
-    - Quantity
+	- Quantity
 
 
 
@@ -605,7 +605,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"MissionAbandoned", "Name":"Mission_Collect_name", "MissionID":65343025 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"MissionAbandoned", "Name":"Mission_Collect_name", "MissionID":65343025 }
 ```
 
 
@@ -716,17 +716,17 @@ Optional parameters (depending on mission type)
 
 - FactionEffects: array of records
 
-    - Faction
+	- Faction
 
-    - Effects: array of Effect and Trend value pairs
+	- Effects: array of Effect and Trend value pairs
 
-    - Influence: array of SystemAddress and Trend value pairs
+	- Influence: array of SystemAddress and Trend value pairs
 
-    - Reputation: Trend value
+	- Reputation: Trend value
 
 
 
-TrendValue can be UpGood, UpBad, DownGood, or DownBad
+*TrendValue* can be UpGood, UpBad, DownGood, or DownBad
 
 
 
@@ -825,7 +825,7 @@ If replacing an existing module:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"ModuleBuy", "Slot":"MediumHardpoint2", "SellItem":"hpt_pulselaser_fixed_medium", "SellPrice":0, "BuyItem":"hpt_multicannon_gimbal_medium", "BuyPrice":50018, "Ship":"cobramkiii","ShipID":1  }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"ModuleBuy", "Slot":"MediumHardpoint2", "SellItem":"hpt_pulselaser_fixed_medium", "SellPrice":0, "BuyItem":"hpt_multicannon_gimbal_medium", "BuyPrice":50018, "Ship":"cobramkiii","ShipID":1  }
 ```
 
 
@@ -882,7 +882,7 @@ Parameters:
 
 
 
-Example:{ "timestamp":"2016-06-10T14:32:03Z", "event":"ModuleSell", "Slot":"Slot06_Size2", "SellItem":"int_cargorack_size1_class1", "SellPrice":877, "Ship":"asp", "ShipID":1 }
+Example:{ "timestamp":"2016-06-10T14:32:03Z","event":"ModuleSell", "Slot":"Slot06_Size2", "SellItem":"int_cargorack_size1_class1", "SellPrice":877, "Ship":"asp", "ShipID":1 }
 
 
 
@@ -969,13 +969,13 @@ Parameters:
 Examples:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"ModuleSwap", "FromSlot":"MediumHardpoint1", "ToSlot":"MediumHardpoint2", "FromItem":"hpt_pulselaser_fixed_medium", "ToItem":"hpt_multicannon_gimbal_medium", "Ship":"cobramkiii", "ShipID":1  }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"ModuleSwap", "FromSlot":"MediumHardpoint1", "ToSlot":"MediumHardpoint2", "FromItem":"hpt_pulselaser_fixed_medium", "ToItem":"hpt_multicannon_gimbal_medium", "Ship":"cobramkiii", "ShipID":1  }
 ```
 
 
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"ModuleSwap", "FromSlot":"SmallHardpoint2", "ToSlot":"SmallHardpoint1", "FromItem":"hpt_pulselaserburst_fixed_small_scatter", "ToItem":"Null", "Ship":"cobramkiii", "ShipID":1  }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"ModuleSwap", "FromSlot":"SmallHardpoint2", "ToSlot":"SmallHardpoint1", "FromItem":"hpt_pulselaserburst_fixed_small_scatter", "ToItem":"Null", "Ship":"cobramkiii", "ShipID":1  }
 ```
 
 
@@ -984,7 +984,7 @@ Examples:
 
 Written when accessing the outfitting menu
 
-The full parts pricelist is written to a separate file **Outfitting.json**
+The full parts pricelist is written to a separate file ***Outfitting.json***
 
 Parameters:
 
@@ -1002,11 +1002,11 @@ The separate file also contains
 
 - Items: array of objects
 
-    - id
+	- id
 
-    - Name
+	- Name
 
-    - BuyPrice
+	- BuyPrice
 
 
 
@@ -1034,11 +1034,11 @@ Example: (in journal)
 
 { "id":128681995, "Name":"hpt_pulselaser_gimbal_huge", "BuyPrice":834269 },
 
-:
+*:*
 
-: (50 lines later)
+*: (50 lines later)*
 
-:
+*:*
 
 ] }
 
@@ -1114,15 +1114,15 @@ Parameters:
 
 - Amount: (Net amount received, after any broker fee)
 
-- Faction: name of faction (for types other than Bounty)
+- Faction: name of faction *(for types other than Bounty)*
 
 - BrokerPercentage (if redeemed through a broker)
 
-- Factions: array of faction/amount pairs (for Type=Bounty)
+- Factions: array of faction/amount pairs *(for Type=Bounty)*
 
 
 
-Example:{ "timestamp":"2016-06-10T14:32:03Z", "event":"RedeemVoucher", "Type":"bounty", Factions: [ { "Faction":"Ed's 38", "Amount":1000 }, { "Faction":"Zac's Lads", "Amount": 2000 } ] }
+Example:{ "timestamp":"2016-06-10T14:32:03Z","event":"RedeemVoucher", "Type":"bounty", Factions: [ { "Faction":"Ed's 38", "Amount":1000 }, { "Faction":"Zac's Lads", "Amount": 2000 } ] }
 
 
 
@@ -1141,7 +1141,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"RefuelAll", "Cost":317, "Amount":6.322901 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"RefuelAll", "Cost":317, "Amount":6.322901 }
 ```
 
 
@@ -1161,7 +1161,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"RefuelPartial", "Cost":83, "Amount":1.649000 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"RefuelPartial", "Cost":83, "Amount":1.649000 }
 ```
 
 
@@ -1181,7 +1181,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"Repair", "Item":"int_powerplant_size3_class5", "Cost":1100 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"Repair", "Item":"int_powerplant_size3_class5", "Cost":1100 }
 ```
 
 
@@ -1215,7 +1215,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"RestockVehicle", "Type":"SRV", "Loadout":"starter", "Cost":1030, "Count":1 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"RestockVehicle", "Type":"SRV", "Loadout":"starter", "Cost":1030, "Count":1 }
 ```
 
 
@@ -1271,7 +1271,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"SellDrones", "Type":"Drones", "Count":1, "SellPrice":91, "TotalSale":91 }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"SellDrones", "Type":"Drones", "Count":1, "SellPrice":91, "TotalSale":91 }
 ```
 
 
@@ -1340,7 +1340,7 @@ Parameters:
 
 
 
-The full price list is written to a separate file, in the same folder as the journal, **Shipyard.json**
+The full price list is written to a separate file, in the same folder as the journal, ***Shipyard.json***
 
 - Horizons: bool
 
@@ -1348,9 +1348,9 @@ The full price list is written to a separate file, in the same folder as the jou
 
 - Pricelist: array of objects
 
-    - ShipType
+	- ShipType
 
-    - ShipPrice
+	- ShipPrice
 
 
 
@@ -1536,27 +1536,27 @@ Parameters:
 
 - Items: (array of objects)
 
-    - Name
+	- Name
 
-    - StarSystem
+	- StarSystem
 
-    - MarketID: where the module is stored
+	- MarketID: where the module is stored
 
-    - StorageSlot
+	- StorageSlot
 
-    - TransferCost
+	- TransferCost
 
-    - TransferTime
+	- TransferTime
 
-    - Hot
+	- Hot
 
-    - EngineerModifications: (recipe name)
+	- EngineerModifications: (recipe name)
 
-    - Level
+	- Level
 
-    - Quality
+	- Quality
 
-    - InTransit:bool
+	- InTransit:bool
 
 
 
@@ -1592,27 +1592,27 @@ Parameters:
 
 - ShipsHere: (array of objects)
 
-    - ShipID
+	- ShipID
 
-    - ShipType
+	- ShipType
 
-    - Name (if named)
+	- Name (if named)
 
-    - Value
+	- Value
 
-    - Hot
+	- Hot
 
 - ShipsRemote: (array of objects)
 
-    - ShipID
+	- ShipID
 
-    - ShipType
+	- ShipType
 
-    - Name (if named)
+	- Name (if named)
 
-    - Value
+	- Value
 
-    - Hot
+	- Hot
 
 
 
@@ -1624,13 +1624,13 @@ If the ship is in transit:
 
 If the ship is not in transit:
 
-    - StarSystem
+	- StarSystem
 
-    - ShipMarketID
+	- ShipMarketID
 
-    - TransferPrice
+	- TransferPrice
 
-    - TransferType
+	- TransferType
 
 
 
@@ -1658,17 +1658,17 @@ Parameters:
 
 - Commodities:
 
-    - Name: name of item
+	- Name: name of item
 
-    - Count: number of items used
+	- Count: number of items used
 
 - Materials:
 
-    - Name
+	- Name
 
-    - Count
+	- Count
 
-    - Category
+	- Category
 
 
 

@@ -72,7 +72,7 @@ Example:
 { "timestamp":"2018-03-07T12:22:25Z", "event":"Docked", "StationName":"Jenner Orbital", "StationType":"Outpost", "StarSystem":"Luhman 16", "SystemAddress":22960358574928, "MarketID":3228883456, "StationFaction":"Union of Luhman 16 Values Party", "FactionState":"CivilWar", "StationGovernment":"$government_Democracy;", "StationGovernment_Localised":"Democracy", "StationAllegiance":"Federation", "StationServices":[ "Dock", "Autodock", "BlackMarket", "Commodities", "Contacts", "Exploration", "Missions", "Outfitting", "CrewLounge", "Rearm", "Refuel", "Workshop", "MissionsGenerated", "FlightController", "StationOperations", "Powerplay", "SearchAndRescue" ], "StationEconomy":"$economy_Refinery;", "StationEconomy_Localised":"Refinery", "StationEconomies":[ { "Name":"$economy_Refinery;", "Name_Localised":"Refinery", "Proportion":0.760000 }, { "Name":"$economy_Extraction;", "Name_Localised":"Extraction", "Proportion":0.240000 } ], "DistFromStarLS":10.061876 }
 ```
 
-StationServices can include:
+StationServices can include: Dock, Autodock, BlackMarket, Commodities, Contacts, Exploration, Initiatives, Missions, Outfitting,CrewLounge, Rearm, Refuel, Repair, Shipyard, Tuning, Workshop, MissionsGenerated, Facilitator, Research, FlightController, StationOperations, OnDockMission, Powerplay, SearchAndRescue,
 
 
 
@@ -196,29 +196,29 @@ Parameters:
 
 - Factions: an array of info for the local minor factions
 
-    - Name
+	- Name
 
-    - FactionState
+	- FactionState
 
-    - Government
+	- Government
 
-    - Influence
+	- Influence
 
-    - Happiness
+	- Happiness
 
-    - MyReputation
+	- MyReputation
 
-    - PendingStates: array (if any) with State name and Trend value
+	- PendingStates: array (if any) with State name and Trend value
 
-    - RecovingStates: array (if any)with State name and Trend value
+	- RecovingStates: array (if any)with State name and Trend value
 
-    - ActiveStates: array with State names (Note active states do not have a Trend value)
+	- ActiveStates: array with State names (Note active states do not have a Trend value)
 
-    - SquadronFaction:true (if player is in squadron aligned to this faction)
+	- SquadronFaction:true (if player is in squadron aligned to this faction)
 
-    - HappiestSystem:true (if player squadron faction, and this is happiest system)
+	- HappiestSystem:true (if player squadron faction, and this is happiest system)
 
-    - HomeSystem:true(if player squadron faction, and this is home system)
+	- HomeSystem:true(if player squadron faction, and this is home system)
 
 
 
@@ -248,7 +248,7 @@ Example:
 
 When written: when selecting a star system to jump to
 
-Note, when following a multi-jump route, this will typically appear for the next star, during a jump, ie after “StartJump” but before the “FSDJump”
+Note, when following a multi-jump route, this will typically appear for the *next* star, during a jump, ie after "StartJump" but before the "FSDJump"
 
 Parameters:
 
@@ -387,7 +387,7 @@ Parameters:
 Example:
 
 ```
-{"timestamp":"2016-06-10T14:32:03Z",  "event":"SupercruiseEntry", "StarSystem":"Yuetu" }
+{"timestamp":"2016-06-10T14:32:03Z", "event":"SupercruiseEntry", "StarSystem":"Yuetu" }
 ```
 
 
@@ -411,7 +411,7 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"SupercruiseExit", "StarSystem":"Yuetu", "Body":"Yuetu B" }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"SupercruiseExit", "StarSystem":"Yuetu", "Body":"Yuetu B" }
 ```
 
 
@@ -453,6 +453,6 @@ Parameters:
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"Undocked", "StationName":"Long Sight Base" }
+{ "timestamp":"2016-06-10T14:32:03Z","event":"Undocked", "StationName":"Long Sight Base" }
 ```
 
