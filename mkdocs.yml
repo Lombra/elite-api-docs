@@ -4,7 +4,7 @@ extra_css:
     - custom.css
 nav:
     - Introduction: index.md
-    - File Format.md
+    - File format: File Format.md
     - Startup.md
     - Travel.md
     - Combat.md
