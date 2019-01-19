@@ -6,22 +6,24 @@ When written: when collecting powerplay commodities for delivery
 
 Parameters:
 
-- Power: 	name of power 
-- Type: 	type of commodity 
-- Count: 	number of units 
+- Power: name of power 
+- Type: type of commodity 
+- Count: number of units 
 
-
-  
 
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"PowerplayCollect", "Power":"Li Yong-Rui", "Type":"siriusfranchisepackage", "Count":10 }
+{
+	"timestamp": "2016-06-10T14:32:03Z",
+	"event": "PowerplayCollect",
+	"Power": "Li Yong-Rui",
+	"Type": "siriusfranchisepackage",
+	"Count": 10
+}
 ```
 
-  
-
-### PowerplayDefect		
+### PowerplayDefect
 
 When written: when a player defects from one power to another
 
@@ -31,15 +33,16 @@ Parameters:
 - ToPower 
 
 
-  
-
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"PowerplayDefect", "FromPower":"Zachary Hudson", "ToPower":"Li Yong-Rui" }
+{
+	"timestamp": "2016-06-10T14:32:03Z",
+	"event": "PowerplayDefect",
+	"FromPower": "Zachary Hudson",
+	"ToPower": "Li Yong-Rui"
+}
 ```
-
-  
 
 ### PowerplayDeliver
 
@@ -52,15 +55,17 @@ Parameters:
 - Count 
 
 
-  
-
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"PowerplayDeliver", "Power":"Li Yong-Rui", "Type":"siriusfranchisepackage", "Count":10 }
+{
+	"timestamp": "2016-06-10T14:32:03Z",
+	"event": "PowerplayDeliver",
+	"Power": "Li Yong-Rui",
+	"Type": "siriusfranchisepackage",
+	"Count": 10
+}
 ```
-
-  
 
 ### PowerplayFastTrack
 
@@ -72,26 +77,24 @@ Parameters:
 - Cost 
 
 
-  
-
 ### PowerplayJoin
 
 When written: when joining up with a power
 
 Parameters:
 
-- 	Power 
+- Power 
 
-
-  
 
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"PowerplayJoin", "Power":"Zachary Hudson" }
+{
+	"timestamp": "2016-06-10T14:32:03Z",
+	"event": "PowerplayJoin",
+	"Power": "Zachary Hudson"
+}
 ```
-
-  
 
 ### PowerplayLeave
 
@@ -102,15 +105,15 @@ Parameters:
 - Power 
 
 
-  
-
 Example:
 
 ```
-{ "timestamp":"2016-06-10T14:32:03Z", "event":"PowerplayLeave", "Power":"Li Yong-Rui" }
+{
+	"timestamp": "2016-06-10T14:32:03Z",
+	"event": "PowerplayLeave",
+	"Power": "Li Yong-Rui"
+}
 ```
-
-  
 
 ### PowerplaySalary
 
@@ -121,10 +124,6 @@ Parameters:
 - Power 
 - Amount 
 
-
-  
-
-  
 
 ### PowerplayVote
 
@@ -137,16 +136,11 @@ Parameters:
 - System 
 
 
-  
-
 ### PowerplayVoucher
 
 When written: when receiving payment for powerplay combat
 
 Parameters:
 
-- 	Power 
+- Power 
 - Systems:[name,name] 
-
-
-  
