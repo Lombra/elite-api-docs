@@ -168,7 +168,7 @@ Parameters:
 
 - Offender 
 - CrimeType 
-- Fine _or _Bounty 
+- Fine _or_ Bounty 
 
 
 ### DatalinkScan
