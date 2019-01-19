@@ -17,4 +17,4 @@ pages:
     - Status File.md
     - Appendix.md
 markdown_extensions:
-    - pymdownx.tilde
+    - 'pymdownx.tilde'
