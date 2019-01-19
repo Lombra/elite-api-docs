@@ -16,5 +16,3 @@ pages:
     - Other Events.md
     - Status File.md
     - Appendix.md
-markdown_extensions:
-    - pymdownx.tilde

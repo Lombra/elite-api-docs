@@ -426,8 +426,6 @@ Parameters:
 
 - BodyName 
 - BodyID 
-- ~~Discoverers: (array of names)~~ 
-- ~~Mappers: (array of names)~~ 
 - ProbesUsed: (int) 
 - EfficiencyTarget: (int) 
 

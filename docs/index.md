@@ -92,7 +92,7 @@ Errata
 - Fix capitalisation for BodyName in SAAScanComplete (§6.13) 
 
 
-**Version 20 – for v3.3 (beta 1) **_(released 30_^_th_^_ Oct 2018)_
+**Version 20 – for v3.3 (beta 1) **_(released 30th Oct 2018)_
 
 - Multiple faction activestates – in Location and FSDJump events (§4.8,§4.12) 
 - The first "Cargo" event written to the journal contains full inventory (§3.1) 
@@ -103,7 +103,7 @@ Errata
 - Added several events for Squadrons(§10) 
 
 
-**Version 19 – for v3.3 **_(preview released 20_^_th_^_ Sept 2018)_
+**Version 19 – for v3.3 **_(preview released 20th Sept 2018)_
 
 - Simplify the "Category" in MaterialTrade 
 - Clarify meaning of bit 14 in status file: was called "under ship" but actually indicates when turret is retracted 
@@ -123,19 +123,19 @@ Errata
 - MissionCompleted now indicates correct destination after redirection 
 
 
-**Version 18 – for v3.0.4** (27^th^ March 2018)
+**Version 18 – for v3.0.4** (27th March 2018)
 
-**Version 17 – for v3.0.3 **(19^th^ March 2018)
+**Version 17 – for v3.0.3 **(19th March 2018)
 
-**Version 16 – for v3.0.2 **(5^th^ March 2018)
+**Version 16 – for v3.0.2 **(5th March 2018)
 
-**Version 15 – for v3.0 – beta3 **(6^th^ Feb 2018)
+**Version 15 – for v3.0 – beta3 **(6th Feb 2018)
 
 **Version 14 – for v3.0 – beta1** (25/Jan/2018)
 
-**Version 13 - In 2.4 Open beta **_(24_^_th_^_ Aug 2017)_
+**Version 13 - In 2.4 Open beta **_(24th Aug 2017)_
 
-**Version 12 - In 2.4 beta1 **_(17_^_th_^_ Aug 2017)_
+**Version 12 - In 2.4 beta1 **_(17th Aug 2017)_
 
 **Version 11** _published 26/Jun/2017_
 
