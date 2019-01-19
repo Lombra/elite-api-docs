@@ -2,17 +2,101 @@
 
 ### Ranks
 
-_**Combat ranks**_: 0='Harmless', 1='Mostly Harmless', 2='Novice', 3='Competent', 4='Expert', 5='Master', 6='Dangerous', 7='Deadly', 8='Elite'
+_**Combat ranks**_:
 
-_**Trade ranks**_: 0='Penniless', 1='Mostly Pennliess', 2='Peddler', 3='Dealer', 4='Merchant', 5='Broker', 6='Entrepreneur', 7='Tycoon', 8='Elite'
+Index|Rank
+-:|
+0|'Harmless'
+1|'Mostly Harmless'
+2|'Novice'
+3|'Competent'
+4|'Expert'
+5|'Master'
+6|'Dangerous'
+7|'Deadly'
+8|'Elite'
 
-_**Exploration ranks**_: 0='Aimless', 1='Mostly Aimless', 2='Scout', 3='Surveyor', 4='Explorer', 5='Pathfinder', 6='Ranger', 7='Pioneer', 8='Elite'
+_**Trade ranks**_:
 
-_**Federation ranks**_: 0='None', 1='Recruit', 2='Cadet', 3='Midshipman', 4='Petty Officer', 5='Chief Petty Officer', 6='Warrant Officer', 7='Ensign', 8='Lieutenant', 9='Lt. Commander', 10='Post Commander', 11= 'Post Captain', 12= 'Rear Admiral', 13='Vice Admiral', 14='Admiral'
+Index|Rank
+-:|
+0|'Penniless'
+1|'Mostly Pennliess'
+2|'Peddler'
+3|'Dealer'
+4|'Merchant'
+5|'Broker'
+6|'Entrepreneur'
+7|'Tycoon'
+8|'Elite'
 
-_**Empire ranks**_: 0='None', 1='Outsider', 2='Serf', 3='Master', 4='Squire', 5='Knight', 6='Lord', 7='Baron',  8='Viscount ', 9='Count', 10= 'Earl', 11='Marquis' 12='Duke', 13='Prince', 14='King'
+_**Exploration ranks**_:
 
-_**CQC ranks**_: 0='Helpless', 1='Mostly Helpless', 2='Amateur', 3='Semi Professional', 4='Professional', 5='Champion', 6='Hero', 7='Legend', 8='Elite'
+Index|Rank
+-:|
+0|'Aimless'
+1|'Mostly Aimless'
+2|'Scout'
+3|'Surveyor'
+4|'Explorer'
+5|'Pathfinder'
+6|'Ranger'
+7|'Pioneer'
+8|'Elite'
+
+_**Federation ranks**_:
+
+Index|Rank
+-:|
+0|'None'
+1|'Recruit'
+2|'Cadet'
+3|'Midshipman'
+4|'Petty Officer'
+5|'Chief Petty Officer'
+6|'Warrant Officer'
+7|'Ensign'
+8|'Lieutenant'
+9|'Lt. Commander'
+10|'Post Commander'
+11|'Post Captain'
+12|'Rear Admiral'
+13|'Vice Admiral'
+14|'Admiral'
+
+_**Empire ranks**_:
+
+Index|Rank
+-:|
+0|'None'
+1|'Outsider'
+2|'Serf'
+3|'Master'
+4|'Squire'
+5|'Knight'
+6|'Lord'
+7|'Baron'
+8|'Viscount'
+9|'Count'
+10|'Earl'
+11|'Marquis'
+12|'Duke'
+13|'Prince'
+14|'King'
+
+_**CQC ranks**_:
+
+Index|Rank
+-:|
+0|'Helpless'
+1|'Mostly Helpless'
+2|'Amateur'
+3|'Semi Professional'
+4|'Professional'
+5|'Champion'
+6|'Hero'
+7|'Legend'
+8|'Elite'
 
 ### Star Descriptions
 
@@ -54,251 +138,165 @@ StellarRemnantNebula
 
 ### Planet Classes
 
-Metal rich body
-
-High metal content body
-
-Rocky body
-
-Icy body
-
-Rocky ice body
-
-Earthlike body
-
-Water world
-
-Ammonia world
-
-Water giant
-
-Water giant with life
-
-Gas giant with water based life
-
-Gas giant with ammonia based life
-
-Sudarsky class I gas giant (also class II, III, IV, V)
-
-Helium rich gas giant
-
-Helium gas giant
+- Metal rich body
+- High metal content body
+- Rocky body
+- Icy body
+- Rocky ice body
+- Earthlike body
+- Water world
+- Ammonia world
+- Water giant
+- Water giant with life
+- Gas giant with water based life
+- Gas giant with ammonia based life
+- Sudarsky class I gas giant (also class II, III, IV, V)
+- Helium rich gas giant
+- Helium gas giant
 
 ### Atmosphere Classes
 
-No atmosphere
-
-Suitable for water-based life
-
-Ammonia and oxygen
-
-Ammonia
-
-Water
-
-Carbon dioxide
-
-Sulphur dioxide
-
-Nitrogen
-
-Water-rich
-
-Methane-rich
-
-Ammonia-rich
-
-Carbon dioxide-rich
-
-Methane
-
-Helium
-
-Silicate vapour
-
-Metallic vapour
-
-Neon-rich
-
-Argon-rich
-
-Neon
-
-Argon
-
-Oxygen
+- No atmosphere
+- Suitable for water-based life
+- Ammonia and oxygen
+- Ammonia
+- Water
+- Carbon dioxide
+- Sulphur dioxide
+- Nitrogen
+- Water-rich
+- Methane-rich
+- Ammonia-rich
+- Carbon dioxide-rich
+- Methane
+- Helium
+- Silicate vapour
+- Metallic vapour
+- Neon-rich
+- Argon-rich
+- Neon
+- Argon
+- Oxygen
 
 ### Volcanism classes
 
 (all with possible 'minor' or 'major' qualifier)
 
-None
-
-Water Magma
-
-Sulphur Dioxide Magma
-
-Ammonia Magma
-
-Methane Magma
-
-Nitrogen Magma
-
-Silicate Magma
-
-Metallic Magma
-
-Water Geysers
-
-Carbon Dioxide Geysers
-
-Ammonia Geysers
-
-Methane Geysers
-
-Nitrogen Geysers
-
-Helium Geysers
-
-Silicate Vapour Geysers
+- None
+- Water Magma
+- Sulphur Dioxide Magma
+- Ammonia Magma
+- Methane Magma
+- Nitrogen Magma
+- Silicate Magma
+- Metallic Magma
+- Water Geysers
+- Carbon Dioxide Geysers
+- Ammonia Geysers
+- Methane Geysers
+- Nitrogen Geysers
+- Helium Geysers
+- Silicate Vapour Geysers
 
 ### Crime types
 
-Assault
-
-Murder
-
-Piracy
-
-Interdiction
-
-IllegalCargo
-
-DisobeyPolice
-
-FireInNoFireZone
-
-FireInStation
-
-DumpingDangerous
-
-DumpingNearStation
-
-DockingMinor_BlockingAirlock
-
-DockingMajor_BlockingAirlock
-
-DockingMinor_BlockingLandingPad
-
-DockingMajor_BlockingLandingPad
-
-DockingMinor_Trespass
-
-DockingMajor_Trespass
-
-CollidedAtSpeedInNoFireZone
-
-CollidedAtSpeedInNoFireZone_HullDamage
+- Assault
+- Murder
+- Piracy
+- Interdiction
+- IllegalCargo
+- DisobeyPolice
+- FireInNoFireZone
+- FireInStation
+- DumpingDangerous
+- DumpingNearStation
+- DockingMinor_BlockingAirlock
+- DockingMajor_BlockingAirlock
+- DockingMinor_BlockingLandingPad
+- DockingMajor_BlockingLandingPad
+- DockingMinor_Trespass
+- DockingMajor_Trespass
+- CollidedAtSpeedInNoFireZone
+- CollidedAtSpeedInNoFireZone_HullDamage
 
 ### BodyType values
 
-"Null" (eg the barycentre of a binary star system)
-
-"Star"
-
-"Planet"
-
-"PlanetaryRing"
-
-"StellarRing"
-
-"Station"
-
-"AsteroidCluster"
+- "Null" (eg the barycentre of a binary star system)
+- "Star"
+- "Planet"
+- "PlanetaryRing"
+- "StellarRing"
+- "Station"
+- "AsteroidCluster"
 
 ### Gases in AtmosphereComposition
 
-Water
-
-Oxygen
-
-CarbonDioxide
-
-SulphurDioxide
-
-Ammonia
-
-Methane
-
-Nitrogen
-
-Hydrogen
-
-Helium
-
-Neon
-
-Argon
-
-Silicates
-
-Iron
+- Water
+- Oxygen
+- CarbonDioxide
+- SulphurDioxide
+- Ammonia
+- Methane
+- Nitrogen
+- Hydrogen
+- Helium
+- Neon
+- Argon
+- Silicates
+- Iron
 
 ### Star Luminosity classes
 
-0,
-
-I,
-
-Ia0,
-
-Ia,
-
-Ib,
-
-Iab,
-
-II,
-
-IIa,
-
-IIab,
-
-IIb,
-
-III,
-
-IIIa,
-
-IIIab,
-
-IIIb,
-
-IV,
-
-IVa,
-
-IVab,
-
-IVb,
-
-V,
-
-Va,
-
-Vab,
-
-Vb,
-
-Vz,
-
-VI,
-
-VII,
+- 0
+- I
+- Ia0
+- Ia
+- Ib
+- Iab
+- II
+- IIa
+- IIab
+- IIb
+- III
+- IIIa
+- IIIab
+- IIIb
+- IV
+- IVa
+- IVab
+- IVb
+- V
+- Va
+- Vab
+- Vb
+- Vz
+- VI
+- VII
 
 ### Engineer IDs
 
-300000Didi Vatermann 300010Bill Turner 300030Broo Tarquin 300040The Sarge 300050Zachariah Nemo 300080Liz Ryder 300090Hera Tani 300100Felicity Farseer 300110Ram Tah 300120Lei Cheung 300140Col. Bris Dekker 300160Elvira Martuuk 300180The Dweller 300200Marco Quent 300210Selene Jean 300220Prof. Palin 300230Lori Jameson 300250Juri Ishmaak 300260Tod 'The Blaster' McQuinn 300270Tiana Fortune
+ID|Name
+-:|
+300000|Didi Vatermann
+300010|Bill Turner
+300030|Broo Tarquin
+300040|The Sarge
+300050|Zachariah Nemo
+300080|Liz Ryder
+300090|Hera Tani
+300100|Felicity Farseer
+300110|Ram Tah
+300120|Lei Cheung
+300140|Col. Bris Dekker
+300160|Elvira Martuuk
+300180|The Dweller
+300200|Marco Quent
+300210|Selene Jean
+300220|Prof. Palin
+300230|Lori Jameson
+300250|Juri Ishmaak
+300260|Tod 'The Blaster' McQuinn
+300270|Tiana Fortune
 
 ### Module Attributes
 
@@ -443,8 +441,29 @@ These are the named attributes on modules, but not all are modifiable via engine
 
 The following module attributes have enum values, written as a string, all others are float
 
-WeaponMode should be one of:    ForwardFire, Gimbal, TargetOnly, FireAtWill, Manual, NoMode
+WeaponMode should be one of:
 
-DamageType should be one of: Kinetic, Thermal, Explosive, Collision, Thargoid, AntiThargoid
+- ForwardFire
+- Gimbal
+- TargetOnly
+- FireAtWill
+- Manual
+- NoMode
 
-CabinClass should be one of: Prison, Economy, Standard, Business, First, Luxury
+DamageType should be one of:
+
+- Kinetic
+- Thermal
+- Explosive
+- Collision
+- Thargoid
+- AntiThargoid
+
+CabinClass should be one of:
+
+- Prison
+- Economy
+- Standard
+- Business
+- First
+- Luxury
