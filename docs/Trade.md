@@ -69,7 +69,17 @@ If the cargo is related to powerplay delivery _from outlying systems back to the
 - PowerplayOrigin: starsystem name 
 
 
-Examples: { "timestamp":"2016-06-10T14:32:03Z", "event":"EjectCargo", "Type":"tobacco", "Count":1, "Abandoned":true }
+Examples:
+
+```
+{
+	"timestamp": "2016-06-10T14:32:03Z",
+	"event": "EjectCargo",
+	"Type": "tobacco",
+	"Count": 1,
+	"Abandoned": true
+}
+```
 
 ```
 {

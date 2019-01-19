@@ -109,13 +109,13 @@ Parameters:
 		- Bonus: string 
 
 
-If the community goal is constructed with a fixed-size top rank (ie max reward for top 10 players)
+- If the community goal is constructed with a fixed-size top rank (ie max reward for top 10 players)
 
 	- TopRankSize: (integer) 
 	- PlayerInTopRank: (Boolean) 
 
 
-If the community goal has reached the first success tier:
+- If the community goal has reached the first success tier:
 
 	- TierReached 
 	- Bonus 
@@ -1382,14 +1382,11 @@ Example: in the Journal:
 In the separate shipyard.json file:
 ```
 { "timestamp":"2017-10-04T10:01:38Z", "event":"Shipyard", "MarketID": 128122104, "StationName":"Seven Holm", "StarSystem":"Tamor", "Horizons":true, "AllowCobraMkIV":true, "PriceList":[
-{ "id":128049249, "ShipType":"sidewinder", "ShipPrice":24336 },
-{ "id":128049255, "ShipType":"eagle", "ShipPrice":34071 },
-{ "id":128049261, "ShipType":"hauler", "ShipPrice":40094 },
-{ "id":128049267, "ShipType":"adder", "ShipPrice":66779 },
-{ "id":128672138, "ShipType":"empire_eagle", "ShipType_Localised":"Imperial Eagle", "ShipPrice":84283 },
-
-:
-
+	{ "id":128049249, "ShipType":"sidewinder", "ShipPrice":24336 },
+	{ "id":128049255, "ShipType":"eagle", "ShipPrice":34071 },
+	{ "id":128049261, "ShipType":"hauler", "ShipPrice":40094 },
+	{ "id":128049267, "ShipType":"adder", "ShipPrice":66779 },
+	{ "id":128672138, "ShipType":"empire_eagle", "ShipType_Localised":"Imperial Eagle", "ShipPrice":84283 },
 ] }
 ```
 
@@ -1583,12 +1580,12 @@ Parameters:
 	- Hot 
 
 
-If the ship is in transit:
+- If the ship is in transit:
 
-- InTransit: true 
+	- InTransit: true 
 
 
-If the ship is not in transit:
+- If the ship is not in transit:
 
 	- StarSystem 
 	- ShipMarketID 
