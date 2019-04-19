@@ -10,6 +10,7 @@ The new Player Journal provides a stream of information about gameplay events wh
 
 A short example of a player journal file (_**out of date, some events may have additional data**_):
 
+
 ```
 {"timestamp":"2016-06-10T14:31:00Z", "event":"FileHeader", "part":1, "gameversion":"2.2", "build":"r113684 " },
 {"timestamp":"2016-06-10T14:32:03Z", "event":"LoadGame", "Commander":"HRC1", "Ship":"SideWinder", "ShipID":1, "GameMode":"Open", "Credits":600120, "Loan":0  }
@@ -32,6 +33,41 @@ A short example of a player journal file (_**out of date, some events may have a
 ```
 
 ### ChangeLog
+
+**Version 25**
+
+**Changes for v3.4**
+
+- FSDJump event – now includes "Body" info about the arrival star 
+- Don't write a spurious "FighterRebuilt" event after docking SLF back in the ship 
+- "ApproachSettlement" now includes body info 
+- The "Loadout" event: 
+	- no longer includes spurious ammo stats for energy weapons 
+	- now includes UnladenMass and FuelCapacity info 
+	- now written when docking SRV back in mothership 
+	- now includes CargoCapacity, and MaxJumpRange 
+	- Module item names are now consistently lowercase 
+- Status.json: 
+	- include LegalState 
+	- includes info on nearby planet, and 'AltFromAvgRad" flag 
+- Scan: include a star's subclass 
+- Location: include DistFromStarLS 
+- Add Conflicts data in FSDJump and Location 
+- Include Vehicle ID for SLF/SRV (LaunchFighter, LaunchSRV, FighterRebuilt, FighterDestroyed, DockSRV, DockFighter, SRVDestroyed, CrewLaunchFighter) 
+- Add info in Scan event to show if the body was previously discovered or mapped 
+
+
+**Version 24**
+
+**In v3.3.03:**
+
+- Change to SystemFaction and StationFaction info in Location, FSDJump, and Docked events (to avoid have multiple FactionState values in a Json record) 
+
+
+**Bugs Fixed**
+
+- Any CR/LF is now removed from localised strings 
+
 
 **Version 23 – v3.3.02 (Jan 2019)**
 
@@ -137,16 +173,16 @@ Errata
 
 **Version 12 - In 2.4 beta1 **_(17th Aug 2017)_
 
-**Version 11** _published 26/Jun/2017_
+**Version 11**_published 26/Jun/2017_
 
-**Version 10** _published 29/Mar/2017 (for v2.3 beta 5)_
+**Version 10**_published 29/Mar/2017 (for v2.3 beta 5)_
 
-**Version 9** _published 20/Feb/2017 (for v2.3 beta)_
+**Version 9**_published 20/Feb/2017 (for v2.3 beta)_
 
-**Version 8** _published 10/Jan/2017 (for v2.2.03)_
+**Version 8**_published 10/Jan/2017 (for v2.2.03)_
 
-**Version 7** _published 15/Nov/2016 (for release 2.2.02)_
+**Version 7**_published 15/Nov/2016 (for release 2.2.02)_
 
-**Version 6** _published 26/Oct/2016 (for 2.2 public release)_
+**Version 6**_published 26/Oct/2016 (for 2.2 public release)_
 
 **Version 1** was published 20/July/2016

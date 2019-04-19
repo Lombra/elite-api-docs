@@ -34,7 +34,8 @@ Parameters:
 - StarSystem: name of system 
 - CockpitBreach:true (only if landing with breached cockpit) 
 - StationFaction: station's controlling faction 
-- FactionState 
+	- Name 
+	- FactionState 
 - StationAllegiance 
 - StationEconomy : (station's primary economy) 
 - StationEconomies: (array of name and proportion values) 
@@ -58,8 +59,10 @@ Example:
 	"StarSystem": "Luhman 16",
 	"SystemAddress": 22960358574928,
 	"MarketID": 3228883456,
-	"StationFaction": "Union of Luhman 16 Values Party",
-	"FactionState": "CivilWar",
+	"StationFaction": {
+		"Name": "Union of Luhman 16 Values Party",
+		"FactionState": "CivilWar"
+	},
 	"StationGovernment": "$government_Democracy;",
 	"StationGovernment_Localised": "Democracy",
 	"StationAllegiance": "Federation",
@@ -176,7 +179,8 @@ Parameters:
 - FuelLevel 
 - BoostUsed: whether FSD boost was used 
 - SystemFaction: system controlling faction 
-- FactionState 
+	- Name 
+	- FactionState 
 - SystemAllegiance 
 - SystemEconomy 
 - SystemSecondEconomy 
@@ -197,6 +201,11 @@ Parameters:
 	- SquadronFaction:true (if player is in squadron aligned to this faction) 
 	- HappiestSystem:true (if player squadron faction, and this is happiest system) 
 	- HomeSystem:true(if player squadron faction, and this is home system) 
+- Conflicts: an array of info about local conflicts (if any) 
+	- WarType 
+	- Status 
+	- Faction1: { Name, Stake, WonDays } 
+	- Faction2: { Name, Stake, WonDays } 
 
 
 If the player is pledged to a Power in Powerplay, and the star system is involved in powerplay,
@@ -344,9 +353,23 @@ Example:
 			]
 		}
 	],
-	"SystemFaction": "Mob of Eranin",
-	"FactionState": "CivilLiberty"
+	"SystemFaction": {
+		"Name": "Mob of Eranin",
+		"FactionState": "CivilLiberty"
+	}
 }
+```
+
+Example Conflict data:
+
+```
+"Conflicts": [
+	{
+		"WarType": "war", "Status": "active",
+		"Faction1": {"Name": "Movement for LHS 3163 League","Stake": "","WonDays": 0},
+		"Faction2": {"Name": "Official i Bootis Liberty Party","Stake": "Red Bronco Farms","WonDays": 1}
+	}
+]
 ```
 
 ### FSDTarget
@@ -408,6 +431,7 @@ Parameters:
 - Body: star or planet's body name 
 - BodyID 
 - BodyType 
+- DistFromStarLS: (unless close to main star) 
 - Docked: (bool) 
 - Latitude (If landed) 
 - Longitude (if landed) 
@@ -415,7 +439,8 @@ Parameters:
 - StationType: (if docked) 
 - MarketID: (if docked) 
 - SystemFaction: star system controlling faction 
-- FactionState 
+	- Name 
+	- FactionState 
 - SystemAllegiance 
 - SystemEconomy 
 - SystemSecondEconomy 
@@ -423,6 +448,7 @@ Parameters:
 - SystemSecurity 
 - Wanted 
 - Factions: an array with info on local minor factions (similar to FSDJump) 
+- Conflicts: an array with info on local conflicts (similar to FSDJump) 
 
 
 If the player is pledged to a Power in Powerplay, and the star system is involved in powerplay,
@@ -436,7 +462,8 @@ The faction data includes happiness info, and can include multiple active states
 If starting docked in a station, also include:
 
 - StationFaction 
-- FactionState 
+	- Name 
+	- FactionState 
 - StationGovernment 
 - StationAllegiance 
 - StationServices 

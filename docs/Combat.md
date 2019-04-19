@@ -168,7 +168,10 @@ Parameters: none
 
 When written: when taking damage due to overheating
 
-Parameters:none
+Parameters:
+
+- ID 
+
 
 ### HeatWarning
 
@@ -320,7 +323,10 @@ If scan stage &gt;= 3
 
 When written: when the player's SRV is destroyed
 
-Parameters: none
+Parameters:
+
+- ID 
+
 
 ### UnderAttack
 

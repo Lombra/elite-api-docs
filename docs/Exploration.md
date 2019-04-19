@@ -69,6 +69,7 @@ Parameters(star)
 - BodyID 
 - DistanceFromArrivalLS 
 - StarType: Stellar classification (for a star) – see §13.2 
+- Subclass: Star's heat classification 0..9 
 - StellarMass: mass as multiple of Sol's mass 
 - Radius 
 - AbsoluteMagnitude 
@@ -76,7 +77,9 @@ Parameters(star)
 - SurfaceTemperature 
 - Luminosity – see §13.9 
 - Age_MY: age in millions of years 
-- Rings: [ array ] – if present
+- Rings: [ array ] – if present 
+- WasDiscovered: bool 
+- WasMapped: bool 
 
 
 Parameters(Planet/Moon)
@@ -101,7 +104,7 @@ Parameters(Planet/Moon)
 - Composition: structure containing info on solid composition
 	- Ice 
 	- Rock 
-	- Metal   
+	- Metal  
 - Rings: [ array of info ] – if rings present
 - ReserveLevel: (Pristine/Major/Common/Low/Depleted) – if rings present
 
@@ -426,6 +429,8 @@ Parameters:
 
 - BodyName 
 - BodyID 
+- ~~Discoverers: (array of names)~~ 
+- ~~Mappers: (array of names)~~ 
 - ProbesUsed: (int) 
 - EfficiencyTarget: (int) 
 

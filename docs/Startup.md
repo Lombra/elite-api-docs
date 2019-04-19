@@ -84,7 +84,7 @@ Parameters:
 
 ### Loadout
 
-When written: at startup, when loading from main menu, or when switching ships, or after changing the ship in Outfitting
+When written: at startup, when loading from main menu, or when switching ships, or after changing the ship in Outfitting, or when docking SRV back in mothership
 
 Parameters:
 
@@ -95,13 +95,17 @@ Parameters:
 - HullValue – may not always be present 
 - ModulesValue – may not always be present 
 - HullHealth 
+- UnladenMass – Mass of Hull and Modules, excludes fuel and cargo 
+- FuelCapacity: { Main: , Reserve: } 
+- CargoCapacity 
+- MaxJumpRange: (based on zero cargo, and just enough fuel for 1 jump) 
 - Rebuy 
 - Hot: (if wanted at startup – may not always be present) 
 
 
 - Modules: array of installed items, each with: 
 	- Slot: slot name 
-	- Item: module name 
+	- Item: module name - lowercase 
 	- On: bool, indicates on or off 
 	- Priority: power priority 
 	- Health 

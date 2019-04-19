@@ -36,6 +36,9 @@ Parameters:
 - MarketID 
 - Latitude 
 - Longitude 
+- SystemAddress 
+- BodyID 
+- BodyName 
 
 
 ### ChangeCrewRole
@@ -118,7 +121,7 @@ When written: when in multicrew, in Helm player's log, when a crew member launch
 Parameters:
 
 - Crew: name of crew member launching in fighter 
-
+- ID 
 
 
 ### CrewMemberJoins
@@ -168,7 +171,7 @@ Parameters:
 
 - Offender 
 - CrimeType 
-- Fine _or_ Bounty 
+- Fine _or _Bounty 
 
 
 ### DatalinkScan
@@ -206,7 +209,10 @@ Type will typically be one of "DataLink", "DataPoint", "ListeningPost", "Abandon
 
 When written: when docking a fighter back with the mothership
 
-Parameters: none
+Parameters:
+
+- ID 
+
 
 Example:
 
@@ -221,7 +227,10 @@ Example:
 
 When written: when docking an SRV with the ship
 
-Parameters: none
+Parameters:
+
+- ID 
+
 
 ### EndCrewSession
 
@@ -239,6 +248,7 @@ When written: when a ship's fighter is rebuilt in the hangar
 Parameters:
 
 - Loadout 
+- ID 
 
 
 ### FuelScoop
@@ -329,6 +339,7 @@ When written: when launching a fighter
 Parameters:
 
 - Loadout 
+- ID 
 - PlayerControlled: whether player is controlling the fighter from launch 
 
 
@@ -348,6 +359,7 @@ When written: deploying the SRV from a ship onto planet surface
 Parameters:
 
 - Loadout 
+- ID 
 
 
 ### ModuleInfo
@@ -362,22 +374,39 @@ Example of ModulesInfo file:
 
 ```
 { "timestamp":"2018-01-10T14:35:08Z", "event":"ModuleInfo", "Modules":[
+
 { "Slot":"MainEngines", "Item":"int_engine_size3_class5", "Power":3.720000, "Priority":0 },
+
 { "Slot":"MediumHardpoint1", "Item":"hpt_beamlaser_turret_medium", "Power":0.930000, "Priority":0 },
+
 { "Slot":"Slot03_Size2", "Item":"int_shieldgenerator_size2_class1", "Power":0.900000, "Priority":2 },
+
 { "Slot":"MediumHardpoint2", "Item":"hpt_multicannon_gimbal_medium", "Power":0.640000, "Priority":0 },
+
 { "Slot":"CargoHatch", "Item":"modularcargobaydoor", "Power":0.600000, "Priority":2 },
+
 { "Slot":"MediumHardpoint3", "Item":"hpt_pulselaser_gimbal_medium", "Power":0.600000, "Priority":0 },
+
 { "Slot":"PowerDistributor", "Item":"int_powerdistributor_size3_class5", "Power":0.600000, "Priority":0 },
+
 { "Slot":"FrameShiftDrive", "Item":"int_hyperdrive_size3_class5", "Power":0.450000, "Priority":0 },
+
 { "Slot":"Slot04_Size2", "Item":"int_fuelscoop_size2_class5", "Power":0.390000, "Priority":0 },
+
 { "Slot":"LifeSupport", "Item":"int_lifesupport_size1_class1", "Power":0.320000, "Priority":2 },
+
 { "Slot":"Slot05_Size2", "Item":"int_buggybay_size2_class1", "Power":0.250000, "Priority":0 },
+
 { "Slot":"Radar", "Item":"int_sensors_size2_class2", "Power":0.210000, "Priority":0 },
+
 { "Slot":"ShipCockpit", "Item":"empire_courier_cockpit", "Power":0.000000 },
+
 { "Slot":"PowerPlant", "Item":"int_powerplant_size4_class2", "Power":0.000000 },
+
 { "Slot":"Slot01_Size3", "Item":"int_cargorack_size2_class1", "Power":0.000000 },
+
 { "Slot":"Slot02_Size3", "Item":"int_cargorack_size2_class1", "Power":0.000000 },
+
 { "Slot":"Slot06_Size1", "Item":"int_stellarbodydiscoveryscanner_standard", "Power":0.000000 },
 { "Slot":"DataLinkScanner", "Item":"hpt_shipdatalinkscanner", "Power":0.000000, "Priority":0 }
  ] }

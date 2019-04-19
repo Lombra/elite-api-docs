@@ -104,7 +104,7 @@ Parameters:
 	- PlayerContribution 
 	- NumContributors 
 	- PlayerPercentileBand 
-	- TopTier:   
+	- TopTier:  
 		- Name: string 
 		- Bonus: string 
 
@@ -1219,7 +1219,6 @@ When written: when repairing everything
 Parameters:
 
 - Cost 
--  
 
 
 ### RestockVehicle
@@ -1582,7 +1581,7 @@ Parameters:
 
 - If the ship is in transit:
 
-	- InTransit: true 
+- InTransit: true 
 
 
 - If the ship is not in transit:

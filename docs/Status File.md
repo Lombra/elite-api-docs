@@ -12,11 +12,30 @@ Parameters:
 - GuiFocus: the selected GUI screen 
 - Fuel: { FuelMain, FuelReservoir} – both mass in tons 
 - Cargo: mass in tons 
+- LegalState 
 - Latitude (if on or near a planet) 
 - Altitude 
 - Longitude 
 - Heading 
+- BodyName 
+- PlanetRadius 
 
+
+LegalState: one of:
+
+- "Clean",
+
+- "IllegalCargo",
+
+- "Speeding",
+
+- "Wanted",
+
+- "Hostile",
+
+- "PassengerWanted",
+
+- "Warrant"
 
 Flags:
 
@@ -51,6 +70,7 @@ Bit|Value|Hex|Meaning
 26|67108864|0400 0000|In SRV
 27|134217728|0800 0000|Hud in Analysis mode
 28|268435456|1000 0000|Night Vision
+29|536870912|2000 0000|Altitude from Average radius
 
 Examples:
 
@@ -116,3 +136,7 @@ Value|Description
 11|Codex
 
 The latitude or longitude need to change by 0.02 degrees to trigger an update when flying, or by 0.0005 degrees when in the SRV
+
+If the bit29 is set, the altitude value is based on the planet's average radius (used at higher altitudes)
+
+If the bit29 is not set, the Altitude value is based on a raycast to the actual surface below the ship/srv

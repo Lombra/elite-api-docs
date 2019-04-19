@@ -1,0 +1,110 @@
+<head>
+	<meta charset="utf-8">
+	<style>
+		body {
+			width: 1400px;
+			margin: 0 auto;
+			display: grid;
+			grid-template-columns: repeat(2, 1fr);
+			grid-gap: 20px;
+		}
+		h1 {
+			margin: 0;
+			grid-column: 1 / 3;
+			text-align: center;
+		}
+		textarea {
+			width: 100%;
+			height: 700px;
+			display: block;
+			white-space: pre;
+			font-size: 12px;
+		}
+	</style>
+</head>
+
+<body>
+
+<h1>HTML parser</h1>
+
+<div>
+	<textarea id="input"></textarea>
+	<button id="parse">Parse</button>
+</div><!--
+
+--><div>
+	<textarea id="output"></textarea>
+	<button id="copy">Copy</button>
+</div>
+
+</body>
+
+<script>
+
+const TAGS = [
+	'H1',
+	'H2',
+	'P',
+	'UL',
+	'LI',
+	'DIV',
+]
+
+const TEXT_TAGS = [
+	'H1',
+	'H2',
+	'P',
+]
+
+function parse(html) {
+	let data = {
+		tag: html.tagName.toLowerCase(),
+		children: [],
+	}
+	
+	let text = html.innerHTML
+	
+	text = text.replace(/^\n/, '')
+	text = text.replace(/\t/g, '')
+	text = text.replace(/\n/g, ' ')
+	text = text.replace(/[‘’]/g, '\'')
+	text = text.replace(/[“”]/g, '"')
+	text = text.replace(/<\/?i>/g, '_')
+	text = text.replace(/<\/?b>/g, '**')
+	text = text.replace(/<\/?sup>/g, '^')
+	text = text.replace(/<\/?strike>/g, '~~')
+	
+	text = text.replace(/<br>/g, '')
+	text = text.replace(/<\/?a.*?>/g, '')
+	text = text.replace(/<\/?font.*?>/g, '')
+	text = text.replace(/<\/?span.*?>/g, '')
+	
+	if (TEXT_TAGS.includes(html.tagName)) data.text = text
+	
+	if (html.children) for (let child of html.children) if (TAGS.includes(child.tagName)) data.children.push(parse(child))
+	return data
+}
+
+let button = document.getElementById('parse')
+
+button.addEventListener('click', () => {
+	let inputBox = document.getElementById('input')
+	let domParser = new window.DOMParser()
+	let input = domParser.parseFromString(inputBox.value, 'text/html')
+	
+	input = input.children[0].children[1]
+	
+	let output = parse(input)
+	
+	let outputBox = document.getElementById('output')
+	outputBox.value = JSON.stringify(output, null, "\t")
+})
+
+let copyButton = document.getElementById('copy')
+
+copyButton.addEventListener('click', () => {
+	let outputBox = document.getElementById('output')
+	navigator.clipboard.writeText(outputBox.value)
+})
+
+</script>
