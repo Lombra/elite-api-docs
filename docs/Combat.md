@@ -317,7 +317,10 @@ If scan stage &gt;= 3
 - Bounty 
 - SubSystem 
 - SubSystemHealth 
+- Power [*] 
 
+
+[*] when targetting another ship, if the player is aligned in powerplay, and the target is also aligned to a power, include the info
 
 ### SRVDestroyed
 

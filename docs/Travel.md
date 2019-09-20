@@ -382,6 +382,7 @@ Parameters:
 
 - Starsystem 
 - Name 
+- RemainingJumpsInRoute 
 
 
 ### LeaveBody
@@ -404,6 +405,7 @@ Parameters:
 
 - Latitude (only if player flying in ship) 
 - Longitude  (only if player flying in ship) 
+- NearestDestination 
 - PlayerControlled: (bool) false if ship dismissed when player is in SRV, true if player is taking off 
 
 
@@ -532,18 +534,23 @@ Parameters:
 
 - Latitude (only if player is landing) 
 - Longitude (only if player is landing) 
+- NearestDestination 
 - PlayerControlled: (bool) false if ship was recalled from SRV, true if player is landing 
 
+
+The NearestDestination is included if within 50km of a location listed in the nav panel
 
 Example:
 
 ```
 {
-	"timestamp": "2016-07-22T10:38:46Z",
+	"timestamp": "2019-05-13T13:20:18Z",
 	"event": "Touchdown",
-	"Latitude": 63.468872,
-	"Longitude": 157.59938,
-	"PlayerControlled": true
+	"PlayerControlled": true,
+	"Latitude": 10.503607,
+	"Longitude": 102.78981,
+	"NearestDestination": "$SAA_Unknown_Signal:#type=$SAA_SignalType_Geological;:#index=9;",
+	"NearestDestination_Localised": "Surface signal: Geological (9)"
 }
 ```
 

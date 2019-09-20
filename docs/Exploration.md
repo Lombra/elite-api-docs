@@ -13,6 +13,7 @@ Parameters:
 - Region: string 
 - System: string 
 - SystemAddress 
+- NearestDestination: name 
 - IsNewEntry: bool 
 - NewTraitsDiscovered: bool 
 - Traits: [ array of strings ] 
@@ -20,29 +21,29 @@ Parameters:
 
 The IsNewEntry and NewTraitsDiscovered fields are optional depending on the results of the scan, and the Traits field is only available for entries that have unlocked traits.
 
+The "NearestDestination" is added if within 50km of a location listed in the navigation panel
+
 Example:
 
 ```
 {
-	"timestamp": "2018-10-09T07:10:25Z",
+	"timestamp": "2019-05-13T13:28:51Z",
 	"event": "CodexEntry",
-	"EntryID": 2401001,
-	"Name": "$Codex_Ent_L_Phn_Part_Cld_001_Name;",
-	"Name_Localised": "L_Phn_Part_Cld_001",
-	"SubCategory": "$Codex_SubCategory_Micro_Organisms;",
-	"SubCategory_Localised": "Micro Organisms",
+	"EntryID": 1400159,
+	"Name": "$Codex_Ent_IceFumarole_CarbonDioxideGeysers_Name;",
+	"Name_Localised": "Carbon Dioxide Ice Fumarole",
+	"SubCategory": "$Codex_SubCategory_Geology_and_Anomalies;",
+	"SubCategory_Localised": "Geology and anomalies",
 	"Category": "$Codex_Category_Biology;",
 	"Category_Localised": "Biological and Geological",
-	"Region": "Region 18",
-	"System": "Shinrarta Dezhra",
-	"SystemAddress": 3932277478106,
+	"Region": "$Codex_RegionName_18;",
+	"Region_Localised": "Inner Orion Spur",
+	"System": "Hermitage",
+	"SystemAddress": 5363877956440,
+	"NearestDestination": "$SAA_Unknown_Signal:#type=$SAA_SignalType_Geological;:#index=9;",
+	"NearestDestination_Localised": "Surface signal: Geological (9)",
 	"IsNewEntry": true,
-	"NewTraitsDiscovered": true,
-	"Traits": [
-		"Trait1",
-		"Trait2",
-		"Trait3"
-	]
+	"VoucherAmount": 50000
 }
 ```
 
@@ -65,6 +66,8 @@ This is also generated when scanning a navigation beacon in a populated system, 
 Parameters(star)
 
 - ScanType 
+- StarSystem: name 
+- SystemAddress 
 - Bodyname: name of body 
 - BodyID 
 - DistanceFromArrivalLS 
@@ -427,6 +430,7 @@ When written: after using the "Surface Area Analysis" scanner
 
 Parameters:
 
+- SystemAddress 
 - BodyName 
 - BodyID 
 - ~~Discoverers: (array of names)~~ 
@@ -445,6 +449,60 @@ Example:
 	"BodyID": 5,
 	"ProbesUsed": 6,
 	"EfficiencyTarget": 9
+}
+```
+
+### SAASignalsFound
+
+When written: when using SAA scanner on a planet or rings
+
+Parameters:
+
+- SystemAddress 
+- BodyName 
+- BodyID 
+- Signals: (array) 
+	- Type 
+	- Count 
+
+
+Examples:
+
+```
+{
+	"timestamp": "2019-04-17T13:38:18Z",
+	"event": "SAASignalsFound",
+	"BodyName": "Hermitage 4 A Ring",
+	"SystemAddress": 5363877956440,
+	"BodyID": 11,
+	"Signals": [
+		{
+			"Type": "LowTemperatureDiamond",
+			"Type_Localised": "Low Temperature Diamonds",
+			"Count": 1
+		},
+		{
+			"Type": "Alexandrite",
+			"Count": 1
+		}
+	]
+}
+```
+
+```
+{
+	"timestamp": "2019-04-17T13:40:39Z",
+	"event": "SAASignalsFound",
+	"BodyName": "Hermitage 4 b",
+	"SystemAddress": 5363877956440,
+	"BodyID": 13,
+	"Signals": [
+		{
+			"Type": "$SAA_SignalType_Geological;",
+			"Type_Localised": "Geological",
+			"Count": 14
+		}
+	]
 }
 ```
 

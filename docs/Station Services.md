@@ -735,46 +735,57 @@ Optional parameters (depending on mission type)
 - MaterialsReward:[] ( name, category and count) 
 - FactionEffects: array of records 
 	- Faction 
-	- Effects: array of Effect and Trend value pairs 
-	- Influence: array of SystemAddress and Trend value pairs 
-	- Reputation: Trend value 
+	- Effects: array of Effect, Effect_Localised and Trend value pairs 
+	- Influence: array of SystemAddress, Trend and Influence values 
+	- Reputation 
+	- ReputationTrend 
 
 
 _TrendValue_ can be UpGood, UpBad, DownGood, or DownBad
+
+_Reputation_ and _Influence _are a set of + indicators (eg "+++")
 
 Example:
 
 ```
 {
-	"timestamp": "2018-01-30T10:00:20Z",
-	"event": "MissionCompleted",
-	"Faction": "Farack Stakeholders",
-	"Name": "Mission_Collect_name",
-	"MissionID": 65391731,
-	"Commodity": "$AgriculturalMedicines_Name;",
-	"Count": 12,
-	"DestinationSystem": "Farack",
-	"DestinationStation": "Mitra Estate",
-	"Reward": 10000,
-	"FactionEffects": [
-		{
-			"Faction": "Farack Stakeholders",
-			"Effects": [
-				{
-					"Effect": "$MISSIONUTIL_Interaction_Summary_outbreak_down;",
-					"Effect_Localised": "Outbreak Down",
-					"Trend": "DownGood"
-				}
-			],
-			"Influence": [
-				{
-					"System": 3932143293138,
-					"Trend": "UpGood"
-				}
-			],
-			"Reputation": "UpGood"
-		}
-	]
+    "timestamp": "2018-12-19T21:41:09Z",
+    "event": "MissionCompleted",
+    "Faction": "Inara Nexus",
+    "Name": "Mission_Courier_Elections_name",
+    "MissionID": 442511682,
+    "TargetFaction": "Tougeir Blue Clan",
+    "DestinationSystem": "Tougeir",
+    "DestinationStation": "Janes Dock",
+    "Reward": 10000,
+    "FactionEffects": [{
+            "Faction": "Tougeir Blue Clan",
+            "Effects": [{
+                "Effect": "$MISSIONUTIL_Interaction_Summary_EP_up;",
+                "Effect_Localised": "The economic status of $#MinorFaction; has improved in the $#System; system.",
+                "Trend": "UpGood"
+            }],
+            "Influence": [{
+                "SystemAddress": 5067927397769,
+                "Trend": "UpGood",
+                "Influence": "++++"
+            }],
+            "ReputationTrend": "UpGood",
+            "Reputation": ""
+        },
+        {
+            "Faction": "Inara Nexus",
+            "Effects": [{
+                    "Effect": "$MISSIONUTIL_Interaction_Summary_EP_up;",
+                    "Effect_Localised": "The economic status of $#MinorFaction; has improved in the $#System; system.",
+                    "Trend": "UpGood"
+                }
+            ],
+            "Influence": [],
+            "ReputationTrend": "UpGood",
+            "Reputation": "+"
+        }
+    ]
 }
 ```
 

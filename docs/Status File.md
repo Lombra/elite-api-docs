@@ -71,6 +71,8 @@ Bit|Value|Hex|Meaning
 27|134217728|0800 0000|Hud in Analysis mode
 28|268435456|1000 0000|Night Vision
 29|536870912|2000 0000|Altitude from Average radius
+30‭|1073741824‬|4000 0000|fsdJump
+31|2147483648|8000 0000|srvHighBeam
 
 Examples:
 

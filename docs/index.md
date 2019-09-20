@@ -34,9 +34,30 @@ A short example of a player journal file (_**out of date, some events may have a
 
 ### ChangeLog
 
+**Version 26**
+
+**Changes for v3.5 (September 2019)**
+
+- New SAASignalsFound event with bio/geo signals on planets and hotspots in rings 
+- SAAScanComplete: add SystemAddress 
+- Scan: add StarSystem name and SystemAddress 
+- FSDTarget: add RemainingJumpsInRoute 
+- CodexEntry,Touchdown,Liftoff: add NearestDestination 
+- StatusFlags: add flags fsdJump, srvHighBeam 
+- ShipTargeted: add powerplay info 
+
+
+**Bugs fixed:**
+
+- Fixed code that strips newlines out of strings 
+- Fixed bug that caused blank system names when selling exploration data 
+- In the CrimeVictim event, the Offender field should now have added localisation, if relevant 
+- Fixed description of FactionEffects in MissionCompleted event 
+
+
 **Version 25**
 
-**Changes for v3.4**
+**Changes for v3.4 (April 2019)**
 
 - FSDJump event – now includes "Body" info about the arrival star 
 - Don't write a spurious "FighterRebuilt" event after docking SLF back in the ship 
