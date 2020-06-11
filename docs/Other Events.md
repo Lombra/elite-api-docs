@@ -71,7 +71,7 @@ When written: when a crime is recorded against the player
 
 Parameters:
 
-- CrimeType – see §13.6 
+- CrimeType – see §14.6 
 - Faction 
 
 
@@ -758,5 +758,45 @@ Example:
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "WingLeave"
+}
+```
+
+### CargoTransfer
+
+When transferring cargo between ship and fleet carrier, or between ship and SRV
+
+- Transfers: [ {Type, Count, Direction}, ... ] 
+
+
+```
+{
+	"timestamp": "2020-03-12T12:49:54Z",
+	"event": "CargoTransfer",
+	"Transfers": [
+		{
+			"Type": "tea",
+			"Count": 1,
+			"Direction": "tocarrier"
+		},
+		{
+			"Type": "gold",
+			"Count": 1,
+			"Direction": "toship"
+		}
+	]
+}
+```
+
+```
+{
+	"timestamp": "2020-03-12T13:34:22Z",
+	"event": "CargoTransfer",
+	"Transfers": [
+		{
+			"Type": "grain",
+			"Count": 2,
+			"Direction": "tosrv"
+		}
+	]
 }
 ```

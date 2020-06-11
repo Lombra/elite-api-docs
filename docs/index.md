@@ -34,6 +34,16 @@ A short example of a player journal file (_**out of date, some events may have a
 
 ### ChangeLog
 
+**Version 27**
+
+**Changes for v3.7 (April 2020)**
+
+- Added events relating to Fleet Carriers (§11) 
+- New CargoTransfer event (§12.52) 
+- Change to Repair event (§8.38) 
+- Added some station services (see 'Docked' §4.2) 
+
+
 **Version 26**
 
 **Changes for v3.5 (September 2019)**
@@ -93,21 +103,21 @@ A short example of a player journal file (_**out of date, some events may have a
 **Version 23 – v3.3.02 (Jan 2019)**
 
 - SquadronStartup event (§10.11) 
-- ProspectedAsteroid event (§11.33) 
-- ReservoirReplenished event (§11.38) 
+- ProspectedAsteroid event (§12.33) 
+- ReservoirReplenished event (§12.38) 
 - Include station info in Location event, if starting when docked 
-- Status.json: more detail on fuel level (§12) 
+- Status.json: more detail on fuel level (§13) 
 
 
 **Bugs Fixed**
 
-- Status.json: fix GuiFocus value when viewing Codex (§12) 
+- Status.json: fix GuiFocus value when viewing Codex (§13) 
 - CodexEntry: fix SystemAddress (§6.1) 
 
 
 **Documentation Errata**
 
-- CrimeVictim event (was in v3.3, but not previously documented) (§11.11) 
+- CrimeVictim event (was in v3.3, but not previously documented) (§12.11) 
 - Fix in EngineerCraft: (§8.13) note property name is BlueprintName not Blueprint (since v3.0) 
 - MissionAccepted: (§8.21) note property LocalisedName (does not match automatically-localised strings) 
 
@@ -128,16 +138,16 @@ A short example of a player journal file (_**out of date, some events may have a
 - FSSSignalDiscovered – if signal is a USS, add a ThreatLevel value; if signal is a station, add IsStation:true; add SystemAddress(§6.6) 
 - Cargo – fix spurious extra events; add a flag to indicate vessel=Ship or Vessel=SRV (§3.1) 
 - CodexEntry: add SystemAddress .(§6.1) 
-- Status.json, Flags: add NightVision flag (bit28/0x10000000) (§12) 
-- SendText: include a journal entry for text to squadron or system chat (§11.42) 
-- ReceiveText: include a 'Channel' parameter to show if message was from squadron or system chat (§11.36) 
+- Status.json, Flags: add NightVision flag (bit28/0x10000000) (§13) 
+- SendText: include a journal entry for text to squadron or system chat (§12.42) 
+- ReceiveText: include a 'Channel' parameter to show if message was from squadron or system chat (§12.36) 
 - SAAScanComplete: remove lists of names of discoverers and mappers (§6.13) 
 
 
 **Version 21 – for v3.3 (beta 2)**
 
 - Include info on Faction Happiness– in Location and FSDJump events (§4.8,§4.12) 
-- Status flags indicate if in Analysis mode, and GUI focus shows if in Orrery, FSS, SAA or Codex view (§12) 
+- Status flags indicate if in Analysis mode, and GUI focus shows if in Orrery, FSS, SAA or Codex view (§13) 
 - Fixed bug in MissionAccepted and MissionCompleted for donation missions, where the "Donated" key was written twice, one with a string, once with an int (§8.21,§8.22) 
 
 
@@ -145,7 +155,7 @@ Errata
 
 - Note Faction Active states do not have a Trend value 
 - Note FID value in Commander(§3.3), LoadGame(§3.8), ClearSavedGame(§3.2), NewCommander(§3.7) events with unique player id number 
-- Note Status.json (§12) includes fuel and cargo info 
+- Note Status.json (§13) includes fuel and cargo info 
 - Fix capitalisation for BodyName in SAAScanComplete (§6.13) 
 
 

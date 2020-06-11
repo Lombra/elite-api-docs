@@ -302,7 +302,7 @@ Parameters:
 - ApplyExperimentalEffect: (when applying a new effect) 
 - Ingredients: JSON array of objects with names and quantities of materials required 
 - Modifiers: JSON array of modification data 
-	- Label: string – (see §13.11 below) 
+	- Label: string – (see §14.11 below) 
 	- Value: float 
 	- OriginalValue: float 
 	- LessIsGood: bool 
@@ -1220,6 +1220,23 @@ Example:
 	"event": "Repair",
 	"Item": "int_powerplant_size3_class5",
 	"Cost": 1100
+}
+```
+
+Note when repairing on a FleetCarrier, you can now get a list of the modules repaired:
+
+```
+{
+	"timestamp": "2020-03-31T13:39:42Z",
+	"event": "Repair",
+	"Items": [
+		"$hpt_dumbfiremissilerack_fixed_large_name;",
+		"$hpt_beamlaser_gimbal_medium_name;",
+		"$hpt_railgun_fixed_medium_name;",
+		"$hpt_beamlaser_gimbal_medium_name;",
+		"$hpt_dumbfiremissilerack_fixed_large_name;"
+	],
+	"Cost": 34590
 }
 ```
 

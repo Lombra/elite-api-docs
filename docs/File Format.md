@@ -20,7 +20,7 @@ In addition to the incremental player journal file, the following files are writ
 
 **Shipyard.json** – contains list of ships available in shipyard, with prices (written when opening shipyard screen). See section §8.46
 
-**Status.json** – contains frequently-changing info as displayed in the cockpit gui. This is updated when the data changes. See section §12
+**Status.json** – contains frequently-changing info as displayed in the cockpit gui. This is updated when the data changes. See section §13
 
 ### Heading entry
 

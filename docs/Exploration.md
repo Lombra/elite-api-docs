@@ -71,14 +71,14 @@ Parameters(star)
 - Bodyname: name of body 
 - BodyID 
 - DistanceFromArrivalLS 
-- StarType: Stellar classification (for a star) – see §13.2 
+- StarType: Stellar classification (for a star) – see §14.2 
 - Subclass: Star's heat classification 0..9 
 - StellarMass: mass as multiple of Sol's mass 
 - Radius 
 - AbsoluteMagnitude 
 - RotationPeriod (seconds) 
 - SurfaceTemperature 
-- Luminosity – see §13.9 
+- Luminosity – see §14.9 
 - Age_MY: age in millions of years 
 - Rings: [ array ] – if present 
 - WasDiscovered: bool 
@@ -94,11 +94,11 @@ Parameters(Planet/Moon)
 - DistanceFromArrivalLS 
 - TidalLock: 1 if tidally locked
 - TerraformState: Terraformable, Terraforming, Terraformed, or null
-- PlanetClass – see §13.3 
-- Atmosphere – see §13.4
+- PlanetClass – see §14.3 
+- Atmosphere – see §14.4 
 - AtmosphereType
 - AtmosphereComposition: [ array of info ]
-- Volcanism – see §13.5
+- Volcanism – see §14.5 
 - SurfaceGravity 
 - SurfaceTemperature
 - SurfacePressure

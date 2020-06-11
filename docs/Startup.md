@@ -121,7 +121,7 @@ Parameters:
 		- Quality 
 		- ExperimentalEffect: (name, if applied) 
 		- Modifications: Json array of objects 
-			- Label – (see §13.11 below) 
+			- Label – (see §14.11 below) 
 			- Value – may not always be present 
 			- OriginalValue 
 			- LessIsGood: bool 

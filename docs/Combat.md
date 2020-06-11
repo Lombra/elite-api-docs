@@ -281,7 +281,7 @@ Examples:
 }
 ```
 
-### ShipTargeted
+### ShipTargetted
 
 When written: when the current player selects a new target
 
