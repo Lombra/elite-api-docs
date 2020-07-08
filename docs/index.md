@@ -34,9 +34,37 @@ A short example of a player journal file (_**out of date, some events may have a
 
 ### ChangeLog
 
+**Version 28**
+
+**Changes for v3.7 beta 2 (May 2020)**
+
+new events added:
+
+- CarrierJumpCancelled 
+- CarrierNameChanged (with callsign, name, carrierid) 
+- new Route.json file 
+
+
+events with new data:
+
+- CarrierJumpRequest - added Body (name) and BodyID 
+- Bounty - include localised Target   
+- FSDTarget - include StarClass 
+
+
+bugs fixed:
+
+- CarrierStats  - don't write a ReservePercent value when in debt 
+- Status.json - flags fixed in SRV, and Lat/Lon in station 
+- Loadout - fix cases where loadout data was mix of SLF and mothership 
+- EngineerProgress - now written when state updates 
+- RefuelAll, RepairAll - fix null strings 
+- Docked - fix bug where docking at a FC doesn't sometimes pick up nearby station name 
+
+
 **Version 27**
 
-**Changes for v3.7 (April 2020)**
+**Changes for v3.7 beta 1 (April 2020)**
 
 - Added events relating to Fleet Carriers (§11) 
 - New CargoTransfer event (§12.52) 
