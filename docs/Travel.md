@@ -451,6 +451,7 @@ Parameters:
 - SystemSecondEconomy 
 - SystemGovernment 
 - SystemSecurity 
+- Population
 - Wanted 
 - Factions: an array with info on local minor factions (similar to FSDJump) 
 - Conflicts: an array with info on local conflicts (similar to FSDJump) 
