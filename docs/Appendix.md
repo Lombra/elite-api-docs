@@ -100,41 +100,41 @@ Index|Rank
 
 ### Star Descriptions
 
-(_Main sequence_:) O B A F G K M L T Y
+- (_Main sequence_:) O B A F G K M L T Y
 
-(_Proto stars_:) TTS AeBe
+- (_Proto stars_:) TTS AeBe
 
-(_Wolf-Rayet_:) W WN WNC WC WO
+- (_Wolf-Rayet_:) W WN WNC WC WO
 
-(_Carbon stars_:) CS C CN CJ CH CHd
+- (_Carbon stars_:) CS C CN CJ CH CHd
 
-MS S
+- MS S
 
-(_white dwarfs_:) D DA DAB DAO DAZ DAV DB DBZ DBV DO DOV DQ DC DCV DX
+- (_white dwarfs_:) D DA DAB DAO DAZ DAV DB DBZ DBV DO DOV DQ DC DCV DX
 
-N (=_Neutron_)
+- N (=_Neutron_)
 
-H (=_Black Hole_)
+- H (=_Black Hole_)
 
-X (=_exotic_)
+- X (=_exotic_)
 
-SupermassiveBlackHole
+- SupermassiveBlackHole
 
-A_BlueWhiteSuperGiant
+- A_BlueWhiteSuperGiant
 
-F_WhiteSuperGiant
+- F_WhiteSuperGiant
 
-M_RedSuperGiant
+- M_RedSuperGiant
 
-M_RedGiant
+- M_RedGiant
 
-K_OrangeGiant
+- K_OrangeGiant
 
-RoguePlanet
+- RoguePlanet
 
-Nebula
+- Nebula
 
-StellarRemnantNebula
+- StellarRemnantNebula
 
 ### Planet Classes
 
