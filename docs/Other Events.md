@@ -71,7 +71,7 @@ When written: when a crime is recorded against the player
 
 Parameters:
 
-- CrimeType – see §14.6 
+- CrimeType – see §15.6 
 - Faction 
 
 
@@ -408,7 +408,7 @@ Example of ModulesInfo file:
 { "Slot":"Slot02_Size3", "Item":"int_cargorack_size2_class1", "Power":0.000000 },
 
 { "Slot":"Slot06_Size1", "Item":"int_stellarbodydiscoveryscanner_standard", "Power":0.000000 },
-{ "Slot":"DataLinkScanner", "Item":"hpt_shipdatalinkscanner", "Power":0.000000, "Priority":0 }
+{ "Slot":"DataLinkScanner", "Item":"hpt_shipdatalinkscanner", "Power":0, "Priority":0 }
  ] }
 ```
 

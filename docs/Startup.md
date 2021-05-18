@@ -121,7 +121,7 @@ Parameters:
 		- Quality 
 		- ExperimentalEffect: (name, if applied) 
 		- Modifications: Json array of objects 
-			- Label – (see §14.11 below) 
+			- Label – (see §15.11 below) 
 			- Value – may not always be present 
 			- OriginalValue 
 			- LessIsGood: bool 
@@ -259,6 +259,7 @@ Parameters:
 - Commander: commander name 
 - FID: player id 
 - Horizons: bool 
+- Odyssey: bool 
 - Ship: current ship type 
 - ShipID: ship id number (indicates which of your ships you are in) 
 - StartLanded: true (only present if landed) 

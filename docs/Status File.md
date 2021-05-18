@@ -7,6 +7,7 @@ This has a similar format to a line in the journal, but the whole file is replac
 Parameters:
 
 - Flags: multiple flags encoded as bits in an integer (see below) 
+- Flags2: more flags, mainly for when on foot 
 - Pips: an array of 3 integers representing energy distribution (in half-pips) 
 - Firegroup: the currently selected firegroup number 
 - GuiFocus: the selected GUI screen 
@@ -36,6 +37,15 @@ LegalState: one of:
 - "PassengerWanted",
 
 - "Warrant"
+
+Additional values when on foot:
+
+- Oxygen: (0.0 .. 1.0) 
+- Health: (0.0 .. 1.0) 
+- Temperature (kelvin) 
+- SelectedWeapon: name 
+- Gravity: (relative to 1G) 
+
 
 Flags:
 
@@ -73,6 +83,28 @@ Bit|Value|Hex|Meaning
 29|536870912|2000 0000|Altitude from Average radius
 30‭|1073741824‬|4000 0000|fsdJump
 31|2147483648|8000 0000|srvHighBeam
+
+**Flags2 bits:**
+
+Bit|Value|Hex|Meaning
+|-:||
+0|1|0001|OnFoot
+1|2|0002|InTaxi (or dropship/shuttle)
+2|4|0004|InMulticrew (ie in someone else's ship)
+3|8|0008|OnFootInStation
+4|16|0010|OnFootOnPlanet
+5|32|0020|AimDownSight
+6|64|0040|LowOxygen
+7|128|0080|LowHealth
+8|256|0100|Cold
+9|512|0200|Hot
+10|1024|0400|VeryCold
+11|2048|0800|VeryHot
+12|4096|1000|Glide Mode
+13|8192|2000|OnFootInHangar
+14|16384|4000|OnFootSocialSpace
+15|32768|8000|OnFootExterior
+16|65536|0001 0000|BreathableAtmosphere
 
 Examples:
 

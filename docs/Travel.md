@@ -408,6 +408,12 @@ Parameters:
 
 - Latitude (only if player flying in ship) 
 - Longitude  (only if player flying in ship) 
+- StarSystem 
+- SystemAddress 
+- Body 
+- BodyID 
+- OnStation: bool 
+- OnPlanet: bool 
 - NearestDestination 
 - PlayerControlled: (bool) false if ship dismissed when player is in SRV, true if player is taking off 
 
@@ -476,6 +482,14 @@ If starting docked in a station, also include:
 - StationEconomies (Array of (Name,Proportion) pairs ) 
 
 
+New in Odyssey:
+
+- Taxi: bool 
+- Multicrew: bool 
+- InSRV: bool 
+- OnFoot: bool 
+
+
 ### StartJump
 
 When written: at the start of a Hyperspace or Supercruise jump (start of countdown)
@@ -538,6 +552,12 @@ Parameters:
 
 - Latitude (only if player is landing) 
 - Longitude (only if player is landing) 
+- StarSystem 
+- SystemAddress 
+- Body 
+- BodyID 
+- OnStation: bool 
+- OnPlanet: bool 
 - NearestDestination 
 - PlayerControlled: (bool) false if ship was recalled from SRV, true if player is landing 
 

@@ -302,7 +302,7 @@ Parameters:
 - ApplyExperimentalEffect: (when applying a new effect) 
 - Ingredients: JSON array of objects with names and quantities of materials required 
 - Modifiers: JSON array of modification data 
-	- Label: string – (see §14.11 below) 
+	- Label: string – (see §15.11 below) 
 	- Value: float 
 	- OriginalValue: float 
 	- LessIsGood: bool 

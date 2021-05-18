@@ -20,7 +20,7 @@ In addition to the incremental player journal file, the following files are writ
 
 **Shipyard.json** – contains list of ships available in shipyard, with prices (written when opening shipyard screen). See section §8.46
 
-**Status.json** – contains frequently-changing info as displayed in the cockpit gui. This is updated when the data changes. See section §13
+**Status.json** – contains frequently-changing info as displayed in the cockpit gui. This is updated when the data changes. See section §14
 
 ### Heading entry
 
@@ -28,6 +28,7 @@ The Heading record has a Json object with the following values:
 
 - timestamp: the time in GMT, ISO 8601 
 - part: the file part number 
+- odyssey: bool 
 - language: the language code 
 - gameversion: which version of the game produced the log (will indicate if beta) 
 - build: game build number   
@@ -41,7 +42,7 @@ Example:
 	"event": "fileheader",
 	"part": 1,
 	"language": "French/FR",
-	"gameversion": "2.2 Beta 1",
+	"gameversion": "4.0.0.100",
 	"build": "r114123 "
 }
 ```

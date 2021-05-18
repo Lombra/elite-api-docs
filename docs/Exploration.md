@@ -14,6 +14,8 @@ Parameters:
 - System: string 
 - SystemAddress 
 - NearestDestination: name 
+- Latitude 
+- Longitude 
 - IsNewEntry: bool 
 - NewTraitsDiscovered: bool 
 - Traits: [ array of strings ] 
@@ -65,24 +67,24 @@ This is also generated when scanning a navigation beacon in a populated system, 
 
 Parameters(star)
 
-- ScanType 
-- StarSystem: name 
-- SystemAddress 
-- Bodyname: name of body 
-- BodyID 
-- DistanceFromArrivalLS 
-- StarType: Stellar classification (for a star) – see §14.2 
-- Subclass: Star's heat classification 0..9 
-- StellarMass: mass as multiple of Sol's mass 
-- Radius 
-- AbsoluteMagnitude 
-- RotationPeriod (seconds) 
-- SurfaceTemperature 
-- Luminosity – see §14.9 
-- Age_MY: age in millions of years 
-- Rings: [ array ] – if present 
-- WasDiscovered: bool 
-- WasMapped: bool 
+- ScanType
+- StarSystem: name
+- SystemAddress
+- Bodyname: name of body
+- BodyID
+- DistanceFromArrivalLS
+- StarType: Stellar classification (for a star) – see §15.2
+- Subclass: Star's heat classification 0..9
+- StellarMass: mass as multiple of Sol's mass
+- Radius
+- AbsoluteMagnitude
+- RotationPeriod (seconds)
+- SurfaceTemperature
+- Luminosity – see §15.9
+- Age_MY: age in millions of years
+- Rings: [ array ] – if present
+- WasDiscovered: bool
+- WasMapped: bool
 
 
 Parameters(Planet/Moon)
@@ -94,11 +96,11 @@ Parameters(Planet/Moon)
 - DistanceFromArrivalLS 
 - TidalLock: 1 if tidally locked
 - TerraformState: Terraformable, Terraforming, Terraformed, or null
-- PlanetClass – see §14.3 
-- Atmosphere – see §14.4 
+- PlanetClass – see §15.3
+- Atmosphere – see §15.4
 - AtmosphereType
 - AtmosphereComposition: [ array of info ]
-- Volcanism – see §14.5 
+- Volcanism – see §15.5
 - SurfaceGravity 
 - SurfaceTemperature
 - SurfacePressure
