@@ -6,10 +6,10 @@ Lists the contents of the backpack, in a separate _**backpack.json**_ file
 
 Parameters:
 
-- Items:[} 
-- Components:[] 
-- Consumables:[] 
-- Data:[] 
+- Items: [ ] 
+- Components: [ ] 
+- Consumables: [ ] 
+- Data: [ ] 
 
 
 Each list has objects containing:
@@ -26,7 +26,7 @@ This is written when there is any change to the contents of the suit backpack â€
 
 Parameters:
 
-Either Added:[array of items] or Removed: [array of items]
+Either Added: [array of items] or Removed: [array of items]
 
 Where each item contains:
 
@@ -35,26 +35,6 @@ Where each item contains:
 - MissionID (if relevant) 
 - Count 
 - Type 
-
-
-### BackpackMaterials
-
-~~Lists the contents of the backpack, eg when disembarking from ship~~
-
-~~Parameters:~~
-
-- ~~Items:[}~~ 
-- ~~Components:[]~~ 
-- ~~Consumables:[]~~ 
-- ~~Data:[]~~ 
-
-
-~~Each list has objects containing:~~
-
-- ~~Name~~ 
-- ~~OwnerID~~ 
-- ~~MissionID (if relevant)~~ 
-- ~~Count~~ 
 
 
 ### BookDropship
@@ -97,7 +77,15 @@ Parameters:
 - MarketID 
 
 
-Category can be one of: Encoded, Raw, Manufactured, Item, Component, Data, Consumable
+Category can be one of:
+
+- Encoded
+- Raw
+- Manufactured
+- Item
+- Component
+- Data
+- Consumable
 
 ```
 {
@@ -199,7 +187,7 @@ Parameters:
 - SuitName 
 - LoadoutID 
 - LoadoutName 
-- Modules:[] 
+- Modules: [ ] 
 	- SlotName 
 	- ModuleName 
 	- SuitModuleID 
@@ -243,7 +231,6 @@ Parameters:
 - StationName (if at a station) 
 - StationType 
 - MarketID 
--  
 
 
 ```
@@ -362,7 +349,7 @@ This event is logged when the player uses the Organic Sampling Tool to scan, log
 
 Parameters:
 
-- ScanType: Log,, Sample, or Analyse 
+- ScanType: Log, Sample, or Analyse 
 - Genus 
 - Species 
 - SystemAddress 
@@ -487,10 +474,10 @@ Lists the contents of the ship locker, eg at startup
 
 Parameters:
 
-- Items:[} 
-- Components:[] 
-- Consumables:[] 
-- Data:[] 
+- Items: [ ] 
+- Components: [ ] 
+- Consumables: [ ] 
+- Data: [ ] 
 
 
 Each list has objects containing:
