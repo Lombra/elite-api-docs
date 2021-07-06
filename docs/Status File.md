@@ -20,6 +20,11 @@ Parameters:
 - Heading 
 - BodyName 
 - PlanetRadius 
+- Balance 
+- Destination: 
+	- System 
+	- Body 
+	- Name 
 
 
 LegalState: one of:

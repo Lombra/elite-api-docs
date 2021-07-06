@@ -87,7 +87,7 @@ Example:
 
 ### CommunityGoal
 
-When written: when checking the status of a community goal
+When written: when the game retrieves info on community goals from the server, and the data has changed since last time
 
 This event contains the current status of all community goals the player is currently subscribed to
 

@@ -108,6 +108,7 @@ Parameters:
 - Name 
 - Price 
 - SuitID 
+- SuitMods 
 
 
 ```
@@ -129,6 +130,8 @@ Parameters:
 - Name 
 - Price 
 - SuitModuleID 
+- Class 
+- WeaponMods 
 
 
 ```
@@ -185,12 +188,15 @@ Parameters:
 
 - SuitID 
 - SuitName 
+- SuitMods 
 - LoadoutID 
 - LoadoutName 
 - Modules: [ ] 
 	- SlotName 
 	- ModuleName 
 	- SuitModuleID 
+	- Class 
+	- WeaponMods 
 
 
 ```
@@ -316,6 +322,8 @@ Parameters:
 - LoadoutName 
 - ModuleName: new weapon or other itsm added to loadout 
 - SuitModuleID 
+- Class 
+- WeaponMods 
 
 
 ### LoadoutRemoveModule
@@ -331,6 +339,8 @@ Parameters:
 - LoadoutName 
 - ModuleName: weapon or other item removed from loadout 
 - SuitModuleID 
+- Class 
+- WeaponMods 
 
 
 ### RenameSuitLoadout
@@ -445,6 +455,7 @@ Parameters:
 - Name 
 - Price 
 - SuitID 
+- SuitMods 
 
 
 ```
@@ -466,11 +477,19 @@ Parameters:
 - Name 
 - Price 
 - SuitModuleID 
+- Class 
+- WeaponMods 
 
 
-### ShipLockerMaterials
+### ShipLocker
 
 Lists the contents of the ship locker, eg at startup
+
+The full contents are written to a separate file, ShipLocker.json
+
+The full list is also written into the journal at startup (if in a ship) and when boarding a ship
+
+The shiplocker.json file is updated when the locker contents are changed
 
 Parameters:
 
@@ -496,12 +515,15 @@ Parameters:
 
 - SuitID 
 - SuitName 
+- SuitMods 
 - LoadoutID 
 - LoadoutName 
 - Modules: array of objects 
 	- SlotName 
 	- SuitModuleID 
 	- ModuleName 
+	- Class 
+	- WeaponMods 
 
 
 ### TransferMicroResources

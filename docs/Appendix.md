@@ -98,6 +98,34 @@ Index|Rank
 7|'Legend'
 8|'Elite'
 
+_**Military Ranks**_:
+
+Index|Rank
+-:|
+0|Defenceless
+1|Mostly Defenceless
+2|Rookie
+3|Soldier
+4|Gunslinger
+5|Warrior
+6|Gladiator
+7|Deadeye
+8|Elite
+
+_**Exobiologist Ranks**_:
+
+Index|Rank
+-:|
+0|Directionless
+1|Mostly Directionless
+2|Compiler
+3|Collector
+4|Cataloguer
+5|Taxonomist
+6|Ecologist
+7|Geneticist
+8|Elite
+
 ### Star Descriptions
 
 - (_Main sequence_:) O B A F G K M L T Y

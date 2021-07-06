@@ -44,6 +44,10 @@ Parameters:
 - StationServices: (Array of strings) 
 - Wanted: (only if docking when wanted locally) 
 - ActiveFine: true (if any fine is active) 
+- LandingPads: 
+	- Small 
+	- Medium 
+	- Large 
 
 
 The 'anonymous docking' protocol comes into effect if you're either Wanted (ie have a local bounty) or have an ActiveFine
@@ -153,6 +157,10 @@ Parameters:
 - StationName: name of station 
 - StationType 
 - MarketID 
+- LandingPads: 
+	- Small 
+	- Medium 
+	- Large 
 
 
 ### DockingTimeout
@@ -598,9 +606,18 @@ Example:
 }
 ```
 
-### Route
+### NavRoute
 
-When plotting a multi-star route, the file "Route.json" is written in the same directory as the journal, with a list of stars along that route
+When plotting a multi-star route, the file "NavRoute.json" is written in the same directory as the journal, with a list of stars along that route
+
+Parameters:
+
+- Route 
+	- StarSystem: (name) 
+	- SystemAddress: (number) 
+	- Starpos: [ x, y, z ] 
+	- StarClass 
+
 
 Example:
 
@@ -628,5 +645,3 @@ Example:
 	]
 }
 ```
-
-Note this may be changed for final 3.7 release to use tag name "SystemAddress" instead of "StarSystem" for better consistency

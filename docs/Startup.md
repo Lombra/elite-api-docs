@@ -272,6 +272,9 @@ Parameters:
 - ShipIdent: user-defined ship ID string 
 - FuelLevel: current fuel   
 - FuelCapacity: size of main tank 
+- language 
+- gameversion 
+- build 
 
 
 Example:

@@ -34,9 +34,25 @@ A short example of a player journal file (_**out of date, some events may have a
 
 ### ChangeLog
 
+**Version 32**
+
+**Changes up to Odyssey Update 5 (July 2021)**
+
+- The "LoadGame" event now includes the language, gameversion, and Build number 
+- Include module class and modifications in suit loadout 
+- Changes to the way the ShipLocker contents are listed 
+- Updated description of CommunityGoal event 
+- Include info on landing pads in DockingRequested and Docked 
+- Added balance and travel destination in Status.json 
+- Fixed bug creating invalid ShipLocker.json 
+- Fixed bug re ADS mode in Status flags 
+- Added names for military and exobiolost ranks in appendix 
+- Corrected details of the contents of the NavRoute file 
+
+
 **Version 31**
 
-**Changes for Odyssey release**
+**Changes for Odyssey release (May 2021)**
 
 - Omit "MissionID":18446744073709551615 in inventory data when it is not mission-related 
 - Ensure the Touchdown/Liftoff events are logged when recalling/dismissing your empty ship 
@@ -73,7 +89,7 @@ new events added:
 
 - CarrierJumpCancelled 
 - CarrierNameChanged (with callsign, name, carrierid) 
-- new Route.json file 
+- new NavRoute.json file 
 
 
 events with new data:
