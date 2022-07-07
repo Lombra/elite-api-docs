@@ -152,5 +152,5 @@ for (let section of docs) {
 	}
 	content += section.paragraphs.map(e => e.text).join('\n\n')
 	if (title == 'Introduction') title = 'index'
-	fs.writeFileSync(`docs\\${title.replace(/"/g, '')}.md`, content)
+	fs.writeFileSync(`docs/${title.replace(/"/g, '')}.md`, content)
 }
