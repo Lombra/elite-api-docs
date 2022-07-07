@@ -52,6 +52,7 @@ Parameters:
 - Cost: cost in credits 
 - DestinationSystem: starsystem name 
 - DestinationLocation: station name 
+- Retreat: bool (inticates if requested for exit from combat zone) 
 
 
 ```
@@ -68,6 +69,8 @@ Parameters:
 
 This event is logged when buying microresources
 
+Old format (used for example at suppies vendor)
+
 Parameters:
 
 - Name 
@@ -75,6 +78,19 @@ Parameters:
 - Count 
 - Price 
 - MarketID 
+
+
+New format (eg at Fleet Carrier bartender)
+
+Parameters:
+
+- TotalCount 
+- Price 
+- MarketID 
+- MicroResources: array of objects 
+	- Name 
+	- Category 
+	- Count 
 
 
 Category can be one of:
@@ -305,6 +321,42 @@ Parameters:
 	"Multicrew": false,
 	"ID": 36
 }
+```
+
+### FCMaterials
+
+When trading with a Fleet Carrier Bartender for materials, a file is written with the pricelist
+
+Similar to the Shipyard and Cargo events, a brief entry is written in the journal:
+
+Parameters:
+
+- MarketID 
+- CarrierName 
+- CarrierID 
+
+
+The full list is included in the file **FCMaterials.json**
+
+- Items: array of objects 
+	- Id 
+	- Name 
+	- Price 
+	- Stock 
+	- Demand 
+
+
+Example of FCMaterials.json:
+
+```
+{ "timestamp":"2022-03-24T11:37:28Z", "event":"FCMaterials", "MarketID":3700020480, "CarrierName":"ralph's carrier", "CarrierID":"VHT-51W", "Items":[
+{ "id":128961556, "Name":"$californium_name;", "Name_Localised":"Californium", "Price":74000, "Stock":0, "Demand":1 },
+{ "id":128961524, "Name":"$aerogel_name;", "Name_Localised":"Aerogel", "Price":500, "Stock":26, "Demand":0 },
+{ "id":128972334, "Name":"$meetingminutes_name;", "Name_Localised":"Meeting Minutes", "Price":1000, "Stock":0, "Demand":1 },
+{ "id":128962572, "Name":"$rdx_name;", "Name_Localised":"RDX", "Price":387, "Stock":0, "Demand":9 },
+{ "id":128972304, "Name":"$culinaryrecipes_name;", "Name_Localised":"Culinary Recipes", "Price":1000, "Stock":20, "Demand":0 },
+{ "id": 128961527, "Name": "$chemicalcatalyst_name;", "Name_Localised": "Chemical Catalyst", "Price": 400, "Stock": 18,	"Demand": 0 }
+] }
 ```
 
 ### LoadoutEquipModule

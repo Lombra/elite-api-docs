@@ -13,6 +13,7 @@ Parameters:
 - Region: string 
 - System: string 
 - SystemAddress 
+- BodyID 
 - NearestDestination: name 
 - Latitude 
 - Longitude 
@@ -252,6 +253,39 @@ Parameters:
 - SystemAddress 
 - Count 
 
+
+### FSSBodySignals
+
+This event is written when completing a "Full Spectrum Scan" of a starsystem, to list the number of SAA signals found in the system (as shown in-game in the top-right panel)
+
+Parameters:
+
+- BodyName 
+- BodyID 
+- SystemAddress 
+- Signals: Array 
+	- Type 
+	- Count 
+
+
+Example:
+
+```
+{
+	"timestamp": "2022-03-17T18:20:53Z",
+	"event": "FSSBodySignals",
+	"BodyName": "Phroi Blou EW-W d1-1056 2 a",
+	"BodyID": 18,
+	"SystemAddress": 36293555558035,
+	"Signals": [
+		{
+			"Type": "$SAA_SignalType_Geological;",
+			"Type_Localised": "Geological",
+			"Count": 3
+		}
+	]
+}
+```
 
 ### FSSDiscoveryScan
 
@@ -505,6 +539,43 @@ Examples:
 			"Count": 14
 		}
 	]
+}
+```
+
+### ScanBaryCentre
+
+When scanning one body of a binary pair, you will now get an event detailing the orbital parameters of their BaryCentre
+
+Parameters:
+
+- StarSystem 
+- SystemAddress 
+- BodyID 
+- SemiMajorAxis 
+- Eccentricity 
+- OrbitalInclination 
+- Periapsis 
+- OrbitalPeriod 
+- AscendingNode 
+- MeanAnomaly 
+
+
+Example
+
+```
+{
+	"timestamp": "2021-07-27T13:52:20Z",
+	"event": "ScanBaryCentre",
+	"StarSystem": "Col 285 Sector YX-N b21-1",
+	"SystemAddress": 2867561768401,
+	"BodyID": 10,
+	"SemiMajorAxis": 2107998251914.978,
+	"Eccentricity": 0.033074,
+	"OrbitalInclination": 0.019013,
+	"Periapsis": 342.187341,
+	"OrbitalPeriod": 3739380657.672882,
+	"AscendingNode": -31.477241,
+	"MeanAnomaly": 64.03028
 }
 ```
 

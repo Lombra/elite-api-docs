@@ -329,6 +329,7 @@ When written: when the player's SRV is destroyed
 Parameters:
 
 - ID 
+- SRVType 
 
 
 ### UnderAttack

@@ -375,7 +375,8 @@ Example Conflict data:
 ```
 "Conflicts": [
 	{
-		"WarType": "war", "Status": "active",
+		"WarType": "war",
+		"Status": "active",
 		"Faction1": {"Name": "Movement for LHS 3163 League","Stake": "","WonDays": 0},
 		"Faction2": {"Name": "Official i Bootis Liberty Party","Stake": "Red Bronco Farms","WonDays": 1}
 	}
@@ -623,25 +624,14 @@ Example:
 
 ```
 {
-	"timestamp":"2020-04-27T08:02:52Z", "event":"Route", "Route":[
-		{
-			"StarSystem":1733120004818,
-			"StarPos": [
-				-19.75000,
-				41.78125,
-				-3.18750
-			],
-			"StarClass":"K"
-		},
-		{
-			"StarSystem": 5068732704169,
-			"StarPos": [
-				-15.25,
-				39.53125,
-				-2.25
-			],
-			"StarClass": "M"
-		}
+	"timestamp": "2020-04-27T08:02:52Z",
+	"event": "Route",
+	"Route": [
+		{ "StarSystem": "i Bootis", "SystemAddress": 1281787693419, "StarPos": [-22.37500,34.84375,4.00000], "StarClass": "G" },
+		{ "StarSystem": "Acihaut", "SystemAddress": 11665802405289, "StarPos": [-18.50000,25.28125,-4.00000], "StarClass": "M" },
+		{ "StarSystem": "LHS 455", "SystemAddress": 3686969379179, "StarPos": [-16.90625,10.21875,-3.43750], "StarClass": "DQ" },
+		{ "StarSystem": "SPF-LF 1", "SystemAddress": 22661187052961, "StarPos": [2.90625,6.31250,-9.56250], "StarClass": "M" },
+		{ "StarSystem": "Luyten's Star", "SystemAddress":7 268024264097, "StarPos": [6.56250,2.34375,-10.25000], "StarClass": "M" }] }
 	]
 }
 ```

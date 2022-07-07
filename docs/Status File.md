@@ -29,18 +29,12 @@ Parameters:
 
 LegalState: one of:
 
-- "Clean",
-
-- "IllegalCargo",
-
-- "Speeding",
-
-- "Wanted",
-
-- "Hostile",
-
-- "PassengerWanted",
-
+- "Clean"
+- "IllegalCargo"
+- "Speeding"
+- "Wanted"
+- "Hostile"
+- "PassengerWanted"
 - "Warrant"
 
 Additional values when on foot:
@@ -110,6 +104,8 @@ Bit|Value|Hex|Meaning
 14|16384|4000|OnFootSocialSpace
 15|32768|8000|OnFootExterior
 16|65536|0001 0000|BreathableAtmosphere
+17|131072|0002 0000|Telepresence Multicrew
+18|262144|0004 0000|Physical Multicrew
 
 Examples:
 

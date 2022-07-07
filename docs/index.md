@@ -34,6 +34,28 @@ A short example of a player journal file (_**out of date, some events may have a
 
 ### ChangeLog
 
+**Version 34**
+
+**Changes for Odyssey up to update12 (May 2022)**
+
+- BookTaxi: add "retreat" flag 
+- CodexEntry: add BodyID 
+- BuyMicroResources: multi-buy format added 
+- FCMaterials – fleet carrier materials pricelist 
+- FSSBodySignals: extra info during a scan (actually from Update 6 last year) 
+- Bugfix: Resurrect event was sometimes written with blank strings 
+
+
+**Version 33**
+
+**Changes for Odyssey up to update 11 (March 2022)**
+
+- new flags in Status flags to distinguish between telepresence and physical crew 
+- the following events have a new bool value Telepresence: ChangeCrewRole EndCrewSession CrewMemberJoins CrewMemberQuits CrewLaunchFighter CrewMemberRoleChange JoinACrew QuitACrew KickCrewMember 
+- LaunchSRV, DockSRV and SRVDestroyed events now add a new value "SRVType" (from Oct 2021 update) 
+- when scanning one body of a binary pair, you will now get an event detailing the orbital parameters of their BaryCentre (from Sep 2021 update) 
+
+
 **Version 32**
 
 **Changes up to Odyssey Update 5 (July 2021)**
