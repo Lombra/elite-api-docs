@@ -466,7 +466,6 @@ Parameters:
 - SystemSecondEconomy 
 - SystemGovernment 
 - SystemSecurity 
-- Population
 - Wanted 
 - Factions: an array with info on local minor factions (similar to FSDJump) 
 - Conflicts: an array with info on local conflicts (similar to FSDJump) 
@@ -633,5 +632,20 @@ Example:
 		{ "StarSystem": "SPF-LF 1", "SystemAddress": 22661187052961, "StarPos": [2.90625,6.31250,-9.56250], "StarClass": "M" },
 		{ "StarSystem": "Luyten's Star", "SystemAddress":7 268024264097, "StarPos": [6.56250,2.34375,-10.25000], "StarClass": "M" }] }
 	]
+}
+```
+
+### NavRouteClear
+
+When written: When the current plotted nav route is cleared
+
+No parameters
+
+Example:
+
+```
+{
+	"timestamp": "2022-06-17T16:04:02Z",
+	"event": "NavRouteClear"
 }
 ```

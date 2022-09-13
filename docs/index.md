@@ -34,6 +34,18 @@ A short example of a player journal file (_**out of date, some events may have a
 
 ### ChangeLog
 
+**Version 35**
+
+**Changes for Odyssey up to update13 (July 2022)**
+
+- A negotiated mission now writes event "MissionAccepted" only when the mission is accepted, not when the negotiation happens. 
+- Handing in a mission to a mission giver while on foot will now write the "MissionCompleted" event   
+- Accepting an on foot mission will now report the destination system and destination settlement. "DestinationSettlement" added as a new optional parameter for the "MissionAccepted" event 
+- The route in NavRoute.json is now cleared when the route is cleared. New journal event "NavRouteClear" 
+- Extended the SAASignalsFound event to include the genuses on the scanned planet 
+- Fixed the "PayFines" event being written instead of "PayBounties" when paying off a bounty 
+
+
 **Version 34**
 
 **Changes for Odyssey up to update12 (May 2022)**

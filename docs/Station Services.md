@@ -677,6 +677,7 @@ Optional Parameters (depending on mission type)
 - Expiry: mission expiry time, in ISO 8601 
 - DestinationSystem 
 - DestinationStation 
+- DestinationSettlement 
 - NewDestinationSystem (if it has been redirected) 
 - NewDestinationStation (if redirected) 
 - PassengerCount 

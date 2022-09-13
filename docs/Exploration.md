@@ -500,6 +500,8 @@ Parameters:
 - Signals: (array) 
 	- Type 
 	- Count 
+- Genuses: (array) 
+	- Genus 
 
 
 Examples:
@@ -537,6 +539,43 @@ Examples:
 			"Type": "$SAA_SignalType_Geological;",
 			"Type_Localised": "Geological",
 			"Count": 14
+		}
+	]
+}
+```
+
+```
+{
+	"timestamp": "2022-07-01T09:14:32Z",
+	"event": "SAASignalsFound",
+	"BodyName": "Asellus 3a",
+	"SystemAddress": 1144348739947,
+	"BodyID": 10,
+	"Signals": [
+		{
+			"Type": "$SAA_SignalType_Biological;",
+			"Type_Localised": "Biological",
+			"Count": 2
+		},
+		{
+			"Type": "$SAA_SignalType_Geological;",
+			"Type_Localised": "Geological",
+			"Count": 3
+		},
+		{
+			"Type": "$SAA_SignalType_Human;",
+			"Type_Localised": "Human",
+			"Count": 8
+		}
+	],
+	"Genuses": [
+		{
+			"Genus": "$Codex_Ent_Bacterial_Genus_Name;",
+			"Genus_Localised": "Bacterium"
+		},
+		{
+			"Genus": "$Codex_Ent_Stratum_Genus_Name;",
+			"Genus_Localised": "Stratum"
 		}
 	]
 }
