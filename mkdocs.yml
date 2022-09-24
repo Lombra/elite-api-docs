@@ -5,7 +5,7 @@ theme: material
 extra_css: 
     - custom.css
 
-pages:
+nav:
     - Introduction: index.md
     - File Format.md
     - Startup.md
