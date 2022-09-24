@@ -1,4 +1,5 @@
 const fs = require('fs')
+const path = require('path')
 
 let data = require('./docA.json')
 
@@ -152,5 +153,5 @@ for (let section of docs) {
 	}
 	content += section.paragraphs.map(e => e.text).join('\n\n')
 	if (title == 'Introduction') title = 'index'
-	fs.writeFileSync(`docs/${title.replace(/"/g, '')}.md`, content)
+	fs.writeFileSync(path.resolve('docs', `${title.replace(/"/g, '')}.md`), content)
 }
