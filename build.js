@@ -3,10 +3,6 @@ const path = require('path')
 
 let data = require('./docA.json')
 
-const TITLE = "Rubrik"
-const HEADING = "Rubrik1"
-const HEADING2 = "Rubrik2"
-
 let docs = []
 
 let section
@@ -131,10 +127,6 @@ for (let element of data.children) {
 		section.paragraphs.push(paragraph)
 	}
 }
-
-// for (let file of fs.readdirSync('../docs')) fs.unlinkSync('../docs/' + file)
-
-// console.log(docs.find(e => e.heading == "Appendix"))
 
 for (let section of docs) {
 	let title = section.heading
