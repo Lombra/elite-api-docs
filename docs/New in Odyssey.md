@@ -657,16 +657,49 @@ Parameters:
 - SuitID 
 - Class 
 - Cost 
+- Resources 
 
 
 ```
 {
-	"timestamp": "2020-10-06T09:37:49Z",
+	"timestamp": "2022-08-19T16:41:33Z",
 	"event": "UpgradeSuit",
 	"Name": "utilitysuit_class1",
-	"Name_Localised": "Utility Suit",
+	"Name_Localised": "Maverick Suit",
+	"SuitID": 1702914472756487,
 	"Class": 2,
-	"Cost": 100000
+	"Cost": 600000,
+	"Resources": [
+		{
+			"Name": "suitschematic",
+			"Name_Localised": "Suit Schematic",
+			"Count": 1
+		},
+		{
+			"Name": "healthmonitor",
+			"Name_Localised": "Health Monitor",
+			"Count": 1
+		},
+		{
+			"Name": "largecapacitypowerregulator",
+			"Name_Localised": "Power Regulator",
+			"Count": 1
+		},
+		{
+			"Name": "manufacturinginstructions",
+			"Name_Localised": "Manufacturing Instructions",
+			"Count": 1
+		},
+		{
+			"Name": "carbonfibreplating",
+			"Name_Localised": "Carbon Fibre Plating",
+			"Count": 5
+		},
+		{
+			"Name": "graphene",
+			"Count": 5
+		}
+	]
 }
 ```
 
@@ -680,16 +713,44 @@ Parameters:
 - SuitModuleID 
 - Class 
 - Cost 
+- Resources 
 
 
 ```
 {
-	"timestamp": "2020-10-06T09:38:23Z",
+	"timestamp": "2022-08-19T16:58:18Z",
 	"event": "UpgradeWeapon",
-	"Name": "wpn_s_pistol_plasma_charged",
-	"Name_Localised": "Manticore Tormentor",
+	"Name": "wpn_m_assaultrifle_laser_fauto",
+	"Name_Localised": "TK Aphelion",
 	"Class": 2,
-	"Cost": 0
+	"SuitModuleID": 1681611765701131,
+	"Cost": 0,
+	"Resources": [
+		{
+			"Name": "weaponschematic",
+			"Name_Localised": "Weapon Schematic",
+			"Count": 1
+		},
+		{
+			"Name": "ionisedgas",
+			"Name_Localised": "Ionised Gas",
+			"Count": 1
+		},
+		{
+			"Name": "manufacturinginstructions",
+			"Name_Localised": "Manufacturing Instructions",
+			"Count": 1
+		},
+		{
+			"Name": "microelectrode",
+			"Count": 5
+		},
+		{
+			"Name": "opticalfibre",
+			"Name_Localised": "Optical Fibre",
+			"Count": 5
+		}
+	]
 }
 ```
 

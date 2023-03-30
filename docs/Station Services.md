@@ -727,7 +727,10 @@ Optional parameters (depending on mission type)
 - Count 
 - Target 
 - TargetType 
-- TargetFaction 
+- TargetFaction  
+- DestinationSystem 
+- DestinationStation 
+- DestinationSettlement 
 - Reward: value of reward 
 - Donation: contracted donation (as string) (for altruism missions) 
 - Donated: actual donation (as int) 

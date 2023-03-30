@@ -235,6 +235,7 @@ At the time the player requests the jump, not the jump itself
 - SystemID: systemaddress 
 - Body: (name) 
 - BodyID 
+- DepartureTime 
 
 
 ```
@@ -245,7 +246,8 @@ At the time the player requests the jump, not the jump itself
 	"SystemName": "Paesui Xena",
 	"Body": "Paesui Xena A",
 	"SystemAddress": 7269634680241,
-	"BodyID": 1
+	"BodyID": 1,
+	"DepartureTime":"2020-04-20T09:45:00Z"
 }
 ```
 

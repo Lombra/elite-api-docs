@@ -34,6 +34,16 @@ A short example of a player journal file (_**out of date, some events may have a
 
 ### ChangeLog
 
+**Version 36**
+
+**Changes for Odyssey up to update14 (November 2022)**
+
+- Updated the "MissionCompleted" documentation to include the optional params "DestinationSystem", "DestinationStation" and "DestinationSettlement". No functional change, these params where already present. 
+- Added a new flag to Status.json to indicate if a charging fsd is charging a hyperspace jump 
+- Extended the UpgradeSuit/UpgradeWeapon events to include the resources used for the upgrade 
+- Added "DepartureTime" to the "CarrierJumpRequest" event 
+
+
 **Version 35**
 
 **Changes for Odyssey up to update13 (July 2022)**

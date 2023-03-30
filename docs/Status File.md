@@ -106,6 +106,7 @@ Bit|Value|Hex|Meaning
 16|65536|0001 0000|BreathableAtmosphere
 17|131072|0002 0000|Telepresence Multicrew
 18|262144|0004 0000|Physical Multicrew
+19|524288|0008 0000|Fsd hyperdrive charging
 
 Examples:
 
