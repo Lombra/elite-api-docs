@@ -794,3 +794,22 @@ When transferring cargo between ship and fleet carrier, or between ship and SRV
 	]
 }
 ```
+
+### SupercruiseDestinationDrop
+
+When dropping out of supercruise at a targeted destination. 
+
+- Type: The type fo destination being dropped into
+- Threat: threat level
+- MarketID: (Optional)The market id of the destination if dropping at a market
+
+
+```
+{
+	"timestamp":"2020-03-12T12:49:54Z",
+	"event":"SupercruiseDestinationDrop",
+	"Type":”Azeban City”,
+	“Threat”:0,
+	“MarketID”:128001536 
+}
+```

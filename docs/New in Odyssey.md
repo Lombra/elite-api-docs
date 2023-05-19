@@ -414,6 +414,7 @@ Parameters:
 - ScanType: Log, Sample, or Analyse 
 - Genus 
 - Species 
+- Variant
 - SystemAddress 
 - Body 
 
@@ -422,13 +423,17 @@ Example:
 
 ```
 {
-	"timestamp": "2020-12-01T15:52:45Z",
-	"event": "ScanOrganic",
-	"ScanType": "Sample",
-	"Genus": "Bacterial Colonies",
-	"Species": "1",
-	"SystemAddress": 44820334955,
-	"Body": 66
+	"timestamp":"2022-12-07T14:27:55Z",
+	"event":"ScanOrganic", 
+	"ScanType":"Analyse",
+	"Genus":"$Codex_Ent_Tubus_Genus_Name;", 
+	"Genus_Localised":"Tubus",
+	"Species":"$Codex_Ent_Tubus_01_Name;",
+	"Species_Localised":"Tubus Conifer",
+	"Variant":"$Codex_Ent_Tubus_01_A_Name;",
+	"Variant_Localised":"Tubus Conifer - Indigo",
+	"SystemAddress":316174882163, 
+	"Body":44
 }
 ```
 
@@ -472,29 +477,28 @@ Parameters:
 - BioData: Array 
 	- Genus 
 	- Species 
+	- Variant
 	- Value 
 	- Bonus 
 
 
 ```
 {
-	"timestamp": "2020-12-01T16:06:57Z",
-	"event": "SellOrganicData",
-	"MarketID": 128666762,
-	"BioData": [
-		{
-			"Genus": "Bacterial Colonies",
-			"Species": "1",
-			"Value": 100,
-			"Bonus": 1000
-		},
-		{
-			"Genus": "Bacterial Colonies",
-			"Species": "2",
-			"Value": 100,
-			"Bonus": 1000
-		}
-	]
+    "timestamp": "2022-12-07T14:44:28Z",
+    "event": "SellOrganicData",
+    "MarketID": 128001536,
+    "BioData": [
+        {
+            "Genus": "$Codex_Ent_Tubus_Genus_Name;",
+            "Genus_Localised": "Tubus",
+            "Species": "$Codex_Ent_Tubus_01_Name;",
+            "Species_Localised": "Tubus Conifer",
+            "Variant": "$Codex_Ent_Tubus_01_A_Name;",
+            "Variant_Localised": "Tubus Conifer - Indigo",
+            "Value": 2415500,
+            "Bonus": 9662000
+        }
+    ]
 }
 ```
 

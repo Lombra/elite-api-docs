@@ -1720,3 +1720,29 @@ Example:
 	]
 }
 ```
+
+### ClearImpound
+
+When written: When clearing the impound off of one of your ships.
+
+Parameters:
+
+- ShipType
+- ShipID
+- ShipMarketID: The market the ship is stored at
+- MarketID: Your current market
+
+
+Example:
+
+```
+{
+	"timestamp":"2022-11-18T16:19:48Z",
+	"event":"ClearImpound", 
+	"ShipType":"asp",
+	"ShipType_Localised":"Asp Explorer",
+	"ShipID":10,
+	"ShipMarketID":128833431,
+	"MarketID":128833431 
+}
+```

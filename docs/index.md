@@ -34,6 +34,22 @@ A short example of a player journal file (_**out of date, some events may have a
 
 ### ChangeLog
 
+**Version 37**
+
+**Changes for Odyssey up to update14 (May 2023)**
+
+- The “CarrierJump” event is now written to the journal again on a carrier hyperspace jump instead of it writing a “Location” event.
+- ‘MissionFailed’ event is now written when the mission enters the failed state instead of when the mission is abandoned in the transactions panel.
+- Ensured StationState is documented in the “Docked” event
+- “StartJump” now sent for jumps while in a taxi, new field added to differentiate between a taxi jump and a jump in a pleyers own ship.
+- Added the param “IsThargoid” to the events “Interdicted” and “EscapeInterdiction”
+- Added new event “SupercruiseDestinationDrop” which is sent when dropping out of supercruise at a targeted destination.
+- Added Thargoid war data to the events “FSDJump”, “CarrierJump” and “Location”
+- Added documentation for the ClearImpound event(no change, was just missing from documentation)
+- Added organic variant to the “ScanOrganic” and “SellOrganicData” events
+- Fixed the “FactionKillBond” event sometimes not getting written
+
+
 **Version 36**
 
 **Changes for Odyssey up to update14 (November 2022)**
