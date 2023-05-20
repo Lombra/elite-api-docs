@@ -48,7 +48,7 @@ Parameters:
 	- Small 
 	- Medium 
 	- Large 
-
+- StationState
 
 The 'anonymous docking' protocol comes into effect if you're either Wanted (ie have a local bounty) or have an ActiveFine
 
@@ -110,6 +110,8 @@ Example:
 StationServices can include:  Dock, Autodock, BlackMarket, Commodities, Contacts, Exploration, Initiatives, Missions, Outfitting,CrewLounge, Rearm, Refuel, Repair, Shipyard, Tuning, Workshop, MissionsGenerated, Facilitator, Research, FlightController, StationOperations, OnDockMission, Powerplay, SearchAndRescue,
 
 New in v3.7: shop, carriermanagement, carrierfuel, carriervendor, livery, modulepacks, voucherredemption
+
+StationState can be any of the following: UnderRepairs, Damaged, Abandoned, UnderAttack
 
 ### DockingCancelled
 
@@ -222,6 +224,17 @@ If the player is pledged to a Power in Powerplay, and the star system is involve
 
 - Powers: a json array with the names of any powers contesting the system, or the name of the controlling power 
 - PowerplayState: the system state – one of ("InPrepareRadius", "Prepared", "Exploited", "Contested", "Controlled", "Turmoil", "HomeSystem") 
+
+If starting in a system affected by the thargoid war:
+
+- ThargoidWar
+	- CurrentState
+	- NextStateSuccess
+	- NextStateFailure
+	- SuccessStateReached
+	- WarProgress:0-1 values
+	- RemainingPorts
+	- EstimatedRemainingTime
 
 
 Example:
@@ -489,6 +502,17 @@ If starting docked in a station, also include:
 - StationServices 
 - StationEconomies (Array of (Name,Proportion) pairs ) 
 
+If starting in a system affected by the thargoid war:
+
+- ThargoidWar
+	- CurrentState
+	- NextStateSuccess
+	- NextStateFailure
+	- SuccessStateReached
+	- WarProgress:0-1 values
+	- RemainingPorts
+	- EstimatedRemainingTime
+
 
 New in Odyssey:
 
@@ -505,6 +529,7 @@ When written: at the start of a Hyperspace or Supercruise jump (start of countdo
 Parameters:
 
 - JumpType: "Hyperspace" or "Supercruise" 
+- Taxi: True if the player is in a taxi
 - StarSystem: name of destination system (for a hyperspace jump) 
 - SystemAddress 
 - StarClass: star type (only for a hyperspace jump) 
