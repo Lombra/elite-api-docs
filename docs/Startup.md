@@ -439,7 +439,15 @@ Parameters:
 	- Spent_On_Fuel 
 	- Spent_On_Ammo_Consumables 
 	- Insurance_Claims 
-	- Spent_On_Insurance 
+	- Spent_On_Insurance
+        - Owned_Ship_Count
+        - Spent_On_Suits
+        - Spent_On_Weapons
+        - Spent_On_Suit_Consumables
+        - Suits_Owned
+        - Weapons_Owned
+        - Spent_On_Premium_Stock
+        - Premium_Stock_Bought 
 - Combat 
 	- Bounties_Claimed 
 	- Bounty_Hunting_Profit 
@@ -448,13 +456,76 @@ Parameters:
 	- Assassinations 
 	- Assassination_Profits 
 	- Highest_Single_Reward 
-	- Skimmers_Killed   
-- Crime 
+	- Skimmers_Killed
+        - OnFoot_Combat_Bonds
+        - OnFoot_Combat_Bonds_Profits
+        - OnFoot_Vehicles_Destroyed
+        - OnFoot_Ships_Destroyed
+        - Dropships_Taken
+        - Dropships_Booked
+        - Dropships_Cancelled
+        - ConflictZone_High
+        - ConflictZone_Medium
+        - ConflictZone_Low
+        - ConflictZone_Total
+        - ConflictZone_High_Wins
+        - ConflictZone_Medium_Wins
+        - ConflictZone_Low_Wins
+        - ConflictZone_Total_Wins
+        - Settlement_Defended
+        - Settlement_Conquered
+        - OnFoot_Skimmers_Killed
+        - OnFoot_Scavs_Killed
+        - ConflictZone_Low
+        - ConflictZone_Total
+        - ConflictZone_High_Wins
+        - ConflictZone_Medium_Wins
+        - ConflictZone_Low_Wins
+        - ConflictZone_Total_Wins
+        - Settlement_Defended
+        - Settlement_Conquered
+        - OnFoot_Skimmers_Killed
+        - OnFoot_Scavs_Killed 
+- Crime
+        - Notoriety 
 	- Fines 
 	- Total_Fines 
 	- Bounties_Received 
 	- Total_Bounties 
-	- Highest_Bounty 
+	- Highest_Bounty
+        - Malware_Uploaded
+        - Settlements_State_Shutdown
+        - Production_Sabotage
+        - Production_Theft
+        - Total_Murders
+        - Citizens_Murdered
+        - Omnipol_Murdered
+        - Guards_Murdered
+        - Data_Stolen
+        - Goods_Stolen
+        - Sample_Stolen
+        - Total_Stolen
+        - Turrets_Destroyed
+        - Turrets_Overloaded
+        - Turrets_Total
+        - Value_Stolen_StateChange
+        - Profiles_ClonedMalware_Uploaded
+        - Settlements_State_Shutdown
+        - Production_Sabotage
+        - Production_Theft
+        - Total_Murders
+        - Citizens_Murdered
+        - Omnipol_Murdered
+        - Guards_Murdered
+        - Data_Stolen
+        - Goods_Stolen
+        - Sample_Stolen
+        - Total_Stolen
+        - Turrets_Destroyed
+        - Turrets_Overloaded
+        - Turrets_Total
+        - Value_Stolen_StateChange
+        - Profiles_Cloned 
 - Smuggling 
 	- Black_Markets_Traded_With 
 	- Black_Markets_Profits 
@@ -466,24 +537,34 @@ Parameters:
 	- Market_Profits 
 	- Resources_Traded 
 	- Average_Profit 
-	- Highest_Single_Transaction   
+	- Highest_Single_Transaction
+        - Data_Sold
+        - Goods_Sold
+        - Assets_Sold  
 - Mining 
 	- Mining_Profits 
 	- Quantity_Mined 
 	- Materials_Collected   
 - Exploration 
 	- Systems_Visited 
-	- Fuel_Scooped 
-	- Fuel_Purchased 
 	- Exploration_Profits 
 	- Planets_Scanned_To_Level_2 
-	- Planets_Scanned_To_Level_3 
+	- Planets_Scanned_To_Level_3
+        - Efficient_Scans 
 	- Highest_Payout 
 	- Total_Hyperspace_Distance 
 	- Total_Hyperspace_Jumps 
 	- Greatest_Distance_From_Start 
-	- Time_Played   
-- Passengers 
+	- Time_Played
+        - OnFoot_Distance_Travelled
+        - Shuttle_Journeys
+        - Shuttle_Distance_Travelled
+        - Spent_On_Shuttles
+        - First_Footfalls
+        - Planet_Footfalls
+        - Settlements_Visited   
+- Passengers
+        - Passengers_Missions_Accepted
 	- Passengers_Missions_Bulk 
 	- Passengers_Missions_VIP 
 	- Passengers_Missions_Delivered 
@@ -491,9 +572,22 @@ Parameters:
 - Search_And_Rescue 
 	- SearchRescue_Traded 
 	- SearchRescue_Profit 
-	- SearchRescue_Count   
-- Crafting 
-	- Spent_On_Crafting 
+	- SearchRescue_Count
+        - "Salvage_Legal_POI
+        - Salvage_Legal_Settlements
+        - Salvage_Illegal_POI
+        - Salvage_Illegal_Settlements
+        - Maglocks_Opened
+        - Panels_Opened
+        - Settlements_State_FireOut
+        - Settlements_State_Reboot":36
+- TG_ENCOUNTERS
+        - TG_ENCOUNTER_KILLED
+        - TG_ENCOUNTER_TOTAL
+        - TG_ENCOUNTER_TOTAL_LAST_SYSTEM
+        - TG_ENCOUNTER_TOTAL_LAST_TIMESTAMP
+        - TG_ENCOUNTER_TOTAL_LAST_SHIP 
+- Crafting
 	- Count_Of_Used_Engineers 
 	- Recipes_Generated 
 	- Recipes_Generated_Rank_1 
@@ -501,13 +595,14 @@ Parameters:
 	- Recipes_Generated_Rank_3 
 	- Recipes_Generated_Rank_4   
 	- Recipes_Generated_Rank_5   
-	- Recipes_Applied   
-	- Recipes_Applied_Rank_1   
-	- Recipes_Applied_Rank_2   
-	- Recipes_Applied_Rank_3   
-	- Recipes_Applied_Rank_4   
-	- Recipes_Applied_Rank_5   
-	- Recipes_Applied_On_Previously_Modified_Modules   
+        - Suit_Mods_Applied
+        - Weapon_Mods_Applied
+        - Suits_Upgraded
+        - Weapons_Upgraded
+        - Suits_Upgraded_Full
+        - Weapons_Upgraded_Full
+        - Suit_Mods_Applied_Full
+        - Weapon_Mods_Applied_Full 
 - Crew 
 	- NpcCrew_TotalWages 
 	- NpcCrew_Hired 
@@ -518,7 +613,32 @@ Parameters:
 	- Multicrew_Gunner_Time_Total 
 	- Multicrew_Fighter_Time_Total 
 	- Multicrew_Credits_Total 
-	- Multicrew_Fines_Total 
+	- Multicrew_Fines_Total
+- Material_Trader_Stats
+        - Trades_Completed
+        - Materials_Traded
+        - Encoded_Materials_Traded
+        - Raw_Materials_Traded
+        - Grade_1_Materials_Traded
+        - Grade_2_Materials_Traded
+        - Grade_3_Materials_Traded
+        - Grade_4_Materials_Traded
+        - Grade_5_Materials_Traded
+        - Assets_Traded_In
+        - Assets_Traded_Out
+- Exobiology
+        - Organic_Genus_Encountered
+        - Organic_Species_Encountered
+        - Organic_Variant_Encountered
+        - Organic_Data_Profits
+        - Organic_Data
+        - First_Logged_Profits
+        - First_Logged
+        - Organic_Systems
+        - Organic_Planets
+        - Organic_Genus
+        - Organic_Species 
+        
 
 
 Note times are in seconds
@@ -537,7 +657,15 @@ Example:
 		"Spent_On_Fuel": 1647,
 		"Spent_On_Ammo_Consumables": 0,
 		"Insurance_Claims": 4,
-		"Spent_On_Insurance": 1397620
+		"Spent_On_Insurance": 1397620,
+                "Owned_Ship_Count":8,
+                "Spent_On_Suits":79200000,
+                "Spent_On_Weapons":82525000,
+                "Spent_On_Suit_Consumables":3782000,
+                "Suits_Owned":11,
+                "Weapons_Owned":20,
+                "Spent_On_Premium_Stock":95000000,
+                "Premium_Stock_Bought":36
 	},
 	"Combat": {
 		"Bounties_Claimed": 0,
@@ -547,14 +675,51 @@ Example:
 		"Assassinations": 0,
 		"Assassination_Profits": 0,
 		"Highest_Single_Reward": 0,
-		"Skimmers_Killed": 0
+		"Skimmers_Killed": 0,
+                "OnFoot_Combat_Bonds":2686,
+                "OnFoot_Combat_Bonds_Profits":285103267,
+                "OnFoot_Vehicles_Destroyed":0,
+                "OnFoot_Ships_Destroyed":0,
+                "Dropships_Taken":45,
+                "Dropships_Booked":92,
+                "Dropships_Cancelled":0,
+                "ConflictZone_High":76,
+                "ConflictZone_Medium":28,
+                "ConflictZone_Low":12,
+                "ConflictZone_Total":116,
+                "ConflictZone_High_Wins":74,
+                "ConflictZone_Medium_Wins":26,
+                "ConflictZone_Low_Wins":12,
+                "ConflictZone_Total_Wins":112,
+                "Settlement_Defended":6,
+                "Settlement_Conquered":5,
+                "OnFoot_Skimmers_Killed":7,
+                "OnFoot_Scavs_Killed":243
 	},
 	"Crime": {
+                "Notoriety":0,
 		"Fines": 0,
 		"Total_Fines": 0,
 		"Bounties_Received": 0,
 		"Total_Bounties": 0,
-		"Highest_Bounty": 0
+		"Highest_Bounty": 0,
+                "Malware_Uploaded":0,
+                "Settlements_State_Shutdown":1,
+                "Production_Sabotage":0,
+                "Production_Theft":62,
+                "Total_Murders":25,
+                "Citizens_Murdered":17,
+                "Omnipol_Murdered":1,
+                "Guards_Murdered":7,
+                "Data_Stolen":60,
+                "Goods_Stolen":520,
+                "Sample_Stolen":4,
+                "Total_Stolen":584,
+                "Turrets_Destroyed":0,
+                "Turrets_Overloaded":0,
+                "Turrets_Total":0,
+                "Value_Stolen_StateChange":0,
+                "Profiles_Cloned":24
 	},
 	"Smuggling": {
 		"Black_Markets_Traded_With": 0,
@@ -568,7 +733,10 @@ Example:
 		"Market_Profits": 40700,
 		"Resources_Traded": 23,
 		"Average_Profit": 4070,
-		"Highest_Single_Transaction": 17961
+		"Highest_Single_Transaction": 17961,
+                "Data_Sold":366,
+                "Goods_Sold":526,
+                "Assets_Sold":426
 	},
 	"Mining": {
 		"Mining_Profits": 0,
@@ -577,8 +745,6 @@ Example:
 	},
 	"Exploration": {
 		"Systems_Visited": 228,
-		"Fuel_Scooped": 111,
-		"Fuel_Purchased": 0,
 		"Exploration_Profits": 304469,
 		"Planets_Scanned_To_Level_2": 39,
 		"Planets_Scanned_To_Level_3": 15,
@@ -586,7 +752,14 @@ Example:
 		"Total_Hyperspace_Distance": 844927,
 		"Total_Hyperspace_Jumps": 295,
 		"Greatest_Distance_From_Start": 65222.47204614,
-		"Time_Played": 651060
+		"Time_Played": 651060,
+                "OnFoot_Distance_Travelled":965216,
+                "Shuttle_Journeys":3,
+                "Shuttle_Distance_Travelled":136.20724062429,
+                "Spent_On_Shuttles":64150,
+                "First_Footfalls":720,
+                "Planet_Footfalls":1138,
+                "Settlements_Visited":28 
 	},
 	"Passengers": {
 		"Passengers_Missions_Bulk": 0,
@@ -597,10 +770,24 @@ Example:
 	"Search_And_Rescue": {
 		"SearchRescue_Traded": 12,
 		"SearchRescue_Profit": 19467,
-		"SearchRescue_Count": 8
+		"SearchRescue_Count": 8,
+                "Salvage_Legal_POI":3764100,
+                "Salvage_Legal_Settlements":9068600,
+                "Salvage_Illegal_POI":1450000,
+                "Salvage_Illegal_Settlements":0,
+                "Maglocks_Opened":756,
+                "Panels_Opened":194,
+                "Settlements_State_FireOut":302,
+                "Settlements_State_Reboot":36
 	},
+        "TG_ENCOUNTERS": {
+                "TG_ENCOUNTER_KILLED":213,
+                "TG_ENCOUNTER_TOTAL":18,
+                "TG_ENCOUNTER_TOTAL_LAST_SYSTEM":"Cephei Sector XO-A b3",
+                "TG_ENCOUNTER_TOTAL_LAST_TIMESTAMP":"3310-04-19 15:00",
+                "TG_ENCOUNTER_TOTAL_LAST_SHIP":"Krait Mk II"
+        },
 	"Crafting": {
-		"Spent_On_Crafting": 0,
 		"Count_Of_Used_Engineers": 2,
 		"Recipes_Generated": 28,
 		"Recipes_Generated_Rank_1": 9,
@@ -608,13 +795,14 @@ Example:
 		"Recipes_Generated_Rank_3": 9,
 		"Recipes_Generated_Rank_4": 4,
 		"Recipes_Generated_Rank_5": 0,
-		"Recipes_Applied": 21,
-		"Recipes_Applied_Rank_1": 8,
-		"Recipes_Applied_Rank_2": 5,
-		"Recipes_Applied_Rank_3": 7,
-		"Recipes_Applied_Rank_4": 1,
-		"Recipes_Applied_Rank_5": 0,
-		"Recipes_Applied_On_Previously_Modified_Modules": 0
+		"Suit_Mods_Applied":10,
+                "Weapon_Mods_Applied":1,
+                "Suits_Upgraded":6,
+                "Weapons_Upgraded":8,
+                "Suits_Upgraded_Full":0,
+                "Weapons_Upgraded_Full":0,
+                "Suit_Mods_Applied_Full":6,
+                "Weapon_Mods_Applied_Full":0
 	},
 	"Crew": {
 		"NpcCrew_TotalWages": 0,
@@ -628,6 +816,32 @@ Example:
 		"Multicrew_Fighter_Time_Total": 6070,
 		"Multicrew_Credits_Total": 0,
 		"Multicrew_Fines_Total": 0
-	}
+	},
+        "Material_Trader_Stats": {
+                "Trades_Completed":540,
+                "Materials_Traded":11617,
+                "Encoded_Materials_Traded":4168,
+                "Raw_Materials_Traded":538,
+                "Grade_1_Materials_Traded":2037,
+                "Grade_2_Materials_Traded":2060,
+                "Grade_3_Materials_Traded":3236,
+                "Grade_4_Materials_Traded":2814,
+                "Grade_5_Materials_Traded":1470,
+                "Assets_Traded_In":218,
+                "Assets_Traded_Out":673
+        },
+        "Exobiology": {
+                "Organic_Genus_Encountered":21,
+                "Organic_Species_Encountered":98,
+                "Organic_Variant_Encountered":56,
+                "Organic_Data_Profits":17497803745,
+                "Organic_Data":1880,
+                "First_Logged_Profits":11593725615,
+                "First_Logged":1054,
+                "Organic_Systems":407,
+                "Organic_Planets":818,
+                "Organic_Genus":13,
+                "Organic_Species":34
+        }
 }
 ```
