@@ -36,6 +36,8 @@ LegalState: one of:
 - "Hostile"
 - "PassengerWanted"
 - "Warrant"
+- "Allied"
+- "Thargoid"
 
 Additional values when on foot:
 
