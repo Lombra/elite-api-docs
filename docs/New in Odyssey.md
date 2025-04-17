@@ -1,6 +1,6 @@
-## New in "Odyssey"
+# New in "Odyssey"
 
-### Backpack
+## Backpack
 
 Lists the contents of the backpack, in a separate _**backpack.json**_ file
 
@@ -20,7 +20,7 @@ Each list has objects containing:
 - Count 
 
 
-### BackpackChange
+## BackpackChange
 
 This is written when there is any change to the contents of the suit backpack – note this can be written at the same time as other events like UseConsumable
 
@@ -37,13 +37,13 @@ Where each item contains:
 - Type 
 
 
-### BookDropship
+## BookDropship
 
 This event is logged when signing up to fight at a recruitment desk
 
 Essentially the same as Booktaxi
 
-### BookTaxi
+## BookTaxi
 
 This event is logged when booking a taxi transport
 
@@ -65,7 +65,7 @@ Parameters:
 }
 ```
 
-### BuyMicroResources
+## BuyMicroResources
 
 This event is logged when buying microresources
 
@@ -115,7 +115,7 @@ Category can be one of:
 }
 ```
 
-### BuySuit
+## BuySuit
 
 This event is logged when buying a new suit
 
@@ -137,7 +137,7 @@ Parameters:
 }
 ```
 
-### BuyWeapon
+## BuyWeapon
 
 This event is logged when purchasing a new hand weapon
 
@@ -160,13 +160,13 @@ Parameters:
 }
 ```
 
-### CancelDropship
+## CancelDropship
 
 This event is logged if the player cancels their journey to a combat zone
 
 Otherwise essentially the same as CancelTaxi
 
-### CancelTaxi
+## CancelTaxi
 
 This event is logged if the player cancels a booked taxi trip
 
@@ -183,7 +183,7 @@ Parameters:
 }
 ```
 
-### CollectItems
+## CollectItems
 
 When picking up items from the ground
 
@@ -196,7 +196,7 @@ Parameters:
 - Stolen: bool 
 
 
-### CreateSuitLoadout
+## CreateSuitLoadout
 
 This event is logged when the player creates a new suit loadout
 
@@ -224,7 +224,7 @@ Parameters:
 }
 ```
 
-### DeleteSuitLoadout
+## DeleteSuitLoadout
 
 Parameters:
 
@@ -234,7 +234,7 @@ Parameters:
 - LoadoutName 
 
 
-### Disembark
+## Disembark
 
 This event is logged when the player steps out of a ship or SRV
 
@@ -266,7 +266,7 @@ Parameters:
 }
 ```
 
-### DropItems
+## DropItems
 
 Parameters:
 
@@ -277,7 +277,7 @@ Parameters:
 - Count 
 
 
-### DropShipDeploy
+## DropShipDeploy
 
 When exiting a shuttle dropship at a conflict zone
 
@@ -291,7 +291,7 @@ Parameters:
 - OnPlanet: bool 
 
 
-### Embark
+## Embark
 
 This event is logged when a player (on foot) gets into a ship or SRV
 
@@ -323,7 +323,7 @@ Parameters:
 }
 ```
 
-### FCMaterials
+## FCMaterials
 
 When trading with a Fleet Carrier Bartender for materials, a file is written with the pricelist
 
@@ -359,7 +359,7 @@ Example of FCMaterials.json:
 ] }
 ```
 
-### LoadoutEquipModule
+## LoadoutEquipModule
 
 This event is logged when a player adds a weapon to a suit loadout
 
@@ -378,7 +378,7 @@ Parameters:
 - WeaponMods 
 
 
-### LoadoutRemoveModule
+## LoadoutRemoveModule
 
 This event is logged when a player removes a weapon from a suit loadout
 
@@ -395,7 +395,7 @@ Parameters:
 - WeaponMods 
 
 
-### RenameSuitLoadout
+## RenameSuitLoadout
 
 Parameters:
 
@@ -405,7 +405,7 @@ Parameters:
 - Loadoutname 
 
 
-### ScanOrganic
+## ScanOrganic
 
 This event is logged when the player uses the Organic Sampling Tool to scan, log or analyse organic discoveries. The first scan is 'Log', subsequent scans are 'sample' until fully scanned, final scan is 'analyse'
 
@@ -437,7 +437,7 @@ Example:
 }
 ```
 
-### SellMicroResources
+## SellMicroResources
 
 This event is logged when a player sells Microresources for cash
 
@@ -467,7 +467,7 @@ Parameters:
 }
 ```
 
-### SellOrganicData
+## SellOrganicData
 
 This event records that a player has sold organic data (see ScanOrganic)
 
@@ -502,7 +502,7 @@ Parameters:
 }
 ```
 
-### SellSuit
+## SellSuit
 
 This event is logged when a player sells a flight suit
 
@@ -524,7 +524,7 @@ Parameters:
 }
 ```
 
-### SellWeapon
+## SellWeapon
 
 This event is logged when a player sells a hand weapon
 
@@ -537,7 +537,7 @@ Parameters:
 - WeaponMods 
 
 
-### ShipLocker
+## ShipLocker
 
 Lists the contents of the ship locker, eg at startup
 
@@ -563,7 +563,7 @@ Each list has objects containing:
 - Count 
 
 
-### SwitchSuitLoadout
+## SwitchSuitLoadout
 
 This event is logged when a player selects a different flight suit from the ship's locker
 
@@ -582,7 +582,7 @@ Parameters:
 	- WeaponMods 
 
 
-### TransferMicroResources
+## TransferMicroResources
 
 Written when transferreing items between backpack and ship locker
 
@@ -618,7 +618,7 @@ Parameters:
 }
 ```
 
-### TradeMicroResources
+## TradeMicroResources
 
 This event is logged when the player exchanges owned microresources to receive some other type of microresource
 
@@ -651,7 +651,7 @@ Parameters:
 }
 ```
 
-### UpgradeSuit
+## UpgradeSuit
 
 This event is logged when the player upgrades their flight suit
 
@@ -707,7 +707,7 @@ Parameters:
 }
 ```
 
-### UpgradeWeapon
+## UpgradeWeapon
 
 This event is logged when the player upgrades a hand weapon
 
@@ -758,7 +758,7 @@ Parameters:
 }
 ```
 
-### UseConsumable
+## UseConsumable
 
 When using an item from the player's inventory (backpack)
 

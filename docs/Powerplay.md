@@ -1,6 +1,6 @@
-## Powerplay
+# Powerplay
 
-### PowerplayCollect
+## PowerplayCollect
 
 When written: when collecting powerplay commodities for delivery
 
@@ -23,7 +23,7 @@ Example:
 }
 ```
 
-### PowerplayDefect
+## PowerplayDefect
 
 When written: when a player defects from one power to another
 
@@ -44,7 +44,7 @@ Example:
 }
 ```
 
-### PowerplayDeliver
+## PowerplayDeliver
 
 When written: when delivering powerplay commodities
 
@@ -67,7 +67,7 @@ Example:
 }
 ```
 
-### PowerplayFastTrack
+## PowerplayFastTrack
 
 When written: when paying to fast-track allocation of commodities
 
@@ -77,7 +77,7 @@ Parameters:
 - Cost 
 
 
-### PowerplayJoin
+## PowerplayJoin
 
 When written: when joining up with a power
 
@@ -96,7 +96,7 @@ Example:
 }
 ```
 
-### PowerplayLeave
+## PowerplayLeave
 
 When written: when leaving a power
 
@@ -115,7 +115,7 @@ Example:
 }
 ```
 
-### PowerplaySalary
+## PowerplaySalary
 
 When written: when receiving salary payment from a power
 
@@ -125,7 +125,7 @@ Parameters:
 - Amount 
 
 
-### PowerplayVote
+## PowerplayVote
 
 When written: when voting for a system expansion
 
@@ -136,7 +136,7 @@ Parameters:
 - System 
 
 
-### PowerplayVoucher
+## PowerplayVoucher
 
 When written: when receiving payment for powerplay combat
 

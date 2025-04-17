@@ -1,10 +1,10 @@
-## File Format
+# File Format
 
 The Player Journal is written in line-delimited JSON format (see json.org and jsonlines.org), to provide a standard format for ease of machine parsing, while still being intelligible to the human reader.
 
 Each Journal file is a series of lines each containing one Json object.
 
-### File Location
+## File Location
 
 The journal files are written into the user's Saved Games folder, eg, for Windows:
 
@@ -22,7 +22,7 @@ In addition to the incremental player journal file, the following files are writ
 
 **Status.json** – contains frequently-changing info as displayed in the cockpit gui. This is updated when the data changes. See section §14
 
-### Heading entry
+## Heading entry
 
 The Heading record has a Json object with the following values:
 
@@ -49,7 +49,7 @@ Example:
 
 (If the play session goes on a long time, and the journal gets very large, the file will be closed and a new file started with an increased part number: the heading entry is added at the beginning of every file. See also the "Continued" event)
 
-### Event Records
+## Event Records
 
 Each event record is a json object.
 
@@ -57,7 +57,7 @@ The object has a "timestamp" value with the time in ISO 8601 format, an "event":
 
 The rest of this document describes each type of event that might be written into the journal, and the data values for each event.
 
-### Localisation
+## Localisation
 
 Some values written into the log use internal symbol IDs, as used by the game to lookup localised text strings. These have the form "$symbolname;"
 

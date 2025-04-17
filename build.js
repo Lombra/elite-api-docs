@@ -51,7 +51,7 @@ let currentHeader
 
 for (let element of data.children) {
 	if (docs.length == 0 && element.tag != 'h1') continue
-	
+
 	if (element.tag == 'h1') {
 		section = {
 			heading: element.text.replace(/\d+\s*/, ''),
@@ -59,7 +59,7 @@ for (let element of data.children) {
 		}
 		docs.push(section)
 	}
-	
+
 	if (element.tag == 'p') {
 		let text = element.text.trim()
 		if (!text) continue
@@ -107,7 +107,7 @@ for (let element of data.children) {
 	}
 	if (element.tag == 'h2') {
 		let paragraph = {
-			text: '### ' + element.text.replace(/[\d\.]+\s*/, ''),
+			text: '## ' + element.text.replace(/[\d\.]+\s*/, ''),
 		}
 		section.paragraphs.push(paragraph)
 		currentHeader = paragraph.text.substring(4)
@@ -131,7 +131,7 @@ for (let element of data.children) {
 for (let section of docs) {
 	let title = section.heading
 	if (title == 'Index') continue
-	let content = '## ' + title
+	let content = '# ' + title
 	content += '\n\n'
 	for (let paragraph of section.paragraphs) {
 		// for (let text of paragraph.text) {

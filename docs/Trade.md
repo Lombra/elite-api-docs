@@ -1,6 +1,6 @@
-## Trade
+# Trade
 
-### AsteroidCracked
+## AsteroidCracked
 
 When written: when the player has broken up a 'Motherlode' asteroid for mining
 
@@ -9,7 +9,7 @@ Parameters:
 - Body: name of nearest body 
 
 
-### BuyTradeData
+## BuyTradeData
 
 When Written: when buying trade data in the galaxy map
 
@@ -30,7 +30,7 @@ Example:
 }
 ```
 
-### CollectCargo
+## CollectCargo
 
 When Written: when scooping cargo from space or planet surface
 
@@ -52,7 +52,7 @@ Example:
 }
 ```
 
-### EjectCargo
+## EjectCargo
 
 When Written:
 
@@ -91,7 +91,7 @@ Examples:
 }
 ```
 
-### MarketBuy
+## MarketBuy
 
 When Written: when purchasing goods in the market
 
@@ -117,7 +117,7 @@ Example:
 }
 ```
 
-### MarketSell
+## MarketSell
 
 When Written: when selling goods in the market
 
@@ -161,7 +161,7 @@ Examples:
 }
 ```
 
-### MiningRefined
+## MiningRefined
 
 When Written: when mining fragments are converted unto a unit of cargo by refinery
 

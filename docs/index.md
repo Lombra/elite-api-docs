@@ -1,4 +1,4 @@
-## Introduction
+# Introduction
 
 Elite:Dangerous writes a network log file primarily to help when investigating problems.
 
@@ -32,7 +32,7 @@ A short example of a player journal file (_**out of date, some events may have a
 {"timestamp":"2016-06-10T14:41:58Z", "event":"SellExplorationData", "Systems":[ "HIP 78085", "Praea Euq NW-W b1-3" ], "Discovered":[ "HIP 78085 A", "Praea Euq 	NW-W b1-3", "Praea Euq NW-W b1-3 3 a", "Praea Euq NW-W b1-3 3" ], "BaseValue":10822, "Bonus":3959 }
 ```
 
-### ChangeLog
+## ChangeLog
 
 **Version 37**
 

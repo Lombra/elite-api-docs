@@ -1,6 +1,6 @@
-## Station Services
+# Station Services
 
-### BuyAmmo
+## BuyAmmo
 
 When Written: when purchasing ammunition
 
@@ -19,7 +19,7 @@ Example:
 }
 ```
 
-### BuyDrones
+## BuyDrones
 
 When Written: when purchasing drones
 
@@ -44,7 +44,7 @@ Example:
 }
 ```
 
-### CargoDepot
+## CargoDepot
 
 When written: when collecting or delivering cargo for a wing mission, or if a wing member updates progress
 
@@ -85,7 +85,7 @@ Example:
 }
 ```
 
-### CommunityGoal
+## CommunityGoal
 
 When written: when the game retrieves info on community goals from the server, and the data has changed since last time
 
@@ -148,7 +148,7 @@ Example:
 }
 ```
 
-### CommunityGoalDiscard
+## CommunityGoalDiscard
 
 When written: when opting out of a community goal
 
@@ -159,7 +159,7 @@ Parameters:
 - System 
 
 
-### CommunityGoalJoin
+## CommunityGoalJoin
 
 When Written: when signing up to a community goal
 
@@ -172,7 +172,7 @@ Parameters:
 - System 
 
 
-### CommunityGoalReward  
+## CommunityGoalReward  
 
 When Written: when receiving a reward for a community goal
 
@@ -184,7 +184,7 @@ Parameters:
 - Reward 
 
 
-### CrewAssign
+## CrewAssign
 
 When written: when changing the task assignment of a member of crew
 
@@ -206,7 +206,7 @@ Example:
 }
 ```
 
-### CrewFire
+## CrewFire
 
 When written: when dismissing a member of crew
 
@@ -226,7 +226,7 @@ Example:
 }
 ```
 
-### CrewHire
+## CrewHire
 
 When written: when engaging a new member of crew
 
@@ -252,11 +252,11 @@ Example:
 }
 ```
 
-### EngineerApply
+## EngineerApply
 
 This event is obsolete, and is no longer written (as from v3.0)
 
-### EngineerContribution
+## EngineerContribution
 
 When written: when offering items cash or bounties to an Engineer to gain access
 
@@ -287,7 +287,7 @@ Example:
 }
 ```
 
-### EngineerCraft
+## EngineerCraft
 
 When Written: when requesting an engineer upgrade
 
@@ -356,13 +356,13 @@ These modification types have string values: WeaponMode, DamageType, CabinClass
 
 (although I'm not sure if there are any blueprints that actually modify a cabin class!)
 
-### EngineerLegacyConvert
+## EngineerLegacyConvert
 
 When written: when converting a pre-2.4 engineered module
 
 This is generated when converting, or previewing a conversion of a legacy module to the new system. Due to the nature of the changes made for3.0, modules generated in the old system are not compatible with the new crafting system, so players will be unable to craft with them. However, players will be given the opportunity to convert their legacy modules to the new format with the caveat that converted modules will be a recipe level below what they were before the conversion. The EngineerLegacyConvert journal entry is generated when converting a recipe, or just previewing a conversion, so some of our creative third party developers out there may be able to make tools to show how a ship loadout compares before and after converting their modules. The entry itself is the same as the EngineerCraft entry, minus the ingredients data (since no materials are required to convert), but plus an "IsPreview" bool to indicate whether this entry has been generated from a conversion, or just a preview.
 
-### EngineerProgress
+## EngineerProgress
 
 When Written: when a player increases their access to an engineer
 
@@ -499,7 +499,7 @@ Example (startup):
 }
 ```
 
-### FetchRemoteModule
+## FetchRemoteModule
 
 When written: when requesting a module is transferred from storage at another station
 
@@ -514,7 +514,7 @@ Parameters:
 - TransferTime: (in seconds) 
 
 
-### Market
+## Market
 
 When written: when accessing the commodity market in a station
 
@@ -568,7 +568,7 @@ Separate file:
 ] }
 ```
 
-### MassModuleStore
+## MassModuleStore
 
 When written: when putting multiple modules into storage
 
@@ -586,7 +586,7 @@ Parameters:
 	- Quality 
 
 
-### MaterialTrade
+## MaterialTrade
 
 When written: when exchanging materials at the Material trader contact
 
@@ -626,7 +626,7 @@ Example: (note categories simplified)
 }
 ```
 
-### MissionAbandoned
+## MissionAbandoned
 
 When Written: when a mission has been abandoned
 
@@ -648,7 +648,7 @@ Example:
 }
 ```
 
-### MissionAccepted
+## MissionAccepted
 
 When Written: when starting a mission
 
@@ -710,7 +710,7 @@ Examples:
 }
 ```
 
-### MissionCompleted
+## MissionCompleted
 
 When Written: when a mission is completed
 
@@ -797,7 +797,7 @@ Example of MaterialsReward:
 
 ... "MaterialsReward":[ { "Name":"DisruptedWakeEchoes", "Name_Localised":"Atypical Disrupted Wake Echoes", "Category":"$MICRORESOURCE_CATEGORY_Encoded;", "Category_Localised":"Encoded", "Count":4 } ] ...
 
-### MissionFailed
+## MissionFailed
 
 When Written: when a mission has failed
 
@@ -808,7 +808,7 @@ Parameters:
 - Fine: (if relevant) 
 
 
-### MissionRedirected
+## MissionRedirected
 
 When written: when a mission is updated with a new destination
 
@@ -836,7 +836,7 @@ Example:
 }
 ```
 
-### ModuleBuy
+## ModuleBuy
 
 When Written: when buying a module in outfitting
 
@@ -877,7 +877,7 @@ Example:
 }
 ```
 
-### ModuleRetrieve
+## ModuleRetrieve
 
 When written: when fetching a previously stored module
 
@@ -896,7 +896,7 @@ Parameters:
 - Cost 
 
 
-### ModuleSell
+## ModuleSell
 
 When Written: when selling a module in outfitting
 
@@ -924,7 +924,7 @@ Example:
 }
 ```
 
-### ModuleSellRemote
+## ModuleSellRemote
 
 When written: when selling a module in storage at another station
 
@@ -938,7 +938,7 @@ Parameters:
 - ShipId 
 
 
-### ModuleStore
+## ModuleStore
 
 When written: when storing a module in Outfitting
 
@@ -976,7 +976,7 @@ Example:
 }
 ```
 
-### ModuleSwap
+## ModuleSwap
 
 When Written: when moving a module to a different slot on the ship
 
@@ -1019,7 +1019,7 @@ Examples:
 }
 ```
 
-### Outfitting
+## Outfitting
 
 Written when accessing the outfitting menu
 
@@ -1066,7 +1066,7 @@ Example: (in journal)
 ] }
 ```
 
-### PayBounties
+## PayBounties
 
 When written: when paying off bounties
 
@@ -1093,7 +1093,7 @@ Example:
 }
 ```
 
-### PayFines
+## PayFines
 
 When Written: when paying fines
 
@@ -1119,7 +1119,7 @@ Example:
 }
 ```
 
-### PayLegacyFines
+## PayLegacyFines
 
 When Written: when paying legacy fines
 
@@ -1131,7 +1131,7 @@ Parameters:
 - BrokerPercentage (present if paid through a broker) 
 
 
-### RedeemVoucher
+## RedeemVoucher
 
 When Written: when claiming payment for combat bounties and bonds
 
@@ -1164,7 +1164,7 @@ Example:
 }
 ```
 
-### RefuelAll
+## RefuelAll
 
 When Written: when refuelling (full tank)
 
@@ -1185,7 +1185,7 @@ Example:
 }
 ```
 
-### RefuelPartial
+## RefuelPartial
 
 When Written: when refuelling (10%)
 
@@ -1206,7 +1206,7 @@ Example:
 }
 ```
 
-### Repair
+## Repair
 
 When Written: when repairing the ship
 
@@ -1244,7 +1244,7 @@ Note when repairing on a FleetCarrier, you can now get a list of the modules rep
 }
 ```
 
-### RepairAll
+## RepairAll
 
 When written: when repairing everything
 
@@ -1253,7 +1253,7 @@ Parameters:
 - Cost 
 
 
-### RestockVehicle
+## RestockVehicle
 
 When Written: when purchasing an SRV or Fighter
 
@@ -1278,7 +1278,7 @@ Example:
 }
 ```
 
-### ScientificResearch
+## ScientificResearch
 
 When written: when contributing materials to a "research" community goal
 
@@ -1291,7 +1291,7 @@ Parameters:
 -  
 
 
-### SearchAndRescue
+## SearchAndRescue
 
 When written: when delivering items to a Search and Rescue contact
 
@@ -1303,7 +1303,7 @@ Parameters:
 - Reward 
 
 
-### SellDrones
+## SellDrones
 
 When Written: when selling unwanted drones back to the market
 
@@ -1328,7 +1328,7 @@ Example:
 }
 ```
 
-### SellShipOnRebuy
+## SellShipOnRebuy
 
 When written: When selling a stored ship to raise funds when on insurance/rebuy screen
 
@@ -1353,7 +1353,7 @@ Example:
 }
 ```
 
-### SetUserShipName
+## SetUserShipName
 
 When written: when assigning a name to the ship in Starport Services
 
@@ -1378,7 +1378,7 @@ Example:
 }
 ```
 
-###  Shipyard
+##  Shipyard
 
 When written: when accessing shipyard in a station
 
@@ -1421,7 +1421,7 @@ In the separate shipyard.json file:
 ] }
 ```
 
-### ShipyardBuy
+## ShipyardBuy
 
 When Written: when buying a new ship in the shipyard
 
@@ -1452,7 +1452,7 @@ Example:
 }
 ```
 
-### ShipyardNew
+## ShipyardNew
 
 When written: after a new ship has been purchased
 
@@ -1473,7 +1473,7 @@ Example:
 }
 ```
 
-### ShipyardSell
+## ShipyardSell
 
 When Written: when selling a ship stored in the shipyard
 
@@ -1499,7 +1499,7 @@ Example:
 }
 ```
 
-### ShipyardTransfer
+## ShipyardTransfer
 
 When Written: when requesting a ship at another station be transported to this station
 
@@ -1529,7 +1529,7 @@ Example:
 }
 ```
 
-### ShipyardSwap
+## ShipyardSwap
 
 When Written: when switching to another ship already stored at this station
 
@@ -1557,7 +1557,7 @@ Example
 }
 ```
 
-### StoredModules
+## StoredModules
 
 When written: when first visiting Outfitting, and when the set of stored modules has changed
 
@@ -1588,7 +1588,7 @@ The InTransit value only appears (with value true) if the module is being transf
 { "Name":"$int_hyperdrive_size6_class5_name;", "Name_Localised":"FSD", "StorageSlot":59, "StarSystem":"Shinrarta Dezhra", "MarketID":128666762, "TransferCost":79680, "TransferTime":1317, "BuyPrice":12620035, "Hot":false, "EngineerModifications":"FSD_LongRange", "Level":5, "Quality":0.000000 } ] }
 ```
 
-### StoredShips
+## StoredShips
 
 When written: when visiting shipyard
 
@@ -1657,7 +1657,7 @@ Example:
 }
 ```
 
-### TechnologyBroker
+## TechnologyBroker
 
 When written: when using the Technology Broker to unlock new purchasable technology
 
@@ -1721,7 +1721,7 @@ Example:
 }
 ```
 
-### ClearImpound
+## ClearImpound
 
 When written: When clearing the impound off of one of your ships.
 

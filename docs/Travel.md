@@ -1,6 +1,6 @@
-## Travel
+# Travel
 
-### ApproachBody
+## ApproachBody
 
 When written: when in Supercruise, and distance from planet drops to within the 'Orbital Cruise' zone
 
@@ -21,7 +21,7 @@ Parameters:
 }
 ```
 
-### Docked
+## Docked
 
 When written: when landing at landing pad in a space station, outpost, or surface settlement
 
@@ -113,7 +113,7 @@ New in v3.7: shop, carriermanagement, carrierfuel, carriervendor, livery, module
 
 StationState can be any of the following: UnderRepairs, Damaged, Abandoned, UnderAttack
 
-### DockingCancelled
+## DockingCancelled
 
 When written: when the player cancels a docking request
 
@@ -124,7 +124,7 @@ Parameters:
 - MarketID 
 
 
-### DockingDenied
+## DockingDenied
 
 When written: when the station denies a docking request
 
@@ -138,7 +138,7 @@ Parameters:
 
 Reasons include: NoSpace, TooLarge, Hostile, Offences, Distance, ActiveFighter, NoReason
 
-### DockingGranted
+## DockingGranted
 
 When written: when a docking request is granted
 
@@ -150,7 +150,7 @@ Parameters:
 - LandingPad: pad number 
 
 
-### DockingRequested
+## DockingRequested
 
 When written: when the player requests docking at a station
 
@@ -165,7 +165,7 @@ Parameters:
 	- Large 
 
 
-### DockingTimeout
+## DockingTimeout
 
 When written: when a docking request has timed out
 
@@ -176,7 +176,7 @@ Parameters:
 - MarketID 
 
 
-### FSDJump
+## FSDJump
 
 When written: when jumping from one star system to another
 
@@ -396,7 +396,7 @@ Example Conflict data:
 ]
 ```
 
-### FSDTarget
+## FSDTarget
 
 When written: when selecting a star system to jump to
 
@@ -410,7 +410,7 @@ Parameters:
 - StarClass 
 
 
-### LeaveBody
+## LeaveBody
 
 When written: when flying away from a planet, and distance increases above the 'Orbital Cruise' altitude
 
@@ -422,7 +422,7 @@ Parameters:
 - BodyID 
 
 
-### Liftoff
+## Liftoff
 
 When written: when taking off from planet surface
 
@@ -452,7 +452,7 @@ Example:
 }
 ```
 
-### Location
+## Location
 
 When written: at startup, or when being resurrected at a station
 
@@ -522,7 +522,7 @@ New in Odyssey:
 - OnFoot: bool 
 
 
-### StartJump
+## StartJump
 
 When written: at the start of a Hyperspace or Supercruise jump (start of countdown)
 
@@ -535,7 +535,7 @@ Parameters:
 - StarClass: star type (only for a hyperspace jump) 
 
 
-### SupercruiseEntry
+## SupercruiseEntry
 
 When written: entering supercruise from normal space
 
@@ -554,7 +554,7 @@ Example:
 }
 ```
 
-### SupercruiseExit
+## SupercruiseExit
 
 When written: leaving supercruise for normal space
 
@@ -577,7 +577,7 @@ Example:
 }
 ```
 
-### Touchdown
+## Touchdown
 
 When written: landing on a planet surface
 
@@ -611,7 +611,7 @@ Example:
 }
 ```
 
-### Undocked
+## Undocked
 
 When written: liftoff from a landing pad in a station, outpost or settlement
 
@@ -631,7 +631,7 @@ Example:
 }
 ```
 
-### NavRoute
+## NavRoute
 
 When plotting a multi-star route, the file "NavRoute.json" is written in the same directory as the journal, with a list of stars along that route
 
@@ -660,7 +660,7 @@ Example:
 }
 ```
 
-### NavRouteClear
+## NavRouteClear
 
 When written: When the current plotted nav route is cleared
 

@@ -1,6 +1,6 @@
-## Other Events
+# Other Events
 
-### AfmuRepairs
+## AfmuRepairs
 
 When written: when repairing modules using the Auto Field Maintenance Unit (AFMU)
 
@@ -26,7 +26,7 @@ Example:
 }
 ```
 
-### ApproachSettlement
+## ApproachSettlement
 
 When written: when approaching a planetary settlement
 
@@ -41,7 +41,7 @@ Parameters:
 - BodyName 
 
 
-### ChangeCrewRole
+## ChangeCrewRole
 
 When written: when in a crew on someone else's ship, player switched crew role
 
@@ -51,7 +51,7 @@ Parameters:
 - Telepresence: (bool) (only from Odyssey build) 
 
 
-### CockpitBreached
+## CockpitBreached
 
 When written: when cockpit canopy is breached
 
@@ -66,7 +66,7 @@ Example:
 }
 ```
 
-### CommitCrime
+## CommitCrime
 
 When written: when a crime is recorded against the player
 
@@ -106,7 +106,7 @@ Examples:
 }
 ```
 
-### Continued
+## Continued
 
 When written: if the journal file grows to 500k lines, we write this event, close the file, and start a new one
 
@@ -115,7 +115,7 @@ Parameters:
 - Part: next part number 
 
 
-### CrewLaunchFighter
+## CrewLaunchFighter
 
 When written: when in multicrew, in Helm player's log, when a crew member launches a fighter
 
@@ -126,7 +126,7 @@ Parameters:
 - Telepresence: (bool) (only from Odyssey build) 
 
 
-### CrewMemberJoins
+## CrewMemberJoins
 
 When written: When another player joins your ship's crew
 
@@ -136,7 +136,7 @@ Parameters:
 - Telepresence: (bool) (only from Odyssey build) 
 
 
-### CrewMemberQuits
+## CrewMemberQuits
 
 When written: When another player leaves your ship's crew
 
@@ -146,7 +146,7 @@ Parameters:
 - Telepresence: (bool) (only from Odyssey build) 
 
 
-### CrewMemberRoleChange
+## CrewMemberRoleChange
 
 When written: in Multicrew, Helm's log, when another crew player changes role
 
@@ -168,7 +168,7 @@ Example:
 }
 ```
 
-### CrimeVictim
+## CrimeVictim
 
 When written: when another player commits a crime against the current player
 
@@ -179,7 +179,7 @@ Parameters:
 - Fine _or _Bounty 
 
 
-### DatalinkScan
+## DatalinkScan
 
 When written: when scanning a data link
 
@@ -188,7 +188,7 @@ Parameters:
 - Message: message from data link 
 
 
-### DatalinkVoucher
+## DatalinkVoucher
 
 When written: when scanning a datalink generates a reward
 
@@ -199,7 +199,7 @@ Parameters:
 - PayeeFaction 
 
 
-### DataScanned
+## DataScanned
 
 When written: when scanning some types of data links
 
@@ -210,7 +210,7 @@ Parameters:
 
 Type will typically be one of "DataLink", "DataPoint", "ListeningPost", "AbandonedDataLog", "WreckedShip", etc
 
-### DockFighter
+## DockFighter
 
 When written: when docking a fighter back with the mothership
 
@@ -228,7 +228,7 @@ Example:
 }
 ```
 
-### DockSRV
+## DockSRV
 
 When written: when docking an SRV with the ship
 
@@ -238,7 +238,7 @@ Parameters:
 - SRVType 
 
 
-### EndCrewSession
+## EndCrewSession
 
 When written: when the captain in multicrew disbands the crew
 
@@ -248,7 +248,7 @@ Parameters:
 - Telepresence: (bool) (only from Odyssey build) 
 
 
-### FighterRebuilt
+## FighterRebuilt
 
 When written: when a ship's fighter is rebuilt in the hangar
 
@@ -258,7 +258,7 @@ Parameters:
 - ID 
 
 
-### FuelScoop
+## FuelScoop
 
 When written: when scooping fuel from a star
 
@@ -279,7 +279,7 @@ Example:
 }
 ```
 
-### Friends
+## Friends
 
 When written: when receiving information about a change in a friend's status
 
@@ -291,7 +291,7 @@ Parameters:
 - Name: the friend's commander name 
 
 
-### JetConeBoost
+## JetConeBoost
 
 When written: when enough material has been collected from a solar jet code (at a white dwarf or neutron star) for a jump boost
 
@@ -300,7 +300,7 @@ Parameters:
 - BoostValue 
 
 
-### JetConeDamage
+## JetConeDamage
 
 When written: when passing through the jet code from a white dwarf or neutron star has caused damage to a ship module
 
@@ -309,7 +309,7 @@ Parameters:
 - Module: the name of the module that has taken some damage 
 
 
-### JoinACrew
+## JoinACrew
 
 When written: When you join another player ship's crew
 
@@ -319,7 +319,7 @@ Parameters:
 - Telepresence: (bool) (only from Odyssey build) 
 
 
-### KickCrewMember
+## KickCrewMember
 
 When written: When you force another player to leave your ship's crew
 
@@ -330,7 +330,7 @@ Parameters:
 - Telepresence: (bool) (only from Odyssey build) 
 
 
-### LaunchDrone
+## LaunchDrone
 
 When written: when using any type of drone/limpet
 
@@ -341,7 +341,7 @@ Parameters:
 
 "Hatchbreaker", "FuelTransfer", "Collection", "Prospector", "Repair", "Research", "Decontamination"
 
-### LaunchFighter
+## LaunchFighter
 
 When written: when launching a fighter
 
@@ -361,7 +361,7 @@ Parameters:
 }
 ```
 
-### LaunchSRV
+## LaunchSRV
 
 When written: deploying the SRV from a ship onto planet surface
 
@@ -372,7 +372,7 @@ Parameters:
 - SRVType 
 
 
-### ModuleInfo
+## ModuleInfo
 
 When written: when looking at the cockpit RHS modules info panel, if data has changed
 
@@ -405,7 +405,7 @@ Example of ModulesInfo file:
  ] }
 ```
 
-### Music
+## Music
 
 When written: when the game music 'mood' changes
 
@@ -418,7 +418,7 @@ Possible track names are: NoTrack, MainMenu, CQCMenu, SystemMap, GalaxyMap, Gala
 
 Note: Other music track names may be used in future
 
-### NpcCrewPaidWage
+## NpcCrewPaidWage
 
 This is written when crew receive wages
 
@@ -429,7 +429,7 @@ Parameters:
 - Amount 
 
 
-### NpcCrewRank
+## NpcCrewRank
 
 This is written when a crew member's combat rank increases
 
@@ -440,7 +440,7 @@ Parameters:
 - RankCombat 
 
 
-### Promotion
+## Promotion
 
 When written: when the player's rank increases
 
@@ -464,7 +464,7 @@ Example:
 }
 ```
 
-### ProspectedAsteroid
+## ProspectedAsteroid
 
 When using a prospecting drone
 
@@ -476,7 +476,7 @@ Parameters:
 - Remaining: percentage 
 
 
-### QuitACrew
+## QuitACrew
 
 When written: When you leave another player ship's crew
 
@@ -486,7 +486,7 @@ Parameters:
 - Telepresence: (bool) (only from Odyssey build) 
 
 
-### RebootRepair
+## RebootRepair
 
 When written: when the 'reboot repair' function is used
 
@@ -508,7 +508,7 @@ Example:
 }
 ```
 
-### ReceiveText
+## ReceiveText
 
 When written: when a text message is received from another player or npc
 
@@ -519,7 +519,7 @@ Parameters:
 - Channel: (wing/local/voicechat/friend/player/npc/squadron/starsystem) 
 
 
-### RepairDrone
+## RepairDrone
 
 When written: when the player's ship has been repaired by a repair drone
 
@@ -532,7 +532,7 @@ Parameters:
 
 Each of these is a number indicating the amount of damage that has been repaired
 
-### ReservoirReplenished
+## ReservoirReplenished
 
 When fuel is moved from one fuel tank to another
 
@@ -542,7 +542,7 @@ Parameters:
 - FuelReservoir 
 
 
-### Resurrect
+## Resurrect
 
 When written: when the player restarts after death
 
@@ -553,7 +553,7 @@ Parameters:
 - Bankrupt: whether the commander declared bankruptcy 
 
 
-### Scanned
+## Scanned
 
 When written: when the player's ship has been scanned
 
@@ -574,13 +574,13 @@ Example:
 }
 ```
 
-### SelfDestruct
+## SelfDestruct
 
 When written: when the 'self destruct' function is used
 
 Parameters: none
 
-### SendText
+## SendText
 
 When written: when a text message is sent to another player
 
@@ -601,13 +601,13 @@ Example:
 }
 ```
 
-### Shutdown
+## Shutdown
 
 When written: on a clean shutdown of the game
 
 Parameters: none
 
-### Synthesis
+## Synthesis
 
 When written: when synthesis is used to repair or rearm
 
@@ -637,13 +637,13 @@ Example:
 }
 ```
 
-### SystemsShutdown
+## SystemsShutdown
 
 When written: when the player's ship systems shut down (eg in a Thargoid encounter)
 
 Parameters: none
 
-### USSDrop
+## USSDrop
 
 When written: when dropping from Supercruise at a USS
 
@@ -664,7 +664,7 @@ Example:
 }
 ```
 
-### VehicleSwitch
+## VehicleSwitch
 
 When written: when switching control between the main ship and a fighter
 
@@ -691,7 +691,7 @@ Examples:
 }
 ```
 
-### WingAdd
+## WingAdd
 
 When written: another player has joined the wing
 
@@ -710,7 +710,7 @@ Example:
 }
 ```
 
-### WingInvite
+## WingInvite
 
 When written: when the player is invited to a wing
 
@@ -719,7 +719,7 @@ Parameters:
 - Name: the commander name of the player inviting to the wing 
 
 
-### WingJoin
+## WingJoin
 
 When written: this player has joined a wing
 
@@ -740,7 +740,7 @@ Example:
 }
 ```
 
-### WingLeave
+## WingLeave
 
 When written: this player has left a wing
 
@@ -755,7 +755,7 @@ Example:
 }
 ```
 
-### CargoTransfer
+## CargoTransfer
 
 When transferring cargo between ship and fleet carrier, or between ship and SRV
 
@@ -795,7 +795,7 @@ When transferring cargo between ship and fleet carrier, or between ship and SRV
 }
 ```
 
-### SupercruiseDestinationDrop
+## SupercruiseDestinationDrop
 
 When dropping out of supercruise at a targeted destination. 
 

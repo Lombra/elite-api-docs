@@ -1,6 +1,6 @@
-## Startup
+# Startup
 
-### Cargo
+## Cargo
 
 When written: at startup, _note this is now written slightly later in startup, after we have initialised missions, so we can detect if any cargo came from an abandoned delivery mission_
 
@@ -49,7 +49,7 @@ Example:
 }
 ```
 
-### ClearSavedGame
+## ClearSavedGame
 
 When written: If you should ever reset your game
 
@@ -70,7 +70,7 @@ Example:
 }
 ```
 
-### Commander
+## Commander
 
 When written: at the start of the LoadGame process
 
@@ -82,7 +82,7 @@ Parameters:
 - FID: player id 
 
 
-### Loadout
+## Loadout
 
 When written: at startup, when loading from main menu, or when switching ships, or after changing the ship in Outfitting, or when docking SRV back in mothership
 
@@ -129,7 +129,7 @@ Parameters:
 
 _(For a passenger cabin, AmmoInClip holds the number of places in the cabin)_
 
-### Materials
+## Materials
 
 When written: at startup, when loading from main menu into game
 
@@ -191,7 +191,7 @@ Example:
 }
 ```
 
-### Missions
+## Missions
 
 When written: at startup
 
@@ -227,7 +227,7 @@ Each object contains:
 }
 ```
 
-### NewCommander
+## NewCommander
 
 When written: Creating a new commander
 
@@ -250,7 +250,7 @@ Example:
 }
 ```
 
-### LoadGame
+## LoadGame
 
 When written: at startup, when loading from main menu into game
 
@@ -298,7 +298,7 @@ Example:
 }
 ```
 
-### Passengers
+## Passengers
 
 When written: at startup, when loading the saved game file
 
@@ -312,7 +312,7 @@ Parameters:
 	- Count 
 
 
-### Powerplay
+## Powerplay
 
 When written: at startup, if player has pledged to a power
 
@@ -339,7 +339,7 @@ Example:
 }
 ```
 
-### Progress
+## Progress
 
 When written: at startup
 
@@ -368,7 +368,7 @@ Example:
 }
 ```
 
-### Rank
+## Rank
 
 When written: at startup
 
@@ -397,7 +397,7 @@ Example:
 }
 ```
 
-### Reputation
+## Reputation
 
 When written: at startup (after Rank and Progress)
 
@@ -425,7 +425,7 @@ Note thresholds:
 
 +90..+100: allied
 
-### Statistics
+## Statistics
 
 When written: at startup
 

@@ -1,6 +1,6 @@
-## Squadrons
+# Squadrons
 
-### AppliedToSquadron
+## AppliedToSquadron
 
 ```
 {
@@ -10,7 +10,7 @@
 }
 ```
 
-### DisbandedSquadron
+## DisbandedSquadron
 
 ```
 {
@@ -20,7 +20,7 @@
 }
 ```
 
-### InvitedToSquadron
+## InvitedToSquadron
 
 ```
 {
@@ -30,7 +30,7 @@
 }
 ```
 
-### JoinedSquadron
+## JoinedSquadron
 
 ```
 {
@@ -40,7 +40,7 @@
 }
 ```
 
-### KickedFromSquadron
+## KickedFromSquadron
 
 ```
 {
@@ -50,7 +50,7 @@
 }
 ```
 
-### LeftSquadron
+## LeftSquadron
 
 ```
 {
@@ -60,7 +60,7 @@
 }
 ```
 
-### SharedBookmarkToSquadron
+## SharedBookmarkToSquadron
 
 ```
 {
@@ -70,7 +70,7 @@
 }
 ```
 
-### SquadronCreated
+## SquadronCreated
 
 ```
 {
@@ -80,7 +80,7 @@
 }
 ```
 
-### SquadronDemotion
+## SquadronDemotion
 
 ```
 {
@@ -92,7 +92,7 @@
 }
 ```
 
-### SquadronPromotion
+## SquadronPromotion
 
 ```
 {
@@ -104,7 +104,7 @@
 }
 ```
 
-### SquadronStartup
+## SquadronStartup
 
 Written at game startup, to identify the player's squadron
 
@@ -114,7 +114,7 @@ Parameters:
 - CurrentRank 
 
 
-### WonATrophyForSquadron
+## WonATrophyForSquadron
 
 ```
 {

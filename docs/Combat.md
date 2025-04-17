@@ -1,6 +1,6 @@
-## Combat
+# Combat
 
-### Bounty
+## Bounty
 
 When written: player is awarded a bounty for a kill
 
@@ -50,7 +50,7 @@ Examples:
 }
 ```
 
-### CapShipBond
+## CapShipBond
 
 When written: The player has been rewarded for a capital ship combat
 
@@ -61,7 +61,7 @@ Parameters:
 - VictimFaction 
 
 
-### Died
+## Died
 
 When written: player was killed
 
@@ -84,7 +84,7 @@ Example:
 }
 ```
 
-### Died
+## Died
 
 When written: player was killed by a wing
 
@@ -114,7 +114,7 @@ Example:
 }
 ```
 
-### EscapeInterdiction
+## EscapeInterdiction
 
 When written: Player has escaped interdiction
 
@@ -136,7 +136,7 @@ Example:
 }
 ```
 
-### FactionKillBond
+## FactionKillBond
 
 When written: Player rewarded for taking part in a combat zone
 
@@ -159,13 +159,13 @@ Example:
 }
 ```
 
-### FighterDestroyed
+## FighterDestroyed
 
 When written: when a ship-launched fighter is destroyed
 
 Parameters: none
 
-### HeatDamage
+## HeatDamage
 
 When written: when taking damage due to overheating
 
@@ -174,13 +174,13 @@ Parameters:
 - ID 
 
 
-### HeatWarning
+## HeatWarning
 
 When written: when heat exceeds 100%
 
 Parameters: none
 
-### HullDamage
+## HullDamage
 
 When written: when hull health drops below a threshold (20% steps)
 
@@ -191,7 +191,7 @@ Parameters:
 - Fighter: bool – true for ship-launched fighter 
 
 
-### Interdicted
+## Interdicted
 
 When written: player was interdicted by player or npc
 
@@ -219,7 +219,7 @@ Example:
 }
 ```
 
-### Interdiction
+## Interdiction
 
 When written: player has (attempted to) interdict another player or npc
 
@@ -246,7 +246,7 @@ Example:
 }
 ```
 
-### PVPKill
+## PVPKill
 
 When written: when this player has killed another player
 
@@ -256,7 +256,7 @@ Parameters:
 - CombatRank: victim's rank in range 0..8 
 
 
-### ShieldState
+## ShieldState
 
 When written: when shields are disabled in combat, or recharged
 
@@ -324,7 +324,7 @@ If scan stage &gt;= 3
 
 [*] when targetting another ship, if the player is aligned in powerplay, and the target is also aligned to a power, include the info
 
-### SRVDestroyed
+## SRVDestroyed
 
 When written: when the player's SRV is destroyed
 
@@ -334,7 +334,7 @@ Parameters:
 - SRVType 
 
 
-### UnderAttack
+## UnderAttack
 
 When written: when under fire (same time as the Under Attack voice message)
 

@@ -1,6 +1,6 @@
-## Exploration
+# Exploration
 
-### CodexEntry
+## CodexEntry
 
 When written: when a new discovery is added to the Codex
 
@@ -50,7 +50,7 @@ Example:
 }
 ```
 
-### DiscoveryScan
+## DiscoveryScan
 
 When written: when using the discovery scanner, and new body discoveries are displayed in the cockpit info window. Note you can get two or three of these in a row, where some bodies are discovered by the automatic passive scan, before the active scan is complete.
 
@@ -60,7 +60,7 @@ Parameters:
 - Bodies: number of new bodies discovered 
 
 
-### Scan
+## Scan
 
 When Written: basic or detailed discovery scan of a star, planet or moon
 
@@ -243,7 +243,7 @@ Example:
 }
 ```
 
-###  FSSAllBodiesFound
+##  FSSAllBodiesFound
 
 When written: after having identified all bodies in the system
 
@@ -254,7 +254,7 @@ Parameters:
 - Count 
 
 
-### FSSBodySignals
+## FSSBodySignals
 
 This event is written when completing a "Full Spectrum Scan" of a starsystem, to list the number of SAA signals found in the system (as shown in-game in the top-right panel)
 
@@ -287,7 +287,7 @@ Example:
 }
 ```
 
-### FSSDiscoveryScan
+## FSSDiscoveryScan
 
 When written: when performing a full system scan ("Honk")
 
@@ -298,7 +298,7 @@ Parameters:
 - NonBodyCount: Number of non-body signals found 
 
 
-### FSSSignalDiscovered
+## FSSSignalDiscovered
 
 When written: when zooming in on a signal using the FSS scanner
 
@@ -314,7 +314,7 @@ Parameters:
 - IsStation: true (if it is a station) 
 
 
-### MaterialCollected
+## MaterialCollected
 
 When Written: whenever materials are collected
 
@@ -347,7 +347,7 @@ Examples:
 }
 ```
 
-### MaterialDiscarded
+## MaterialDiscarded
 
 When Written: if materials are discarded
 
@@ -370,7 +370,7 @@ Example:
 }
 ```
 
-### MaterialDiscovered
+## MaterialDiscovered
 
 When Written: when a new material is discovered
 
@@ -393,7 +393,7 @@ Example:
 }
 ```
 
-### MultiSellExplorationData
+## MultiSellExplorationData
 
 When written: when selling exploration data in Cartographics, a page at a time
 
@@ -429,7 +429,7 @@ Example
 }
 ```
 
-### NavBeaconScan
+## NavBeaconScan
 
 When written: when scanning  a navigation beacon, before the scan data for all the bodies in the system is written into the journal
 
@@ -439,7 +439,7 @@ Parameters:
 - SystemAddress 
 
 
-### BuyExplorationData  
+## BuyExplorationData  
 
 When Written: when buying system data via the galaxy map
 
@@ -460,7 +460,7 @@ Example:
 }
 ```
 
-### SAAScanComplete
+## SAAScanComplete
 
 When written: after using the "Surface Area Analysis" scanner
 
@@ -488,7 +488,7 @@ Example:
 }
 ```
 
-### SAASignalsFound
+## SAASignalsFound
 
 When written: when using SAA scanner on a planet or rings
 
@@ -581,7 +581,7 @@ Examples:
 }
 ```
 
-### ScanBaryCentre
+## ScanBaryCentre
 
 When scanning one body of a binary pair, you will now get an event detailing the orbital parameters of their BaryCentre
 
@@ -618,7 +618,7 @@ Example
 }
 ```
 
-### SellExplorationData
+## SellExplorationData
 
 When Written: when selling exploration data in Cartographics
 
@@ -653,7 +653,7 @@ Example:
 }
 ```
 
-### Screenshot
+## Screenshot
 
 When Written: when a screen snapshot is saved
 
