@@ -6,9 +6,9 @@ build:
     nodejs: "latest"
   jobs:
     install:
-      - npm install vitepress
+      - npm ci
     build:
       html:
-        - vitepress build
+        - npm run docs:build
         - mkdir -p $READTHEDOCS_OUTPUT
         - mv .vitepress/dist $READTHEDOCS_OUTPUT/html
