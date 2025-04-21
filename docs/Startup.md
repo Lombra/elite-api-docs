@@ -12,17 +12,16 @@ A simple event (with no parameters) is written to the main journal file when the
 
 Parameters:
 
-- Vessel: "Ship" or "SRV" 
-- Inventory: array of cargo, 
-	- Name 
-	- Count 
-	- Stolen 
-	- MissionID (if relevant) 
-
+- Vessel: "Ship" or "SRV"
+- Inventory: array of cargo,
+	- Name
+	- Count
+	- Stolen
+	- MissionID (if relevant)
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2018-06-26T08:21:17Z",
 	"event": "Cargo",
@@ -55,13 +54,12 @@ When written: If you should ever reset your game
 
 Parameters:
 
-- Name: commander name 
-- FID: player id 
-
+- Name: commander name
+- FID: player id
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "ClearSavedGame",
@@ -78,9 +76,8 @@ This is written before the inventory, loadout, etc
 
 Parameters:
 
-- Name: commander name 
-- FID: player id 
-
+- Name: commander name
+- FID: player id
 
 ## Loadout
 
@@ -88,44 +85,42 @@ When written: at startup, when loading from main menu, or when switching ships, 
 
 Parameters:
 
-- Ship: current ship type 
-- ShipID: ship id number (indicates which of your ships you are in) 
-- ShipName: user-defined ship name 
-- ShipIdent: user-defined ship ID string 
-- HullValue – may not always be present 
-- ModulesValue – may not always be present 
-- HullHealth 
-- UnladenMass – Mass of Hull and Modules, excludes fuel and cargo 
-- FuelCapacity: { Main: , Reserve: } 
-- CargoCapacity 
-- MaxJumpRange: (based on zero cargo, and just enough fuel for 1 jump) 
-- Rebuy 
-- Hot: (if wanted at startup – may not always be present) 
+- Ship: current ship type
+- ShipID: ship id number (indicates which of your ships you are in)
+- ShipName: user-defined ship name
+- ShipIdent: user-defined ship ID string
+- HullValue – may not always be present
+- ModulesValue – may not always be present
+- HullHealth
+- UnladenMass – Mass of Hull and Modules, excludes fuel and cargo
+- FuelCapacity: { Main: , Reserve: }
+- CargoCapacity
+- MaxJumpRange: (based on zero cargo, and just enough fuel for 1 jump)
+- Rebuy
+- Hot: (if wanted at startup – may not always be present)
 
-
-- Modules: array of installed items, each with: 
-	- Slot: slot name 
-	- Item: module name - lowercase 
-	- On: bool, indicates on or off 
-	- Priority: power priority 
-	- Health 
-	- Value 
-	- AmmoInClip: (if relevant) 
-	- AmmoInHopper: (if relevant) 
-	- Engineering: (if engineered) 
-		- EngineerID 
-		- Engineer: name 
-		- BlueprintID 
-		- BlueprintName: blueprint name   
-		- Level 
-		- Quality 
-		- ExperimentalEffect: (name, if applied) 
-		- Modifications: Json array of objects 
-			- Label – (see §15.11 below) 
-			- Value – may not always be present 
-			- OriginalValue 
-			- LessIsGood: bool 
-
+- Modules: array of installed items, each with:
+	- Slot: slot name
+	- Item: module name - lowercase
+	- On: bool, indicates on or off
+	- Priority: power priority
+	- Health
+	- Value
+	- AmmoInClip: (if relevant)
+	- AmmoInHopper: (if relevant)
+	- Engineering: (if engineered)
+		- EngineerID
+		- Engineer: name
+		- BlueprintID
+		- BlueprintName: blueprint name
+		- Level
+		- Quality
+		- ExperimentalEffect: (name, if applied)
+		- Modifications: Json array of objects
+			- Label – (see §15.11 below)
+			- Value – may not always be present
+			- OriginalValue
+			- LessIsGood: bool
 
 _(For a passenger cabin, AmmoInClip holds the number of places in the cabin)_
 
@@ -135,14 +130,13 @@ When written: at startup, when loading from main menu into game
 
 Parameters:
 
-- Raw: array of raw materials (each with name and count) 
-- Manufactured: array of manufactured items 
-- Encoded: array of scanned data 
-
+- Raw: array of raw materials (each with name and count)
+- Manufactured: array of manufactured items
+- Encoded: array of scanned data
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2017-02-10T14:25:51Z",
 	"event": "Materials",
@@ -197,20 +191,18 @@ When written: at startup
 
 Parameters:
 
-- Active: (array of objects) 
-- Failed: (array of objects) 
-- Complete: (array of objects) 
-
+- Active: (array of objects)
+- Failed: (array of objects)
+- Complete: (array of objects)
 
 Each object contains:
 
-- MissionID 
-- Name 
-- PassengerMission: bool 
-- Expires: time left in seconds 
+- MissionID
+- Name
+- PassengerMission: bool
+- Expires: time left in seconds
 
-
-```
+```json
 {
 	"timestamp": "2017-10-02T10:37:58Z",
 	"event": "Missions",
@@ -233,14 +225,13 @@ When written: Creating a new commander
 
 Parameters:
 
-- Name: (new) commander name 
-- FID: player id 
-- Package: selected starter package 
-
+- Name: (new) commander name
+- FID: player id
+- Package: selected starter package
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "NewCommander",
@@ -256,30 +247,29 @@ When written: at startup, when loading from main menu into game
 
 Parameters:
 
-- Commander: commander name 
-- FID: player id 
-- Horizons: bool 
-- Odyssey: bool 
-- Ship: current ship type 
-- ShipID: ship id number (indicates which of your ships you are in) 
-- StartLanded: true (only present if landed) 
-- StartDead:true (only present if starting dead: see "Resurrect") 
-- GameMode: Open, Solo or Group 
-- Group: name of group (if in a group) 
-- Credits: current credit balance 
-- Loan: current loan 
-- ShipName: user-defined ship name 
-- ShipIdent: user-defined ship ID string 
-- FuelLevel: current fuel   
-- FuelCapacity: size of main tank 
-- language 
-- gameversion 
-- build 
-
+- Commander: commander name
+- FID: player id
+- Horizons: bool
+- Odyssey: bool
+- Ship: current ship type
+- ShipID: ship id number (indicates which of your ships you are in)
+- StartLanded: true (only present if landed)
+- StartDead:true (only present if starting dead: see "Resurrect")
+- GameMode: Open, Solo or Group
+- Group: name of group (if in a group)
+- Credits: current credit balance
+- Loan: current loan
+- ShipName: user-defined ship name
+- ShipIdent: user-defined ship ID string
+- FuelLevel: current fuel
+- FuelCapacity: size of main tank
+- language
+- gameversion
+- build
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2017-02-10T14:25:51Z",
 	"event": "LoadGame",
@@ -304,13 +294,12 @@ When written: at startup, when loading the saved game file
 
 Parameters:
 
-- Manifest: array of passenger records, each containing: 
-	- MissionID 
-	- Type 
-	- VIP (bool) 
-	- Wanted (bool) 
-	- Count 
-
+- Manifest: array of passenger records, each containing:
+	- MissionID
+	- Type
+	- VIP (bool)
+	- Wanted (bool)
+	- Count
 
 ## Powerplay
 
@@ -318,16 +307,15 @@ When written: at startup, if player has pledged to a power
 
 Parameters:
 
-- Power: name 
-- Rank 
-- Merits 
-- Votes 
-- TimePledged (time in seconds) 
-
+- Power: name
+- Rank
+- Merits
+- Votes
+- TimePledged (time in seconds)
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2018-01-31T10:53:04Z",
 	"event": "Powerplay",
@@ -345,17 +333,16 @@ When written: at startup
 
 Parameters:
 
-- Combat: percent progress to next rank 
-- Trade: " 
-- Explore: " 
-- Empire: " 
-- Federation: " 
-- CQC: " 
-
+- Combat: percent progress to next rank
+- Trade: "
+- Explore: "
+- Empire: "
+- Federation: "
+- CQC: "
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "Progress",
@@ -374,17 +361,16 @@ When written: at startup
 
 Parameters:
 
-- Combat: rank on scale 0-8 
-- Trade: rank on scale 0-8 
-- Explore: rank on scale 0-8 
-- Empire: military rank 
-- Federation: military rank 
-- CQC: rank on scale 0-8 
-
+- Combat: rank on scale 0-8
+- Trade: rank on scale 0-8
+- Explore: rank on scale 0-8
+- Empire: military rank
+- Federation: military rank
+- CQC: rank on scale 0-8
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "Rank",
@@ -405,11 +391,10 @@ This gives the player's reputation (on a scale of -100..+100) with the superpowe
 
 Parameters:
 
-- Empire 
-- Federation 
-- Independent 
-- Alliance 
-
+- Empire
+- Federation
+- Independent
+- Alliance
 
 Note thresholds:
 
@@ -433,13 +418,13 @@ This line contains the information displayed in the statistics panel on the righ
 
 Parameters:
 
-- Bank_Account 
-	- Current_Wealth Spent_On_Ships 
-	- Spent_On_Outfitting Spent_On_Repairs 
-	- Spent_On_Fuel 
-	- Spent_On_Ammo_Consumables 
-	- Insurance_Claims 
-	- Spent_On_Insurance 
+- Bank_Account
+	- Current_Wealth Spent_On_Ships
+	- Spent_On_Outfitting Spent_On_Repairs
+	- Spent_On_Fuel
+	- Spent_On_Ammo_Consumables
+	- Insurance_Claims
+	- Spent_On_Insurance
 	- Owned_Ship_Count
 	- Spent_On_Suits
 	- Spent_On_Weapons
@@ -447,16 +432,16 @@ Parameters:
 	- Suits_Owned
 	- Weapons_Owned
 	- Spent_On_Premium_Stock
-	- Premium_Stock_Bought 
-- Combat 
-	- Bounties_Claimed 
-	- Bounty_Hunting_Profit 
-	- Combat_Bonds 
-	- Combat_Bond_Profits 
-	- Assassinations 
-	- Assassination_Profits 
-	- Highest_Single_Reward 
-	- Skimmers_Killed   
+	- Premium_Stock_Bought
+- Combat
+	- Bounties_Claimed
+	- Bounty_Hunting_Profit
+	- Combat_Bonds
+	- Combat_Bond_Profits
+	- Assassinations
+	- Assassination_Profits
+	- Highest_Single_Reward
+	- Skimmers_Killed
 	- OnFoot_Combat_Bonds
 	- OnFoot_Combat_Bonds_Profits
 	- OnFoot_Vehicles_Destroyed
@@ -485,14 +470,14 @@ Parameters:
 	- Settlement_Defended
 	- Settlement_Conquered
 	- OnFoot_Skimmers_Killed
-	- OnFoot_Scavs_Killed 
-- Crime 
-	- Notoriety 
-	- Fines 
-	- Total_Fines 
-	- Bounties_Received 
-	- Total_Bounties 
-	- Highest_Bounty 
+	- OnFoot_Scavs_Killed
+- Crime
+	- Notoriety
+	- Fines
+	- Total_Fines
+	- Bounties_Received
+	- Total_Bounties
+	- Highest_Bounty
 	- Malware_Uploaded
 	- Settlements_State_Shutdown
 	- Production_Sabotage
@@ -525,54 +510,54 @@ Parameters:
 	- Turrets_Overloaded
 	- Turrets_Total
 	- Value_Stolen_StateChange
-	- Profiles_Cloned 
-- Smuggling 
-	- Black_Markets_Traded_With 
-	- Black_Markets_Profits 
-	- Resources_Smuggled 
-	- Average_Profit 
-	- Highest_Single_Transaction   
-- Trading 
-	- Markets_Traded_With 
-	- Market_Profits 
-	- Resources_Traded 
-	- Average_Profit 
-	- Highest_Single_Transaction   
+	- Profiles_Cloned
+- Smuggling
+	- Black_Markets_Traded_With
+	- Black_Markets_Profits
+	- Resources_Smuggled
+	- Average_Profit
+	- Highest_Single_Transaction
+- Trading
+	- Markets_Traded_With
+	- Market_Profits
+	- Resources_Traded
+	- Average_Profit
+	- Highest_Single_Transaction
 	- Data_Sold
 	- Goods_Sold
-	- Assets_Sold  
-- Mining 
-	- Mining_Profits 
-	- Quantity_Mined 
-	- Materials_Collected   
-- Exploration 
-	- Systems_Visited 
-	- Exploration_Profits 
-	- Planets_Scanned_To_Level_2 
-	- Planets_Scanned_To_Level_3 
-	- Efficient_Scans 
-	- Highest_Payout 
-	- Total_Hyperspace_Distance 
-	- Total_Hyperspace_Jumps 
-	- Greatest_Distance_From_Start 
-	- Time_Played   
+	- Assets_Sold
+- Mining
+	- Mining_Profits
+	- Quantity_Mined
+	- Materials_Collected
+- Exploration
+	- Systems_Visited
+	- Exploration_Profits
+	- Planets_Scanned_To_Level_2
+	- Planets_Scanned_To_Level_3
+	- Efficient_Scans
+	- Highest_Payout
+	- Total_Hyperspace_Distance
+	- Total_Hyperspace_Jumps
+	- Greatest_Distance_From_Start
+	- Time_Played
 	- OnFoot_Distance_Travelled
 	- Shuttle_Journeys
 	- Shuttle_Distance_Travelled
 	- Spent_On_Shuttles
 	- First_Footfalls
 	- Planet_Footfalls
-	- Settlements_Visited   
-- Passengers 
+	- Settlements_Visited
+- Passengers
 	- Passengers_Missions_Accepted
-	- Passengers_Missions_Bulk 
-	- Passengers_Missions_VIP 
-	- Passengers_Missions_Delivered 
-	- Passengers_Missions_Ejected   
-- Search_And_Rescue 
-	- SearchRescue_Traded 
-	- SearchRescue_Profit 
-	- SearchRescue_Count   
+	- Passengers_Missions_Bulk
+	- Passengers_Missions_VIP
+	- Passengers_Missions_Delivered
+	- Passengers_Missions_Ejected
+- Search_And_Rescue
+	- SearchRescue_Traded
+	- SearchRescue_Profit
+	- SearchRescue_Count
 	- Salvage_Legal_POI
 	- Salvage_Legal_Settlements
 	- Salvage_Illegal_POI
@@ -586,15 +571,15 @@ Parameters:
 	- TG_ENCOUNTER_TOTAL
 	- TG_ENCOUNTER_TOTAL_LAST_SYSTEM
 	- TG_ENCOUNTER_TOTAL_LAST_TIMESTAMP
-	- TG_ENCOUNTER_TOTAL_LAST_SHIP 
-- Crafting 
-	- Count_Of_Used_Engineers 
-	- Recipes_Generated 
-	- Recipes_Generated_Rank_1 
-	- Recipes_Generated_Rank_2 
-	- Recipes_Generated_Rank_3 
-	- Recipes_Generated_Rank_4   
-	- Recipes_Generated_Rank_5   
+	- TG_ENCOUNTER_TOTAL_LAST_SHIP
+- Crafting
+	- Count_Of_Used_Engineers
+	- Recipes_Generated
+	- Recipes_Generated_Rank_1
+	- Recipes_Generated_Rank_2
+	- Recipes_Generated_Rank_3
+	- Recipes_Generated_Rank_4
+	- Recipes_Generated_Rank_5
 	- Suit_Mods_Applied
 	- Weapon_Mods_Applied
 	- Suits_Upgraded
@@ -602,18 +587,18 @@ Parameters:
 	- Suits_Upgraded_Full
 	- Weapons_Upgraded_Full
 	- Suit_Mods_Applied_Full
-	- Weapon_Mods_Applied_Full 
-- Crew 
-	- NpcCrew_TotalWages 
-	- NpcCrew_Hired 
-	- NpcCrew_Fired 
-	- NpcCrew_Died 
-- Multicrew 
-	- Multicrew_Time_Total 
-	- Multicrew_Gunner_Time_Total 
-	- Multicrew_Fighter_Time_Total 
-	- Multicrew_Credits_Total 
-	- Multicrew_Fines_Total 
+	- Weapon_Mods_Applied_Full
+- Crew
+	- NpcCrew_TotalWages
+	- NpcCrew_Hired
+	- NpcCrew_Fired
+	- NpcCrew_Died
+- Multicrew
+	- Multicrew_Time_Total
+	- Multicrew_Gunner_Time_Total
+	- Multicrew_Fighter_Time_Total
+	- Multicrew_Credits_Total
+	- Multicrew_Fines_Total
 - Material_Trader_Stats
 	- Trades_Completed
 	- Materials_Traded
@@ -637,14 +622,14 @@ Parameters:
 	- Organic_Systems
 	- Organic_Planets
 	- Organic_Genus
-	- Organic_Species 
+	- Organic_Species
 
 
 Note times are in seconds
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2017-09-25T15:18:31Z",
 	"event": "Statistics",
@@ -758,7 +743,7 @@ Example:
 		"Spent_On_Shuttles": 64150,
 		"First_Footfalls": 720,
 		"Planet_Footfalls": 1138,
-		"Settlements_Visited": 28 
+		"Settlements_Visited": 28
 	},
 	"Passengers": {
 		"Passengers_Missions_Bulk": 0,

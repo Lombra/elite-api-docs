@@ -14,8 +14,10 @@ function parseList(list, level = 0) {
 			s += parseList(item, level + 1)
 		} else {
 			for (let itemChild of item.children) {
-				if (itemChild.tag == 'p') s += '\t'.repeat(level) + '- ' + itemChild.text + ' \n'
-				if (itemChild.tag == 'ul') s += parseList(itemChild, level + 1)
+				if (itemChild.tag == 'p' && itemChild.text.length > 0)
+					s += '\t'.repeat(level) + '- ' + itemChild.text.trim() + '\n'
+				if (itemChild.tag == 'ul')
+					s += parseList(itemChild, level + 1)
 			}
 		}
 	}
@@ -29,9 +31,12 @@ const TableHeaders = [
 	"_**Federation ranks**_",
 	"_**Empire ranks**_",
 	"_**CQC ranks**_",
+	"_**Military Ranks**_",
+	"_**Exobiologist Ranks**_",
 ]
 
 const ListHeaders = [
+	"Star Descriptions",
 	"Planet Classes",
 	"Atmosphere Classes",
 	"Volcanism classes",
@@ -48,6 +53,19 @@ const ListHeaders2 = [
 ]
 
 let currentHeader
+let isListHeader = false
+
+function createTable(header, text) {
+	let rows = [
+		header,
+		'|---:|---|',
+	]
+	for (let row of text.split(/ ?,/)) {
+		let s = row.split(/\s*=\s*/)
+		rows.push(`|${s[0].trim()}|${s[1].replace(/^'(.+)'$/, '$1')}|`)
+	}
+	return rows.join('\n')
+}
 
 for (let element of data.children) {
 	if (docs.length == 0 && element.tag != 'h1') continue
@@ -65,66 +83,59 @@ for (let element of data.children) {
 		if (!text) continue
 		if (text.startsWith('Example: {') && text.endsWith('}')) {
 			text = text.replace(/^Example: /, '')
-			section.paragraphs.push({text: "Example:"})
+			section.paragraphs.push({ text: "Example:" })
 		}
 		if (text.startsWith('{') && text.endsWith('}')) {
 			let code = text
 			try {
 				code = JSON.stringify(JSON.parse(text), null, '\t')
 			} catch (e) { }
-			text = '```\n' + code + '\n```'
+			text = '```json\n' + code + '\n```'
 		}
 		if (TableHeaders.some(e => text.startsWith(e))) {
-			text = text.replace(/^[^\:]+:/, "$&\n\nIndex|Rank\n-:|\n")
-			text = text.replace(/, */g, "\n")
-			text = text.replace(/= */g, "|")
-			section.paragraphs.push({
-				text: text,
-			})
+			let matches = text.match(/^([^\:]+:)(.+)/)
+			text = matches[1]
+			text += '\n\n'
+			text += createTable('|Index|Rank|', matches[2])
+			section.paragraphs.push({ text })
 		} else if (currentHeader == 'Engineer IDs') {
-			text = text.replace(/\d+/g, "\n$&|")
-			text = "ID|Name\n-:|" + text
-			section.paragraphs.push({
-				text: text,
-			})
+			text = text.replace(/\d+/g, ",$&=").replace(/^,/, '')
+			text = createTable('|ID|Name|', text)
+			section.paragraphs.push({ text })
 		} else if (ListHeaders.includes(currentHeader)) {
 			let paragraph = {
-				text: '- ' + text.replace(/,\s*$/, ''),
+				text: '- ' + text.replace(/,\s*$/, ''), noNewLine: true,
 			}
+			isListHeader = true
 			section.paragraphs.push(paragraph)
 		} else if (ListHeaders2.some(e => text.startsWith(e))) {
 			text = text.replace(/^([^\:]+:)\s*/, "$1\n\n- ")
 			text = text.replace(/, */g, "\n- ")
-			section.paragraphs.push({
-				text: text,
-			})
+			section.paragraphs.push({ text })
 		} else {
-			let paragraph = {
-				text: text,
-			}
-			section.paragraphs.push(paragraph)
+			section.paragraphs.push({ text })
 		}
 	}
+
 	if (element.tag == 'h2') {
+		if (isListHeader)
+			section.paragraphs[section.paragraphs.length - 1].noNewLine = false
+		isListHeader = false
+		currentHeader = element.text.replace(/[\d\.]+\s*/, '').trim()
 		let paragraph = {
-			text: '## ' + element.text.replace(/[\d\.]+\s*/, ''),
+			text: '## ' + currentHeader,
 		}
 		section.paragraphs.push(paragraph)
-		currentHeader = paragraph.text.substring(4)
 	}
+
 	if (element.tag == 'ul') {
 		let text = parseList(element)
-		let paragraph = {
-			text: text,
-		}
-		section.paragraphs.push(paragraph)
+		section.paragraphs.push({ text: text.trimEnd() })
 	}
+
 	if (element.tag == 'div') {
-		let text = element.children.reduce((acc, cur) => acc + '- ' + cur.text.replace(/,/, '') + ' \n', '')
-		let paragraph = {
-			text: text,
-		}
-		section.paragraphs.push(paragraph)
+		let text = element.children.reduce((acc, cur) => acc + '- ' + cur.text.replace(/,/, '') + '\n', '')
+		section.paragraphs.push({ text: text.trimEnd() })
 	}
 }
 
@@ -143,7 +154,7 @@ for (let section of docs) {
 		// })
 		// paragraph.text = paragraph.text.map(e => e)
 	}
-	content += section.paragraphs.map(e => e.text).join('\n\n')
+	content += section.paragraphs.map(e => e.text + (e.noNewLine ? '' : '\n')).join('\n')
 	if (title == 'Introduction') title = 'index'
 	fs.writeFileSync(path.resolve('docs', `${title.replace(/"/g, '')}.md`), content)
 }

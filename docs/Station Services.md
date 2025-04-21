@@ -6,12 +6,11 @@ When Written: when purchasing ammunition
 
 Parameters:
 
-- Cost 
-
+- Cost
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "BuyAmmo",
@@ -25,15 +24,14 @@ When Written: when purchasing drones
 
 Parameters:
 
-- Type 
-- Count 
-- BuyPrice 
-- TotalCost 
-
+- Type
+- Count
+- BuyPrice
+- TotalCost
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "BuyDrones",
@@ -50,17 +48,16 @@ When written: when collecting or delivering cargo for a wing mission, or if a wi
 
 Parameters:
 
-- MissionID:(int) 
-- UpdateType:(string) (one of: "Collect", "Deliver", "WingUpdate") 
-- CargoType 
-- Count 
-- StartMarketID(int) 
-- EndMarketID(int) 
-- ItemsCollected(int) 
-- ItemsDelivered(int) 
-- TotalItemsToDeliver(int) 
-- Progress:(float) 
-
+- MissionID:(int)
+- UpdateType:(string) (one of: "Collect", "Deliver", "WingUpdate")
+- CargoType
+- Count
+- StartMarketID(int)
+- EndMarketID(int)
+- ItemsCollected(int)
+- ItemsDelivered(int)
+- TotalItemsToDeliver(int)
+- Progress:(float)
 
 The CargoType and Count are included when you collect or deliver gods, they are not included for a wing update.
 
@@ -68,7 +65,7 @@ The Progress value actually represents pending progress for goods in transit: (I
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2018-03-07T15:47:03Z",
 	"event": "CargoDepot",
@@ -93,37 +90,34 @@ This event contains the current status of all community goals the player is curr
 
 Parameters:
 
-- CurrentGoals: an array with an entry for each CG, containing: 
-	- CGID: a unique ID number for this CG 
-	- Title: the description of the CG 
-	- SystemName 
-	- MarketName 
-	- Expiry: time and date 
-	- IsComplete: Boolean 
-	- CurrentTotal 
-	- PlayerContribution 
-	- NumContributors 
-	- PlayerPercentileBand 
-	- TopTier:  
-		- Name: string 
-		- Bonus: string 
-
+- CurrentGoals: an array with an entry for each CG, containing:
+	- CGID: a unique ID number for this CG
+	- Title: the description of the CG
+	- SystemName
+	- MarketName
+	- Expiry: time and date
+	- IsComplete: Boolean
+	- CurrentTotal
+	- PlayerContribution
+	- NumContributors
+	- PlayerPercentileBand
+	- TopTier:
+		- Name: string
+		- Bonus: string
 
 - If the community goal is constructed with a fixed-size top rank (ie max reward for top 10 players)
 
-	- TopRankSize: (integer) 
-	- PlayerInTopRank: (Boolean) 
-
+	- TopRankSize: (integer)
+	- PlayerInTopRank: (Boolean)
 
 - If the community goal has reached the first success tier:
 
-	- TierReached 
-	- Bonus 
-
+	- TierReached
+	- Bonus
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2017-08-14T13:20:28Z",
 	"event": "CommunityGoal",
@@ -154,10 +148,9 @@ When written: when opting out of a community goal
 
 Parameters:
 
-- CGID 
-- Name 
-- System 
-
+- CGID
+- Name
+- System
 
 ## CommunityGoalJoin
 
@@ -165,24 +158,21 @@ When Written: when signing up to a community goal
 
 Parameters:
 
-- CGID 
+- CGID
 
+- Name
+- System
 
-- Name 
-- System 
-
-
-## CommunityGoalReward  
+## CommunityGoalReward
 
 When Written: when receiving a reward for a community goal
 
 Parameters:
 
-- CGID 
-- Name 
-- System 
-- Reward 
-
+- CGID
+- Name
+- System
+- Reward
 
 ## CrewAssign
 
@@ -190,14 +180,13 @@ When written: when changing the task assignment of a member of crew
 
 Parameters:
 
-- Name 
-- CrewID 
-- Role 
-
+- Name
+- CrewID
+- Role
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-08-09T08:45:31Z",
 	"event": "CrewAssign",
@@ -212,13 +201,12 @@ When written: when dismissing a member of crew
 
 Parameters:
 
-- Name 
-- CrewID 
-
+- Name
+- CrewID
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-08-09T08:46:11Z",
 	"event": "CrewFire",
@@ -232,16 +220,15 @@ When written: when engaging a new member of crew
 
 Parameters:
 
-- Name 
-- CrewID 
-- Faction 
-- Cost 
-- Combat Rank 
-
+- Name
+- CrewID
+- Faction
+- Cost
+- Combat Rank
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-08-09T08:46:29Z",
 	"event": "CrewHire",
@@ -262,19 +249,18 @@ When written: when offering items cash or bounties to an Engineer to gain access
 
 Parameters:
 
-- Engineer: name of engineer 
-- EngineerID 
-- Type: type of contribution (Commodity, materials, Credits, Bond, Bounty) 
-- Commodity 
-- Material 
-- Faction (for bond or bounty) 
-- Quantity: amount offered this time 
-- TotalQuantity: total amount now donated 
-
+- Engineer: name of engineer
+- EngineerID
+- Type: type of contribution (Commodity, materials, Credits, Bond, Bounty)
+- Commodity
+- Material
+- Faction (for bond or bounty)
+- Quantity: amount offered this time
+- TotalQuantity: total amount now donated
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2017-05-24T10:41:51Z",
 	"event": "EngineerContribution",
@@ -293,23 +279,22 @@ When Written: when requesting an engineer upgrade
 
 Parameters:
 
-- Engineer: name of engineer 
-- EngineerID 
-- BlueprintName: name of blueprint 
-- BlueprintID 
-- Level: crafting level 
-- Quality: float 
-- ApplyExperimentalEffect: (when applying a new effect) 
-- Ingredients: JSON array of objects with names and quantities of materials required 
-- Modifiers: JSON array of modification data 
-	- Label: string – (see §15.11 below) 
-	- Value: float 
-	- OriginalValue: float 
-	- LessIsGood: bool 
-- Some modifications have string values: 
-	- Label: string 
-	- ValueStr: string 
-
+- Engineer: name of engineer
+- EngineerID
+- BlueprintName: name of blueprint
+- BlueprintID
+- Level: crafting level
+- Quality: float
+- ApplyExperimentalEffect: (when applying a new effect)
+- Ingredients: JSON array of objects with names and quantities of materials required
+- Modifiers: JSON array of modification data
+	- Label: string – (see §15.11 below)
+	- Value: float
+	- OriginalValue: float
+	- LessIsGood: bool
+- Some modifications have string values:
+	- Label: string
+	- ValueStr: string
 
 The new "quality" value represents the quality or progress of the blueprint. The quality should increase from 0 to 1 as the blueprint is refined through further crafting, and once it reaches a certain value, the player will have the option to upgrade the blueprint to the next level of recipe.
 
@@ -317,7 +302,7 @@ When applying an experimental effect, the _ApplyExperimentalEffect_ property wil
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2018-03-04T07:08:27Z",
 	"event": "EngineerCraft",
@@ -370,26 +355,24 @@ Also a summary of progress for all engineers at startup
 
 Parameters (summary at startup)
 
-- Engineers: array 
-	- Engineer: name 
-	- EngineerID 
-	- Rank: rank reached (when unlocked) 
-	- Progress: progress stage (Invited/Acquainted/Unlocked/Barred) 
-	- RankProgress: percentage towards next rank 
-
+- Engineers: array
+	- Engineer: name
+	- EngineerID
+	- Rank: rank reached (when unlocked)
+	- Progress: progress stage (Invited/Acquainted/Unlocked/Barred)
+	- RankProgress: percentage towards next rank
 
 Parameters (update for one engineer)
 
-- Engineer: name 
-- EngineerID 
-- Rank: rank reached (when unlocked) 
-- Progress: progress stage (Invited/Acquainted/Unlocked/Barred) 
-- RankProgress: percentage towards next rank 
-
+- Engineer: name
+- EngineerID
+- Rank: rank reached (when unlocked)
+- Progress: progress stage (Invited/Acquainted/Unlocked/Barred)
+- RankProgress: percentage towards next rank
 
 Example (update)
 
-```
+```json
 {
 	"timestamp": "2018-01-16T09:34:36Z",
 	"event": "EngineerProgress",
@@ -402,7 +385,7 @@ Example (update)
 
 Example (startup):
 
-```
+```json
 {
 	"timestamp": "2018-05-04T13:58:22Z",
 	"event": "EngineerProgress",
@@ -505,14 +488,13 @@ When written: when requesting a module is transferred from storage at another st
 
 Parameters:
 
-- StorageSlot 
-- StoredItem 
-- ServerId 
-- TransferCost 
-- Ship 
-- ShipId 
-- TransferTime: (in seconds) 
-
+- StorageSlot
+- StoredItem
+- ServerId
+- TransferCost
+- Ship
+- ShipId
+- TransferTime: (in seconds)
 
 ## Market
 
@@ -522,32 +504,30 @@ A separate file _**market.json**_ is written to the same folder as the journal, 
 
 Parameters:
 
-- MarketID 
-- StationName 
-- StarSystem 
-
+- MarketID
+- StationName
+- StarSystem
 
 The separate file also contains:
 
-- Items: array of objects 
-	- id 
-	- Name 
-	- Category 
-	- BuyPrice 
-	- SellPrice 
-	- MeanPrice 
-	- StockBracket 
-	- DemandBracket 
-	- Stock 
-	- Demand 
-	- Consumer: bool 
-	- Producer: bool 
-	- Rare: bool 
-
+- Items: array of objects
+	- id
+	- Name
+	- Category
+	- BuyPrice
+	- SellPrice
+	- MeanPrice
+	- StockBracket
+	- DemandBracket
+	- Stock
+	- Demand
+	- Consumer: bool
+	- Producer: bool
+	- Rare: bool
 
 Example: in the journal:
 
-```
+```json
 {
 	"timestamp": "2017-10-05T10:11:38Z",
 	"event": "Outfitting",
@@ -559,7 +539,7 @@ Example: in the journal:
 
 Separate file:
 
-```
+```json
 { "timestamp":"2017-10-05T10:10:34Z", "event":"Market", "MarketID":128678535, "StationName":"Black Hide", "StarSystem":"Wyrd", "Items":[
 	{ "id":128049152, "Name":"$platinum_name;", "Name_Localised":"Platinum", "Category":"$MARKET_category_metals;", "Category_Localised":"Metals", "BuyPrice":0, "SellPrice":42220, "MeanPrice":19756, "StockBracket":0, "DemandBracket":3, "Stock":0, "Demand":9182, "Consumer":true, "Producer":false, "Rare":false },
 	{ "id":128049153, "Name":"$palladium_name;", "Name_Localised":"Palladium", "Category":"$MARKET_category_metals;", "Category_Localised":"Metals", "BuyPrice":0, "SellPrice":13999, "MeanPrice":13244, "StockBracket":0, "DemandBracket":3, "Stock":0, "Demand":123183, "Consumer":true, "Producer":false, "Rare":false },
@@ -574,17 +554,16 @@ When written: when putting multiple modules into storage
 
 Parameters:
 
-- MarketID 
-- Ship 
-- ShipId 
-- Items: Array of records 
-	- Slot 
-	- Name 
-	- Hot 
-	- EngineerModifications (only present if modified) 
-	- Level 
-	- Quality 
-
+- MarketID
+- Ship
+- ShipId
+- Items: Array of records
+	- Slot
+	- Name
+	- Hot
+	- EngineerModifications (only present if modified)
+	- Level
+	- Quality
 
 ## MaterialTrade
 
@@ -592,21 +571,20 @@ When written: when exchanging materials at the Material trader contact
 
 Parameters:
 
-- MarketID 
-- TraderType 
-- Paid 
-	- Material 
-	- Category 
-	- Quantity 
-- Received 
-	- Material 
-	- Category 
-	- Quantity 
-
+- MarketID
+- TraderType
+- Paid
+	- Material
+	- Category
+	- Quantity
+- Received
+	- Material
+	- Category
+	- Quantity
 
 Example: (note categories simplified)
 
-```
+```json
 {
 	"timestamp": "2018-02-21T15:23:49Z",
 	"event": "MaterialTrade",
@@ -632,14 +610,13 @@ When Written: when a mission has been abandoned
 
 Parameters:
 
-- Name: name of mission 
-- MissionID 
-- Fine: (if relevant) 
-
+- Name: name of mission
+- MissionID
+- Fine: (if relevant)
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "MissionAbandoned",
@@ -654,41 +631,39 @@ When Written: when starting a mission
 
 Parameters:
 
-- Name: name of mission 
-- LocalisedName: the mission name as displayed to the user 
-- Faction: faction offering mission 
-- MissionID 
-- Influence: effect on influence (None/Low/Med/High) 
-- Reputation: effect on reputation (None/Low/Med/High) 
-- Reward: expected cash reward 
-- Wing: bool 
-
+- Name: name of mission
+- LocalisedName: the mission name as displayed to the user
+- Faction: faction offering mission
+- MissionID
+- Influence: effect on influence (None/Low/Med/High)
+- Reputation: effect on reputation (None/Low/Med/High)
+- Reward: expected cash reward
+- Wing: bool
 
 Optional Parameters (depending on mission type)
 
-- Commodity: commodity type 
-- Count: number required / to deliver 
-- Donation: contracted donation (as string) (for altruism missions) 
-- Donated: actual donation (as int) 
-- Target: name of target 
-- TargetType: type of target 
-- TargetFaction: target's faction 
-- KillCount: number of targets 
-- Expiry: mission expiry time, in ISO 8601 
-- DestinationSystem 
-- DestinationStation 
-- DestinationSettlement 
-- NewDestinationSystem (if it has been redirected) 
-- NewDestinationStation (if redirected) 
-- PassengerCount 
-- PassengerVIPs: bool 
-- PassengerWanted: bool 
-- PassengerType: eg Tourist, Soldier, Explorer,... 
-
+- Commodity: commodity type
+- Count: number required / to deliver
+- Donation: contracted donation (as string) (for altruism missions)
+- Donated: actual donation (as int)
+- Target: name of target
+- TargetType: type of target
+- TargetFaction: target's faction
+- KillCount: number of targets
+- Expiry: mission expiry time, in ISO 8601
+- DestinationSystem
+- DestinationStation
+- DestinationSettlement
+- NewDestinationSystem (if it has been redirected)
+- NewDestinationStation (if redirected)
+- PassengerCount
+- PassengerVIPs: bool
+- PassengerWanted: bool
+- PassengerType: eg Tourist, Soldier, Explorer,...
 
 Examples:
 
-```
+```json
 {
 	"timestamp": "2018-02-28T12:06:37Z",
 	"event": "MissionAccepted",
@@ -716,34 +691,32 @@ When Written: when a mission is completed
 
 Parameters:
 
-- Name: mission type 
-- Faction: faction name 
-- MissionID 
-
+- Name: mission type
+- Faction: faction name
+- MissionID
 
 Optional parameters (depending on mission type)
 
-- Commodity 
-- Count 
-- Target 
-- TargetType 
-- TargetFaction  
-- DestinationSystem 
-- DestinationStation 
-- DestinationSettlement 
-- Reward: value of reward 
-- Donation: contracted donation (as string) (for altruism missions) 
-- Donated: actual donation (as int) 
-- PermitsAwarded:[] (names of any permits awarded, as a JSON array) 
-- CommodityReward:[] (names and counts of any commodity rewards) 
-- MaterialsReward:[] ( name, category and count) 
-- FactionEffects: array of records 
-	- Faction 
-	- Effects: array of Effect, Effect_Localised and Trend value pairs 
-	- Influence: array of SystemAddress, Trend and Influence values 
-	- Reputation 
-	- ReputationTrend 
-
+- Commodity
+- Count
+- Target
+- TargetType
+- TargetFaction
+- DestinationSystem
+- DestinationStation
+- DestinationSettlement
+- Reward: value of reward
+- Donation: contracted donation (as string) (for altruism missions)
+- Donated: actual donation (as int)
+- PermitsAwarded:[] (names of any permits awarded, as a JSON array)
+- CommodityReward:[] (names and counts of any commodity rewards)
+- MaterialsReward:[] ( name, category and count)
+- FactionEffects: array of records
+	- Faction
+	- Effects: array of Effect, Effect_Localised and Trend value pairs
+	- Influence: array of SystemAddress, Trend and Influence values
+	- Reputation
+	- ReputationTrend
 
 _TrendValue_ can be UpGood, UpBad, DownGood, or DownBad
 
@@ -751,7 +724,7 @@ _Reputation_ and _Influence _are a set of + indicators (eg "+++")
 
 Example:
 
-```
+```json
 {
     "timestamp": "2018-12-19T21:41:09Z",
     "event": "MissionCompleted",
@@ -803,10 +776,9 @@ When Written: when a mission has failed
 
 Parameters:
 
-- Name: name of mission 
-- MissionID 
-- Fine: (if relevant) 
-
+- Name: name of mission
+- MissionID
+- Fine: (if relevant)
 
 ## MissionRedirected
 
@@ -814,17 +786,16 @@ When written: when a mission is updated with a new destination
 
 Parameters
 
-- MissionID 
-- Name 
-- NewDestinationStation 
-- OldDestinationStation 
-- NewDestinationSystem 
-- OldDestinationSystem 
-
+- MissionID
+- Name
+- NewDestinationStation
+- OldDestinationStation
+- NewDestinationSystem
+- OldDestinationSystem
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2017-08-01T09:04:07Z",
 	"event": "MissionRedirected",
@@ -842,28 +813,25 @@ When Written: when buying a module in outfitting
 
 Parameters:
 
-- MarketID 
-- Slot: the outfitting slot 
-- BuyItem: the module being purchased 
-- BuyPrice: price paid 
-- Ship: the players ship 
-- ShipID 
-
+- MarketID
+- Slot: the outfitting slot
+- BuyItem: the module being purchased
+- BuyPrice: price paid
+- Ship: the players ship
+- ShipID
 
 If existing module is stored:
 
-- StoredItem: item being stored 
-
+- StoredItem: item being stored
 
 If replacing an existing module:
 
-- SellItem: item being sold 
-- SellPrice: sale price 
-
+- SellItem: item being sold
+- SellPrice: sale price
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "ModuleBuy",
@@ -883,18 +851,17 @@ When written: when fetching a previously stored module
 
 Parameters:
 
-- MarketID 
-- Slot 
-- Ship 
-- ShipID 
-- RetrievedItem 
-- Hot 
-- EngineerModifications: name of modification blueprint, if any 
-- Level 
-- Quality 
-- SwapOutItem (if slot was not empty) 
-- Cost 
-
+- MarketID
+- Slot
+- Ship
+- ShipID
+- RetrievedItem
+- Hot
+- EngineerModifications: name of modification blueprint, if any
+- Level
+- Quality
+- SwapOutItem (if slot was not empty)
+- Cost
 
 ## ModuleSell
 
@@ -902,17 +869,16 @@ When Written: when selling a module in outfitting
 
 Parameters:
 
-- MarketID 
-- Slot 
-- SellItem 
-- SellPrice 
-- Ship 
-- ShipID 
-
+- MarketID
+- Slot
+- SellItem
+- SellPrice
+- Ship
+- ShipID
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "ModuleSell",
@@ -930,13 +896,12 @@ When written: when selling a module in storage at another station
 
 Parameters:
 
-- StorageSlot 
-- SellItem 
-- ServerId 
-- SellPrice 
-- Ship 
-- ShipId 
-
+- StorageSlot
+- SellItem
+- ServerId
+- SellPrice
+- Ship
+- ShipId
 
 ## ModuleStore
 
@@ -944,22 +909,21 @@ When written: when storing a module in Outfitting
 
 Parameters:
 
-- MarketID 
-- Slot 
-- Ship 
-- ShipID 
-- StoredItem 
-- Hot 
-- EngineerModifications: name of modification blueprint, if any 
-- Level 
-- Quality 
-- ReplacementItem (if a core module) 
-- Cost (if any) 
-
+- MarketID
+- Slot
+- Ship
+- ShipID
+- StoredItem
+- Hot
+- EngineerModifications: name of modification blueprint, if any
+- Level
+- Quality
+- ReplacementItem (if a core module)
+- Cost (if any)
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2018-01-31T10:55:15Z",
 	"event": "ModuleStore",
@@ -982,18 +946,17 @@ When Written: when moving a module to a different slot on the ship
 
 Parameters:
 
-- MarketID 
-- FromSlot 
-- ToSlot 
-- FromItem 
-- ToItem 
-- Ship 
-- ShipID 
-
+- MarketID
+- FromSlot
+- ToSlot
+- FromItem
+- ToItem
+- Ship
+- ShipID
 
 Examples:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "ModuleSwap",
@@ -1006,7 +969,7 @@ Examples:
 }
 ```
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "ModuleSwap",
@@ -1027,23 +990,21 @@ The full parts pricelist is written to a separate file _**Outfitting.json**_
 
 Parameters:
 
-- MarketID 
-- StationName 
-- StarSystem 
-
+- MarketID
+- StationName
+- StarSystem
 
 The separate file also contains
 
-- Horizons: bool 
-- Items: array of objects 
-	- id 
-	- Name 
-	- BuyPrice 
-
+- Horizons: bool
+- Items: array of objects
+	- id
+	- Name
+	- BuyPrice
 
 Example: (in journal)
 
-```
+```json
 {
 	"timestamp": "2017-10-05T10:11:38Z",
 	"event": "Outfitting",
@@ -1055,7 +1016,7 @@ Example: (in journal)
 
 (In separate file)
 
-```
+```json
 { "timestamp":"2017-10-05T10:11:38Z", "event":"Outfitting", "MarketID":128678535, "StationName":"Black Hide", "StarSystem":"Wyrd", "Horizons":true, "Items":[
 	{ "id":128049382, "Name":"hpt_pulselaser_fixed_medium", "BuyPrice":16731 },
 	{ "id":128049383, "Name":"hpt_pulselaser_fixed_large", "BuyPrice":66924 },
@@ -1072,16 +1033,15 @@ When written: when paying off bounties
 
 Parameters:
 
-- Amount: (total amount paid , including any broker fee) 
-- BrokerPercentage (present if paid via a Broker) 
-- AllFines: bool 
-- Faction 
-- ShipID 
-
+- Amount: (total amount paid , including any broker fee)
+- BrokerPercentage (present if paid via a Broker)
+- AllFines: bool
+- Faction
+- ShipID
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2018-03-19T10:25:10Z",
 	"event": "PayBounties",
@@ -1099,16 +1059,15 @@ When Written: when paying fines
 
 Parameters:
 
-- Amount: (total amount paid , including any broker fee) 
-- BrokerPercentage (present if paid via a Broker) 
-- AllFines: bool 
-- Faction: (if paying off an individual faction's fines) 
-- ShipID 
-
+- Amount: (total amount paid , including any broker fee)
+- BrokerPercentage (present if paid via a Broker)
+- AllFines: bool
+- Faction: (if paying off an individual faction's fines)
+- ShipID
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2018-03-19T10:24:21Z",
 	"event": "PayFines",
@@ -1127,9 +1086,8 @@ When Written: when paying legacy fines
 
 Parameters:
 
-- Amount (total amount paid, including any broker fee) 
-- BrokerPercentage (present if paid through a broker) 
-
+- Amount (total amount paid, including any broker fee)
+- BrokerPercentage (present if paid through a broker)
 
 ## RedeemVoucher
 
@@ -1137,16 +1095,15 @@ When Written: when claiming payment for combat bounties and bonds
 
 Parameters:
 
-- Type: (CombatBond/Bounty/Trade/Settlement/Scannable) 
-- Amount: (Net amount received, after any broker fee) 
-- Faction: name of faction _(for types other than Bounty)_ 
-- BrokerPercentage (if redeemed through a broker) 
-- Factions: array of faction/amount pairs _(for Type=Bounty)_ 
-
+- Type: (CombatBond/Bounty/Trade/Settlement/Scannable)
+- Amount: (Net amount received, after any broker fee)
+- Faction: name of faction _(for types other than Bounty)_
+- BrokerPercentage (if redeemed through a broker)
+- Factions: array of faction/amount pairs _(for Type=Bounty)_
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "RedeemVoucher",
@@ -1170,13 +1127,12 @@ When Written: when refuelling (full tank)
 
 Parameters:
 
-- Cost: cost of fuel 
-- Amount: tons of fuel purchased 
-
+- Cost: cost of fuel
+- Amount: tons of fuel purchased
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "RefuelAll",
@@ -1191,13 +1147,12 @@ When Written: when refuelling (10%)
 
 Parameters:
 
-- Cost: cost of fuel 
-- Amount: tons of fuel purchased 
-
+- Cost: cost of fuel
+- Amount: tons of fuel purchased
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "RefuelPartial",
@@ -1212,13 +1167,12 @@ When Written: when repairing the ship
 
 Parameters:
 
-- Item: all, wear, hull, paint, or name of module 
-- Cost: cost of repair 
-
+- Item: all, wear, hull, paint, or name of module
+- Cost: cost of repair
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "Repair",
@@ -1229,7 +1183,7 @@ Example:
 
 Note when repairing on a FleetCarrier, you can now get a list of the modules repaired:
 
-```
+```json
 {
 	"timestamp": "2020-03-31T13:39:42Z",
 	"event": "Repair",
@@ -1250,8 +1204,7 @@ When written: when repairing everything
 
 Parameters:
 
-- Cost 
-
+- Cost
 
 ## RestockVehicle
 
@@ -1259,15 +1212,14 @@ When Written: when purchasing an SRV or Fighter
 
 Parameters:
 
-- Type: type of vehicle being purchased (SRV or fighter model) 
-- Loadout: variant 
-- Cost: purchase cost 
-- Count: number of vehicles purchased 
-
+- Type: type of vehicle being purchased (SRV or fighter model)
+- Loadout: variant
+- Cost: purchase cost
+- Count: number of vehicles purchased
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "RestockVehicle",
@@ -1284,12 +1236,10 @@ When written: when contributing materials to a "research" community goal
 
 Parameters:
 
-- MarketID 
-- Name: material name 
-- Category 
-- Count 
--  
-
+- MarketID
+- Name: material name
+- Category
+- Count
 
 ## SearchAndRescue
 
@@ -1297,11 +1247,10 @@ When written: when delivering items to a Search and Rescue contact
 
 Parameters:
 
-- MarketID 
-- Name 
-- Count 
-- Reward 
-
+- MarketID
+- Name
+- Count
+- Reward
 
 ## SellDrones
 
@@ -1309,15 +1258,14 @@ When Written: when selling unwanted drones back to the market
 
 Parameters:
 
-- Type 
-- Count 
-- SellPrice 
-- TotalSale 
-
+- Type
+- Count
+- SellPrice
+- TotalSale
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "SellDrones",
@@ -1334,15 +1282,14 @@ When written: When selling a stored ship to raise funds when on insurance/rebuy 
 
 Parameters:
 
-- ShipType 
-- System 
-- SellShipId 
-- ShipPrice 
-
+- ShipType
+- System
+- SellShipId
+- ShipPrice
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2017-07-20T08:56:39Z",
 	"event": "SellShipOnRebuy",
@@ -1359,15 +1306,14 @@ When written: when assigning a name to the ship in Starport Services
 
 Parameters:
 
-- Ship: Ship model (eg CobraMkIII) 
-- ShipID: player's ship ID number 
-- UserShipName: selected name 
-- UserShipId: selected ship id 
-
+- Ship: Ship model (eg CobraMkIII)
+- ShipID: player's ship ID number
+- UserShipName: selected name
+- UserShipId: selected ship id
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2017-01-24T10:42:38Z",
 	"event": "SetUserShipName",
@@ -1378,29 +1324,27 @@ Example:
 }
 ```
 
-##  Shipyard
+## Shipyard
 
 When written: when accessing shipyard in a station
 
 Parameters:
 
-- MarketID 
-- StationName 
-- StarSystem 
-
+- MarketID
+- StationName
+- StarSystem
 
 The full price list is written to a separate file, in the same folder as the journal, _**Shipyard.json**_
 
-- Horizons: bool 
-- AllowCobraMkIV: bool 
-- Pricelist: array of objects 
-	- ShipType 
-	- ShipPrice 
-
+- Horizons: bool
+- AllowCobraMkIV: bool
+- Pricelist: array of objects
+	- ShipType
+	- ShipPrice
 
 Example: in the Journal:
 
-```
+```json
 {
 	"timestamp": "2017-10-04T10:01:38Z",
 	"event": "Shipyard",
@@ -1411,7 +1355,7 @@ Example: in the Journal:
 ```
 
 In the separate shipyard.json file:
-```
+```json
 { "timestamp":"2017-10-04T10:01:38Z", "event":"Shipyard", "MarketID": 128122104, "StationName":"Seven Holm", "StarSystem":"Tamor", "Horizons":true, "AllowCobraMkIV":true, "PriceList":[
 	{ "id":128049249, "ShipType":"sidewinder", "ShipPrice":24336 },
 	{ "id":128049255, "ShipType":"eagle", "ShipPrice":34071 },
@@ -1419,7 +1363,6 @@ In the separate shipyard.json file:
 	{ "id":128049267, "ShipType":"adder", "ShipPrice":66779 },
 	{ "id":128672138, "ShipType":"empire_eagle", "ShipType_Localised":"Imperial Eagle", "ShipPrice":84283 },
 ] }
-```
 
 ## ShipyardBuy
 
@@ -1427,21 +1370,20 @@ When Written: when buying a new ship in the shipyard
 
 Parameters:
 
-- MarketID 
-- ShipType: ship being purchased 
-- ShipPrice: purchase cost   
-- StoreOldShip: (if storing old ship) ship type being stored 
-- StoreShipID 
-- SellOldShip: (if selling current ship) ship type being sold 
-- SellShipID 
-- SellPrice: (if selling current ship) ship sale price 
-
+- MarketID
+- ShipType: ship being purchased
+- ShipPrice: purchase cost
+- StoreOldShip: (if storing old ship) ship type being stored
+- StoreShipID
+- SellOldShip: (if selling current ship) ship type being sold
+- SellShipID
+- SellPrice: (if selling current ship) ship sale price
 
 Note: the new ship's ShipID will be logged in a separate event after the purchase
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-07-21T14:36:38Z",
 	"event": "ShipyardBuy",
@@ -1458,13 +1400,12 @@ When written: after a new ship has been purchased
 
 Parameters:
 
-- ShipType 
-- NewShipID 
-
+- ShipType
+- NewShipID
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-07-21T14:36:38Z",
 	"event": "ShipyardNew",
@@ -1479,16 +1420,15 @@ When Written: when selling a ship stored in the shipyard
 
 Parameters:
 
-- MarketID 
-- ShipType: type of ship being sold 
-- SellShipID 
-- ShipPrice: sale price 
-- System: (if ship is in another system) name of system 
-
+- MarketID
+- ShipType: type of ship being sold
+- SellShipID
+- ShipPrice: sale price
+- System: (if ship is in another system) name of system
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-07-21T15:12:19Z",
 	"event": "ShipyardSell",
@@ -1505,19 +1445,18 @@ When Written: when requesting a ship at another station be transported to this s
 
 Parameters:
 
-- MarketID 
-- ShipType: type of ship 
-- ShipID 
-- System: where it is 
-- ShipMarketID 
-- Distance: how far away 
-- TransferPrice: cost of transfer 
-- TransferTime: time taken in seconds 
-
+- MarketID
+- ShipType: type of ship
+- ShipID
+- System: where it is
+- ShipMarketID
+- Distance: how far away
+- TransferPrice: cost of transfer
+- TransferTime: time taken in seconds
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-07-21T15:19:49Z",
 	"event": "ShipyardTransfer",
@@ -1535,18 +1474,17 @@ When Written: when switching to another ship already stored at this station
 
 Parameters:
 
-- MarketID 
-- ShipType: type of ship being switched to 
-- ShipID 
-- StoreOldShip: (if storing old ship) type of ship being stored 
-- StoreShipID 
-- SellOldShip: (if selling old ship) type of ship being sold 
-- SellShipID 
-
+- MarketID
+- ShipType: type of ship being switched to
+- ShipID
+- StoreOldShip: (if storing old ship) type of ship being stored
+- StoreShipID
+- SellOldShip: (if selling old ship) type of ship being sold
+- SellShipID
 
 Example
 
-```
+```json
 {
 	"timestamp": "2016-07-21T14:36:06Z",
 	"event": "ShipyardSwap",
@@ -1563,26 +1501,25 @@ When written: when first visiting Outfitting, and when the set of stored modules
 
 Parameters:
 
-- MarketID: current market 
-- Items: (array of objects) 
-	- Name 
-	- StarSystem 
-	- MarketID: where the module is stored 
-	- StorageSlot 
-	- TransferCost 
-	- TransferTime 
-	- Hot 
-	- EngineerModifications: (recipe name) 
-	- Level 
-	- Quality 
-	- InTransit:bool 
-
+- MarketID: current market
+- Items: (array of objects)
+	- Name
+	- StarSystem
+	- MarketID: where the module is stored
+	- StorageSlot
+	- TransferCost
+	- TransferTime
+	- Hot
+	- EngineerModifications: (recipe name)
+	- Level
+	- Quality
+	- InTransit:bool
 
 "EngineerModifications", "Level" and "Quality" only appear for an engineered module
 
 The InTransit value only appears (with value true) if the module is being transferred. In this case, the system, market, transfer cost and transfer time are not written.
 
-```
+```json
 { "timestamp":"2018-01-31T10:55:16Z", "event":"StoredModules", "MarketID":128676487, "StationName":"Farseer Inc", "StarSystem":"Deciat", "Items":[
 { "Name":"$int_engine_size3_class5_name;", "Name_Localised":"Thrusters", "StorageSlot":57, "StarSystem":"Deciat", "MarketID":128676487, "TransferCost":0, "TransferTime":0, "BuyPrice":495215, "Hot":false, "EngineerModifications":"Engine_Dirty", "Level":1, "Quality":0.000000 },
 { "Name":"$int_hyperdrive_size6_class5_name;", "Name_Localised":"FSD", "StorageSlot":59, "StarSystem":"Shinrarta Dezhra", "MarketID":128666762, "TransferCost":79680, "TransferTime":1317, "BuyPrice":12620035, "Hot":false, "EngineerModifications":"FSD_LongRange", "Level":5, "Quality":0.000000 } ] }
@@ -1594,39 +1531,36 @@ When written: when visiting shipyard
 
 Parameters:
 
-- MarketID 
-- StationName 
-- StarSystem 
-- ShipsHere: (array of objects) 
-	- ShipID 
-	- ShipType 
-	- Name (if named) 
-	- Value 
-	- Hot 
-- ShipsRemote: (array of objects) 
-	- ShipID 
-	- ShipType 
-	- Name (if named) 
-	- Value 
-	- Hot 
-
+- MarketID
+- StationName
+- StarSystem
+- ShipsHere: (array of objects)
+	- ShipID
+	- ShipType
+	- Name (if named)
+	- Value
+	- Hot
+- ShipsRemote: (array of objects)
+	- ShipID
+	- ShipType
+	- Name (if named)
+	- Value
+	- Hot
 
 - If the ship is in transit:
 
-- InTransit: true 
-
+- InTransit: true
 
 - If the ship is not in transit:
 
-	- StarSystem 
-	- ShipMarketID 
-	- TransferPrice 
-	- TransferType 
-
+	- StarSystem
+	- ShipMarketID
+	- TransferPrice
+	- TransferType
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2017-10-04T10:07:21Z",
 	"event": "StoredShips",
@@ -1663,21 +1597,20 @@ When written: when using the Technology Broker to unlock new purchasable technol
 
 Parameters:
 
-- BrokerType 
-- MarketID 
-- ItemsUnlocked: the name(s) of the new item unlocked (available in Outfitting) 
-- Commodities: 
-	- Name: name of item 
-	- Count: number of items used 
-- Materials: 
-	- Name 
-	- Count 
-	- Category 
-
+- BrokerType
+- MarketID
+- ItemsUnlocked: the name(s) of the new item unlocked (available in Outfitting)
+- Commodities:
+	- Name: name of item
+	- Count: number of items used
+- Materials:
+	- Name
+	- Count
+	- Category
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2018-03-02T11:28:44Z",
 	"event": "TechnologyBroker",
@@ -1732,17 +1665,16 @@ Parameters:
 - ShipMarketID: The market the ship is stored at
 - MarketID: Your current market
 
-
 Example:
 
-```
+```json
 {
-	"timestamp":"2022-11-18T16:19:48Z",
-	"event":"ClearImpound", 
-	"ShipType":"asp",
-	"ShipType_Localised":"Asp Explorer",
-	"ShipID":10,
-	"ShipMarketID":128833431,
-	"MarketID":128833431 
+	"timestamp": "2022-11-18T16:19:48Z",
+	"event": "ClearImpound",
+	"ShipType": "asp",
+	"ShipType_Localised": "Asp Explorer",
+	"ShipID": 10,
+	"ShipMarketID": 128833431,
+	"MarketID": 128833431
 }
 ```

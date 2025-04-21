@@ -2,7 +2,7 @@
 
 ## AppliedToSquadron
 
-```
+```json
 {
 	"timestamp": "2018-10-17T16:17:55Z",
 	"event": "AppliedToSquadron",
@@ -12,7 +12,7 @@
 
 ## DisbandedSquadron
 
-```
+```json
 {
 	"timestamp": "2018-10-17T16:17:55Z",
 	"event": "DisbandedSquadron",
@@ -22,7 +22,7 @@
 
 ## InvitedToSquadron
 
-```
+```json
 {
 	"timestamp": "2018-10-17T16:17:55Z",
 	"event": "InvitedToSquadron",
@@ -32,7 +32,7 @@
 
 ## JoinedSquadron
 
-```
+```json
 {
 	"timestamp": "2018-10-17T16:17:55Z",
 	"event": "JoinedSquadron",
@@ -42,7 +42,7 @@
 
 ## KickedFromSquadron
 
-```
+```json
 {
 	"timestamp": "2018-10-17T16:17:55Z",
 	"event": "KickedFromSquadron",
@@ -52,7 +52,7 @@
 
 ## LeftSquadron
 
-```
+```json
 {
 	"timestamp": "2018-10-17T16:17:55Z",
 	"event": "LeftSquadron",
@@ -62,7 +62,7 @@
 
 ## SharedBookmarkToSquadron
 
-```
+```json
 {
 	"timestamp": "2018-10-17T16:17:55Z",
 	"event": "SharedBookmarkToSquadron",
@@ -72,7 +72,7 @@
 
 ## SquadronCreated
 
-```
+```json
 {
 	"timestamp": "2018-10-17T16:17:55Z",
 	"event": "SquadronCreated",
@@ -82,7 +82,7 @@
 
 ## SquadronDemotion
 
-```
+```json
 {
 	"timestamp": "2018-10-17T16:17:55Z",
 	"event": "SquadronDemotion",
@@ -94,7 +94,7 @@
 
 ## SquadronPromotion
 
-```
+```json
 {
 	"timestamp": "2018-10-17T16:17:55Z",
 	"event": "SquadronPromotion",
@@ -110,13 +110,12 @@ Written at game startup, to identify the player's squadron
 
 Parameters:
 
-- SquadronName 
-- CurrentRank 
-
+- SquadronName
+- CurrentRank
 
 ## WonATrophyForSquadron
 
-```
+```json
 {
 	"timestamp": "2018-10-17T16:17:55Z",
 	"event": "WonATrophyForSquadron",

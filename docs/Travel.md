@@ -6,13 +6,12 @@ When written: when in Supercruise, and distance from planet drops to within the 
 
 Parameters:
 
-- StarSystem 
-- SystemAddress 
-- Body 
-- BodyID 
+- StarSystem
+- SystemAddress
+- Body
+- BodyID
 
-
-```
+```json
 {
 	"timestamp": "2017-09-27T15:21:05Z",
 	"event": "ApproachBody",
@@ -27,34 +26,34 @@ When written: when landing at landing pad in a space station, outpost, or surfac
 
 Parameters:
 
-- StationName: name of station 
-- MarketID 
-- SystemAddress 
-- StationType: type of station 
-- StarSystem: name of system 
-- CockpitBreach:true (only if landing with breached cockpit) 
-- StationFaction: station's controlling faction 
-	- Name 
-	- FactionState 
-- StationAllegiance 
-- StationEconomy : (station's primary economy) 
-- StationEconomies: (array of name and proportion values) 
-- StationGovernment 
-- DistFromStarLS 
-- StationServices: (Array of strings) 
-- Wanted: (only if docking when wanted locally) 
-- ActiveFine: true (if any fine is active) 
-- LandingPads: 
-	- Small 
-	- Medium 
-	- Large 
+- StationName: name of station
+- MarketID
+- SystemAddress
+- StationType: type of station
+- StarSystem: name of system
+- CockpitBreach:true (only if landing with breached cockpit)
+- StationFaction: station's controlling faction
+	- Name
+	- FactionState
+- StationAllegiance
+- StationEconomy : (station's primary economy)
+- StationEconomies: (array of name and proportion values)
+- StationGovernment
+- DistFromStarLS
+- StationServices: (Array of strings)
+- Wanted: (only if docking when wanted locally)
+- ActiveFine: true (if any fine is active)
+- LandingPads:
+	- Small
+	- Medium
+	- Large
 - StationState
 
 The 'anonymous docking' protocol comes into effect if you're either Wanted (ie have a local bounty) or have an ActiveFine
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2018-03-07T12:22:25Z",
 	"event": "Docked",
@@ -119,10 +118,9 @@ When written: when the player cancels a docking request
 
 Parameters:
 
-- StationName: name of station 
-- StationType 
-- MarketID 
-
+- StationName: name of station
+- StationType
+- MarketID
 
 ## DockingDenied
 
@@ -130,11 +128,10 @@ When written: when the station denies a docking request
 
 Parameters:
 
-- StationName: name of station 
-- StationType 
-- MarketID 
-- Reason: reason for denial 
-
+- StationName: name of station
+- StationType
+- MarketID
+- Reason: reason for denial
 
 Reasons include: NoSpace, TooLarge, Hostile, Offences, Distance, ActiveFighter, NoReason
 
@@ -144,11 +141,10 @@ When written: when a docking request is granted
 
 Parameters:
 
-- StationName: name of station 
-- StationType 
-- MarketID 
-- LandingPad: pad number 
-
+- StationName: name of station
+- StationType
+- MarketID
+- LandingPad: pad number
 
 ## DockingRequested
 
@@ -156,14 +152,13 @@ When written: when the player requests docking at a station
 
 Parameters:
 
-- StationName: name of station 
-- StationType 
-- MarketID 
-- LandingPads: 
-	- Small 
-	- Medium 
-	- Large 
-
+- StationName: name of station
+- StationType
+- MarketID
+- LandingPads:
+	- Small
+	- Medium
+	- Large
 
 ## DockingTimeout
 
@@ -171,10 +166,9 @@ When written: when a docking request has timed out
 
 Parameters:
 
-- StationName: name of station 
-- StationType 
-- MarketID 
-
+- StationName: name of station
+- StationType
+- MarketID
 
 ## FSDJump
 
@@ -182,48 +176,47 @@ When written: when jumping from one star system to another
 
 Parameters:
 
-- StarSystem: name of destination starsystem 
-- SystemAddress 
-- StarPos: star position, as a Json array [x, y, z], in light years 
-- Body: star's body name 
-- JumpDist: distance jumped 
-- FuelUsed 
-- FuelLevel 
-- BoostUsed: whether FSD boost was used 
-- SystemFaction: system controlling faction 
-	- Name 
-	- FactionState 
-- SystemAllegiance 
-- SystemEconomy 
-- SystemSecondEconomy 
-- SystemGovernment 
-- SystemSecurity 
-- Population 
-- Wanted 
-- Factions: an array of info for the local minor factions 
-	- Name 
-	- FactionState 
-	- Government 
-	- Influence 
-	- Happiness 
-	- MyReputation 
-	- PendingStates: array (if any) with State name and Trend value 
-	- RecovingStates: array (if any)with State name and Trend value 
-	- ActiveStates: array with State names (Note active states do not have a Trend value) 
-	- SquadronFaction:true (if player is in squadron aligned to this faction) 
-	- HappiestSystem:true (if player squadron faction, and this is happiest system) 
-	- HomeSystem:true(if player squadron faction, and this is home system) 
-- Conflicts: an array of info about local conflicts (if any) 
-	- WarType 
-	- Status 
-	- Faction1: { Name, Stake, WonDays } 
-	- Faction2: { Name, Stake, WonDays } 
-
+- StarSystem: name of destination starsystem
+- SystemAddress
+- StarPos: star position, as a Json array [x, y, z], in light years
+- Body: star's body name
+- JumpDist: distance jumped
+- FuelUsed
+- FuelLevel
+- BoostUsed: whether FSD boost was used
+- SystemFaction: system controlling faction
+	- Name
+	- FactionState
+- SystemAllegiance
+- SystemEconomy
+- SystemSecondEconomy
+- SystemGovernment
+- SystemSecurity
+- Population
+- Wanted
+- Factions: an array of info for the local minor factions
+	- Name
+	- FactionState
+	- Government
+	- Influence
+	- Happiness
+	- MyReputation
+	- PendingStates: array (if any) with State name and Trend value
+	- RecovingStates: array (if any)with State name and Trend value
+	- ActiveStates: array with State names (Note active states do not have a Trend value)
+	- SquadronFaction:true (if player is in squadron aligned to this faction)
+	- HappiestSystem:true (if player squadron faction, and this is happiest system)
+	- HomeSystem:true(if player squadron faction, and this is home system)
+- Conflicts: an array of info about local conflicts (if any)
+	- WarType
+	- Status
+	- Faction1: { Name, Stake, WonDays }
+	- Faction2: { Name, Stake, WonDays }
 
 If the player is pledged to a Power in Powerplay, and the star system is involved in powerplay,
 
-- Powers: a json array with the names of any powers contesting the system, or the name of the controlling power 
-- PowerplayState: the system state – one of ("InPrepareRadius", "Prepared", "Exploited", "Contested", "Controlled", "Turmoil", "HomeSystem") 
+- Powers: a json array with the names of any powers contesting the system, or the name of the controlling power
+- PowerplayState: the system state – one of ("InPrepareRadius", "Prepared", "Exploited", "Contested", "Controlled", "Turmoil", "HomeSystem")
 
 If starting in a system affected by the thargoid war:
 
@@ -236,14 +229,13 @@ If starting in a system affected by the thargoid war:
 	- RemainingPorts
 	- EstimatedRemainingTime
 
-
 Example:
 
 Happiness values are: (Elated, Happy, Discontented, Unhappy, Despondent)
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2018-10-29T10:05:21Z",
 	"event": "FSDJump",
@@ -385,7 +377,7 @@ Example:
 
 Example Conflict data:
 
-```
+```json
 "Conflicts": [
 	{
 		"WarType": "war",
@@ -404,11 +396,10 @@ Note, when following a multi-jump route, this will typically appear for the _nex
 
 Parameters:
 
-- Starsystem 
-- Name 
-- RemainingJumpsInRoute 
-- StarClass 
-
+- Starsystem
+- Name
+- RemainingJumpsInRoute
+- StarClass
 
 ## LeaveBody
 
@@ -416,11 +407,10 @@ When written: when flying away from a planet, and distance increases above the '
 
 Parameters:
 
-- StarSystem 
-- SystemAddress 
-- Body 
-- BodyID 
-
+- StarSystem
+- SystemAddress
+- Body
+- BodyID
 
 ## Liftoff
 
@@ -428,21 +418,20 @@ When written: when taking off from planet surface
 
 Parameters:
 
-- Latitude (only if player flying in ship) 
-- Longitude  (only if player flying in ship) 
-- StarSystem 
-- SystemAddress 
-- Body 
-- BodyID 
-- OnStation: bool 
-- OnPlanet: bool 
-- NearestDestination 
-- PlayerControlled: (bool) false if ship dismissed when player is in SRV, true if player is taking off 
-
+- Latitude (only if player flying in ship)
+- Longitude  (only if player flying in ship)
+- StarSystem
+- SystemAddress
+- Body
+- BodyID
+- OnStation: bool
+- OnPlanet: bool
+- NearestDestination
+- PlayerControlled: (bool) false if ship dismissed when player is in SRV, true if player is taking off
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-07-22T10:53:19Z",
 	"event": "Liftoff",
@@ -458,49 +447,47 @@ When written: at startup, or when being resurrected at a station
 
 Parameters:
 
-- StarSystem: name of destination starsystem 
-- SystemAddress 
-- StarPos: star position, as a Json array [x, y, z], in light years 
-- Body: star or planet's body name 
-- BodyID 
-- BodyType 
-- DistFromStarLS: (unless close to main star) 
-- Docked: (bool) 
-- Latitude (If landed) 
-- Longitude (if landed) 
-- StationName: station name, (if docked) 
-- StationType: (if docked) 
-- MarketID: (if docked) 
-- SystemFaction: star system controlling faction 
-	- Name 
-	- FactionState 
-- SystemAllegiance 
-- SystemEconomy 
-- SystemSecondEconomy 
-- SystemGovernment 
-- SystemSecurity 
-- Wanted 
-- Factions: an array with info on local minor factions (similar to FSDJump) 
-- Conflicts: an array with info on local conflicts (similar to FSDJump) 
-
+- StarSystem: name of destination starsystem
+- SystemAddress
+- StarPos: star position, as a Json array [x, y, z], in light years
+- Body: star or planet's body name
+- BodyID
+- BodyType
+- DistFromStarLS: (unless close to main star)
+- Docked: (bool)
+- Latitude (If landed)
+- Longitude (if landed)
+- StationName: station name, (if docked)
+- StationType: (if docked)
+- MarketID: (if docked)
+- SystemFaction: star system controlling faction
+	- Name
+	- FactionState
+- SystemAllegiance
+- SystemEconomy
+- SystemSecondEconomy
+- SystemGovernment
+- SystemSecurity
+- Wanted
+- Factions: an array with info on local minor factions (similar to FSDJump)
+- Conflicts: an array with info on local conflicts (similar to FSDJump)
 
 If the player is pledged to a Power in Powerplay, and the star system is involved in powerplay,
 
-- Powers: a json array with the names of any powers contesting the system, or the name of the controlling power 
-- PowerplayState: the system state – one of ("InPrepareRadius", "Prepared", "Exploited", "Contested", "Controlled", "Turmoil", "HomeSystem") 
-
+- Powers: a json array with the names of any powers contesting the system, or the name of the controlling power
+- PowerplayState: the system state – one of ("InPrepareRadius", "Prepared", "Exploited", "Contested", "Controlled", "Turmoil", "HomeSystem")
 
 The faction data includes happiness info, and can include multiple active states
 
 If starting docked in a station, also include:
 
-- StationFaction 
-	- Name 
-	- FactionState 
-- StationGovernment 
-- StationAllegiance 
-- StationServices 
-- StationEconomies (Array of (Name,Proportion) pairs ) 
+- StationFaction
+	- Name
+	- FactionState
+- StationGovernment
+- StationAllegiance
+- StationServices
+- StationEconomies (Array of (Name,Proportion) pairs )
 
 If starting in a system affected by the thargoid war:
 
@@ -513,14 +500,12 @@ If starting in a system affected by the thargoid war:
 	- RemainingPorts
 	- EstimatedRemainingTime
 
-
 New in Odyssey:
 
-- Taxi: bool 
-- Multicrew: bool 
-- InSRV: bool 
-- OnFoot: bool 
-
+- Taxi: bool
+- Multicrew: bool
+- InSRV: bool
+- OnFoot: bool
 
 ## StartJump
 
@@ -528,12 +513,11 @@ When written: at the start of a Hyperspace or Supercruise jump (start of countdo
 
 Parameters:
 
-- JumpType: "Hyperspace" or "Supercruise" 
+- JumpType: "Hyperspace" or "Supercruise"
 - Taxi: True if the player is in a taxi
-- StarSystem: name of destination system (for a hyperspace jump) 
-- SystemAddress 
-- StarClass: star type (only for a hyperspace jump) 
-
+- StarSystem: name of destination system (for a hyperspace jump)
+- SystemAddress
+- StarClass: star type (only for a hyperspace jump)
 
 ## SupercruiseEntry
 
@@ -541,12 +525,11 @@ When written: entering supercruise from normal space
 
 Parameters:
 
-- Starsystem 
-
+- Starsystem
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "SupercruiseEntry",
@@ -560,15 +543,14 @@ When written: leaving supercruise for normal space
 
 Parameters:
 
-- Starsystem 
-- Body 
-- BodyID 
-- BodyType 
-
+- Starsystem
+- Body
+- BodyID
+- BodyType
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "SupercruiseExit",
@@ -583,23 +565,22 @@ When written: landing on a planet surface
 
 Parameters:
 
-- Latitude (only if player is landing) 
-- Longitude (only if player is landing) 
-- StarSystem 
-- SystemAddress 
-- Body 
-- BodyID 
-- OnStation: bool 
-- OnPlanet: bool 
-- NearestDestination 
-- PlayerControlled: (bool) false if ship was recalled from SRV, true if player is landing 
-
+- Latitude (only if player is landing)
+- Longitude (only if player is landing)
+- StarSystem
+- SystemAddress
+- Body
+- BodyID
+- OnStation: bool
+- OnPlanet: bool
+- NearestDestination
+- PlayerControlled: (bool) false if ship was recalled from SRV, true if player is landing
 
 The NearestDestination is included if within 50km of a location listed in the nav panel
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2019-05-13T13:20:18Z",
 	"event": "Touchdown",
@@ -617,13 +598,12 @@ When written: liftoff from a landing pad in a station, outpost or settlement
 
 Parameters:
 
-- StationName: name of station 
-- MarketID 
-
+- StationName: name of station
+- MarketID
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "Undocked",
@@ -637,16 +617,15 @@ When plotting a multi-star route, the file "NavRoute.json" is written in the sam
 
 Parameters:
 
-- Route 
-	- StarSystem: (name) 
-	- SystemAddress: (number) 
-	- Starpos: [ x, y, z ] 
-	- StarClass 
-
+- Route
+	- StarSystem: (name)
+	- SystemAddress: (number)
+	- Starpos: [ x, y, z ]
+	- StarClass
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2020-04-27T08:02:52Z",
 	"event": "Route",
@@ -668,7 +647,7 @@ No parameters
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2022-06-17T16:04:02Z",
 	"event": "NavRouteClear"

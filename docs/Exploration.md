@@ -6,21 +6,20 @@ When written: when a new discovery is added to the Codex
 
 Parameters:
 
-- EntryID: an ID number 
-- Name: string (+localisation) 
-- SubCategory: string (+localisation) 
-- Category: string (+localisation) 
-- Region: string 
-- System: string 
-- SystemAddress 
-- BodyID 
-- NearestDestination: name 
-- Latitude 
-- Longitude 
-- IsNewEntry: bool 
-- NewTraitsDiscovered: bool 
-- Traits: [ array of strings ] 
-
+- EntryID: an ID number
+- Name: string (+localisation)
+- SubCategory: string (+localisation)
+- Category: string (+localisation)
+- Region: string
+- System: string
+- SystemAddress
+- BodyID
+- NearestDestination: name
+- Latitude
+- Longitude
+- IsNewEntry: bool
+- NewTraitsDiscovered: bool
+- Traits: [ array of strings ]
 
 The IsNewEntry and NewTraitsDiscovered fields are optional depending on the results of the scan, and the Traits field is only available for entries that have unlocked traits.
 
@@ -28,7 +27,7 @@ The "NearestDestination" is added if within 50km of a location listed in the nav
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2019-05-13T13:28:51Z",
 	"event": "CodexEntry",
@@ -56,9 +55,8 @@ When written: when using the discovery scanner, and new body discoveries are dis
 
 Parameters:
 
-- SystemAddress 
-- Bodies: number of new bodies discovered 
-
+- SystemAddress
+- Bodies: number of new bodies discovered
 
 ## Scan
 
@@ -87,14 +85,13 @@ Parameters(star)
 - WasDiscovered: bool
 - WasMapped: bool
 
-
 Parameters(Planet/Moon)
 
-- ScanType 
-- Bodyname: name of body 
-- BodyID 
-- Parents: Array of BodyType:BodyID pairs 
-- DistanceFromArrivalLS 
+- ScanType
+- Bodyname: name of body
+- BodyID
+- Parents: Array of BodyType:BodyID pairs
+- DistanceFromArrivalLS
 - TidalLock: 1 if tidally locked
 - TerraformState: Terraformable, Terraforming, Terraformed, or null
 - PlanetClass – see §15.3
@@ -102,42 +99,38 @@ Parameters(Planet/Moon)
 - AtmosphereType
 - AtmosphereComposition: [ array of info ]
 - Volcanism – see §15.5
-- SurfaceGravity 
+- SurfaceGravity
 - SurfaceTemperature
 - SurfacePressure
 - Landable: true (if landable)
 - Materials: JSON array with objects with material names and percentage occurrence
 - Composition: structure containing info on solid composition
-	- Ice 
-	- Rock 
-	- Metal  
+	- Ice
+	- Rock
+	- Metal
 - Rings: [ array of info ] – if rings present
 - ReserveLevel: (Pristine/Major/Common/Low/Depleted) – if rings present
 
-
 If rotating:
 
-- RotationPeriod (seconds) 
-- Axial tilt 
-
+- RotationPeriod (seconds)
+- Axial tilt
 
 Orbital Parameters for any Star/Planet/Moon (except main star of single-star system)
 
-- SemiMajorAxis 
-- Eccentricity 
-- OrbitalInclination 
-- Periapsis 
-- OrbitalPeriod 
-
+- SemiMajorAxis
+- Eccentricity
+- OrbitalInclination
+- Periapsis
+- OrbitalPeriod
 
 Rings properties*
 
-- Name 
-- RingClass 
-- MassMT – ie in megatons 
-- InnerRad 
-- OuterRad 
-
+- Name
+- RingClass
+- MassMT – ie in megatons
+- InnerRad
+- OuterRad
 
 Note that a basic scan (ie without having a Detailed Surface Scanner installed) will now save a reduced amount of information.
 
@@ -151,7 +144,7 @@ _Entries in the list above marked with an asterisk are only included for a detai
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2018-02-02T10:43:05Z",
 	"event": "Scan",
@@ -243,16 +236,15 @@ Example:
 }
 ```
 
-##  FSSAllBodiesFound
+## FSSAllBodiesFound
 
 When written: after having identified all bodies in the system
 
 Parameters:
 
-- SystemName 
-- SystemAddress 
-- Count 
-
+- SystemName
+- SystemAddress
+- Count
 
 ## FSSBodySignals
 
@@ -260,17 +252,16 @@ This event is written when completing a "Full Spectrum Scan" of a starsystem, to
 
 Parameters:
 
-- BodyName 
-- BodyID 
-- SystemAddress 
-- Signals: Array 
-	- Type 
-	- Count 
-
+- BodyName
+- BodyID
+- SystemAddress
+- Signals: Array
+	- Type
+	- Count
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2022-03-17T18:20:53Z",
 	"event": "FSSBodySignals",
@@ -293,10 +284,9 @@ When written: when performing a full system scan ("Honk")
 
 Parameters:
 
-- Progress: (a value in range 0-1 showing how completely the system has been scanned) 
-- BodyCount: number of stellar bodies in system 
-- NonBodyCount: Number of non-body signals found 
-
+- Progress: (a value in range 0-1 showing how completely the system has been scanned)
+- BodyCount: number of stellar bodies in system
+- NonBodyCount: Number of non-body signals found
 
 ## FSSSignalDiscovered
 
@@ -304,15 +294,14 @@ When written: when zooming in on a signal using the FSS scanner
 
 Parameters:
 
-- SignalName 
-- SpawningState: the BGS state that triggered this event, if relevant 
-- SpawningFaction: the minor faction, if relevant 
-- TimeRemaining: remaining lifetime in seconds, if relevant 
-- SystemAddress 
-- ThreatLevel (if a USS) 
-- USSType: (if a USS) – same types as in USSDrop event 
-- IsStation: true (if it is a station) 
-
+- SignalName
+- SpawningState: the BGS state that triggered this event, if relevant
+- SpawningFaction: the minor faction, if relevant
+- TimeRemaining: remaining lifetime in seconds, if relevant
+- SystemAddress
+- ThreatLevel (if a USS)
+- USSType: (if a USS) – same types as in USSDrop event
+- IsStation: true (if it is a station)
 
 ## MaterialCollected
 
@@ -320,14 +309,13 @@ When Written: whenever materials are collected
 
 Parameters:
 
-- Category: type of material (Raw/Encoded/Manufactured) 
-- Name: name of material 
-- Count: number of units collected 
-
+- Category: type of material (Raw/Encoded/Manufactured)
+- Name: name of material
+- Count: number of units collected
 
 Examples:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "MaterialCollected",
@@ -337,7 +325,7 @@ Examples:
 }
 ```
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "MaterialCollected",
@@ -353,14 +341,13 @@ When Written: if materials are discarded
 
 Parameters:
 
-- Category 
-- Name 
-- Count 
-
+- Category
+- Name
+- Count
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "MaterialDiscarded",
@@ -376,14 +363,13 @@ When Written: when a new material is discovered
 
 Parameters:
 
-- Category 
-- Name 
-- DiscoveryNumber 
-
+- Category
+- Name
+- DiscoveryNumber
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "MaterialDiscovered",
@@ -399,17 +385,16 @@ When written: when selling exploration data in Cartographics, a page at a time
 
 Parameters:
 
-- Discovered: (array of records, as follows) 
-	- SystemName 
-	- NumBodies 
-- BaseValue 
-- Bonus 
-- TotalEarnings 
-
+- Discovered: (array of records, as follows)
+	- SystemName
+	- NumBodies
+- BaseValue
+- Bonus
+- TotalEarnings
 
 Example
 
-```
+```json
 {
 	"timestamp": "2018-11-14T10:35:35Z",
 	"event": "MultiSellExplorationData",
@@ -435,23 +420,21 @@ When written: when scanning  a navigation beacon, before the scan data for all t
 
 Parameters:
 
-- NumBodies 
-- SystemAddress 
+- NumBodies
+- SystemAddress
 
-
-## BuyExplorationData  
+## BuyExplorationData
 
 When Written: when buying system data via the galaxy map
 
 Parameters:
 
-- System 
-- Cost 
-
+- System
+- Cost
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "BuyExplorationData",
@@ -466,18 +449,17 @@ When written: after using the "Surface Area Analysis" scanner
 
 Parameters:
 
-- SystemAddress 
-- BodyName 
-- BodyID 
-- ~~Discoverers: (array of names)~~ 
-- ~~Mappers: (array of names)~~ 
-- ProbesUsed: (int) 
-- EfficiencyTarget: (int) 
-
+- SystemAddress
+- BodyName
+- BodyID
+- ~~Discoverers: (array of names)~~
+- ~~Mappers: (array of names)~~
+- ProbesUsed: (int)
+- EfficiencyTarget: (int)
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2018-10-05T15:06:12Z",
 	"event": "SAAScanComplete",
@@ -494,19 +476,18 @@ When written: when using SAA scanner on a planet or rings
 
 Parameters:
 
-- SystemAddress 
-- BodyName 
-- BodyID 
-- Signals: (array) 
-	- Type 
-	- Count 
-- Genuses: (array) 
-	- Genus 
-
+- SystemAddress
+- BodyName
+- BodyID
+- Signals: (array)
+	- Type
+	- Count
+- Genuses: (array)
+	- Genus
 
 Examples:
 
-```
+```json
 {
 	"timestamp": "2019-04-17T13:38:18Z",
 	"event": "SAASignalsFound",
@@ -527,7 +508,7 @@ Examples:
 }
 ```
 
-```
+```json
 {
 	"timestamp": "2019-04-17T13:40:39Z",
 	"event": "SAASignalsFound",
@@ -544,7 +525,7 @@ Examples:
 }
 ```
 
-```
+```json
 {
 	"timestamp": "2022-07-01T09:14:32Z",
 	"event": "SAASignalsFound",
@@ -587,21 +568,20 @@ When scanning one body of a binary pair, you will now get an event detailing the
 
 Parameters:
 
-- StarSystem 
-- SystemAddress 
-- BodyID 
-- SemiMajorAxis 
-- Eccentricity 
-- OrbitalInclination 
-- Periapsis 
-- OrbitalPeriod 
-- AscendingNode 
-- MeanAnomaly 
-
+- StarSystem
+- SystemAddress
+- BodyID
+- SemiMajorAxis
+- Eccentricity
+- OrbitalInclination
+- Periapsis
+- OrbitalPeriod
+- AscendingNode
+- MeanAnomaly
 
 Example
 
-```
+```json
 {
 	"timestamp": "2021-07-27T13:52:20Z",
 	"event": "ScanBaryCentre",
@@ -624,16 +604,15 @@ When Written: when selling exploration data in Cartographics
 
 Parameters:
 
-- Systems: JSON array of system names 
-- Discovered: JSON array of discovered bodies 
-- BaseValue: value of systems 
-- Bonus: bonus for first discoveries 
-- TotalEarnings: total credits received (including for example the 200% bonus if rank 5 with Li Yong Rui) 
-
+- Systems: JSON array of system names
+- Discovered: JSON array of discovered bodies
+- BaseValue: value of systems
+- Bonus: bonus for first discoveries
+- TotalEarnings: total credits received (including for example the 200% bonus if rank 5 with Li Yong Rui)
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "SellExplorationData",
@@ -659,22 +638,21 @@ When Written: when a screen snapshot is saved
 
 Parameters:
 
-- Filename: filename of screenshot 
-- Width: size in pixels 
-- Height: size in pixels 
-- System: current star system 
-- Body: name of nearest body 
-- Latitude 
-- Longitude 
-- Altitude 
-- Heading 
-
+- Filename: filename of screenshot
+- Width: size in pixels
+- Height: size in pixels
+- System: current star system
+- Body: name of nearest body
+- Latitude
+- Longitude
+- Altitude
+- Heading
 
 The latitude, longitude, altitude and heading will be included if on a planet or in low-altitude flight
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2018-01-17T09:48:26Z",
 	"event": "Screenshot",

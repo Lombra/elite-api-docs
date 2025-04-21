@@ -6,7 +6,7 @@ This is similar to FSDJump and Location, but it is written if the player is onli
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2020-03-25T15:55:56Z",
 	"event": "CarrierJump",
@@ -78,15 +78,14 @@ Example:
 
 Player has bought a fleet carrier
 
-- BoughtAtmarket: marketid 
-- CarrierID : marketid 
-- Location: starsystem name 
-- Price: number 
-- Variant: string 
-- Callsign: string 
+- BoughtAtmarket: marketid
+- CarrierID : marketid
+- Location: starsystem name
+- Price: number
+- Variant: string
+- Callsign: string
 
-
-```
+```json
 {
 	"timestamp": "2020-03-11T15:31:46Z",
 	"event": "CarrierBuy",
@@ -104,23 +103,22 @@ Player has bought a fleet carrier
 
 When owner opens carrier management
 
-- CarrierID: marketid 
-- Callsign: string 
-- Name: string 
-- DockingAccess: all/none/friends/squadron/squadronfriends 
-- AllowNotorious: bool 
-- FuelLevel: int 
-- JumpRangeCurr: float 
-- JumpRangeMax: float 
-- PendingDecommission: bool 
-- SpaceUsage { TotalCapacity, Crew, Cargo, CargoSpaceReserved, ShipPacks, ModulePacks, FreeSpace} 
-- Finance { CarrierBalance, ReserveBalance, AvailableBalance, ReservePercent, TaxRate } 
-- Crew [{ CrewRole, Activated, Enabled, CrewName },...] 
-- ShipPacks [{ PackTheme, packTier },...] 
-- ModulePacks [{PackTheme, packTier },...] 
+- CarrierID: marketid
+- Callsign: string
+- Name: string
+- DockingAccess: all/none/friends/squadron/squadronfriends
+- AllowNotorious: bool
+- FuelLevel: int
+- JumpRangeCurr: float
+- JumpRangeMax: float
+- PendingDecommission: bool
+- SpaceUsage { TotalCapacity, Crew, Cargo, CargoSpaceReserved, ShipPacks, ModulePacks, FreeSpace}
+- Finance { CarrierBalance, ReserveBalance, AvailableBalance, ReservePercent, TaxRate }
+- Crew [{ CrewRole, Activated, Enabled, CrewName },...]
+- ShipPacks [{ PackTheme, packTier },...]
+- ModulePacks [{PackTheme, packTier },...]
 
-
-```
+```json
 {
 	"timestamp": "2020-03-27T09:42:04Z",
 	"event": "CarrierStats",
@@ -230,15 +228,14 @@ When owner opens carrier management
 
 At the time the player requests the jump, not the jump itself
 
-- CarrierID: marketid 
-- SystemName: starsystem name 
-- SystemID: systemaddress 
-- Body: (name) 
-- BodyID 
-- DepartureTime 
+- CarrierID: marketid
+- SystemName: starsystem name
+- SystemID: systemaddress
+- Body: (name)
+- BodyID
+- DepartureTime
 
-
-```
+```json
 {
 	"timestamp": "2020-04-20T09:30:58Z",
 	"event": "CarrierJumpRequest",
@@ -255,12 +252,11 @@ At the time the player requests the jump, not the jump itself
 
 At the time the player requests decommission
 
-- CarrierID: marketid 
-- ScrapRefund: number 
-- Scraptime: timestamp 
+- CarrierID: marketid
+- ScrapRefund: number
+- Scraptime: timestamp
 
-
-```
+```json
 {
 	"timestamp": "2020-03-11T15:12:26Z",
 	"event": "CarrierDecommission",
@@ -272,10 +268,9 @@ At the time the player requests decommission
 
 ## CarrierCancelDecommission
 
-- CarrierID: marketid 
+- CarrierID: marketid
 
-
-```
+```json
 {
 	"timestamp": "2020-03-11T15:12:38Z",
 	"event": "CarrierCancelDecommission",
@@ -287,13 +282,12 @@ At the time the player requests decommission
 
 Player transfers credits to/from carrier
 
-- CarrierID: marketid 
-- Deposit, or Withdraw 
-- PlayerBalance: (after transfer) 
-- CarrierBalance: (after transfer) 
+- CarrierID: marketid
+- Deposit, or Withdraw
+- PlayerBalance: (after transfer)
+- CarrierBalance: (after transfer)
 
-
-```
+```json
 {
 	"timestamp": "2020-03-24T15:34:46Z",
 	"event": "CarrierBankTransfer",
@@ -308,12 +302,11 @@ Player transfers credits to/from carrier
 
 Any player giving fuel to the carrier
 
-- CarrierID: marketid 
-- Amount: tons 
-- Total: total amount of fuel after donation 
+- CarrierID: marketid
+- Amount: tons
+- Total: total amount of fuel after donation
 
-
-```
+```json
 {
 	"timestamp": "2020-03-19T09:17:29Z",
 	"event": "CarrierDepositFuel",
@@ -327,13 +320,12 @@ Any player giving fuel to the carrier
 
 Changes to crew
 
-- CarrierID: marketid 
-- Operation: (activate/deactivate/pause/resume/replace) 
-- CrewRole: string 
-- CrewName: string 
+- CarrierID: marketid
+- Operation: (activate/deactivate/pause/resume/replace)
+- CrewRole: string
+- CrewName: string
 
-
-```
+```json
 {
 	"timestamp": "2020-03-17T12:38:54Z",
 	"event": "CarrierCrewServices",
@@ -348,15 +340,14 @@ Changes to crew
 
 Change to tax rate or reserve
 
-- CarrierID: marketid 
-- TaxRate: number 
-- CarrierBalance: number 
-- ReserveBalance: number 
-- AvailableBalance: number 
-- ReservePercent: number 
+- CarrierID: marketid
+- TaxRate: number
+- CarrierBalance: number
+- ReserveBalance: number
+- AvailableBalance: number
+- ReservePercent: number
 
-
-```
+```json
 {
 	"timestamp": "2020-03-26T10:36:32Z",
 	"event": "CarrierFinance",
@@ -373,14 +364,13 @@ Change to tax rate or reserve
 
 CarrierShipPack/CarrierModulePack
 
-- CarrierID: marketid 
-- Operation: buypack/sellpack/restockpack 
-- PackTheme: name 
-- PackTier: name 
-- Cost/Refund: int 
+- CarrierID: marketid
+- Operation: buypack/sellpack/restockpack
+- PackTheme: name
+- PackTier: name
+- Cost/Refund: int
 
-
-```
+```json
 {
 	"timestamp": "2020-03-16T09:25:39Z",
 	"event": "CarrierShipPack",
@@ -400,16 +390,15 @@ Same format as CarrierShipPack
 
 The carrier owner has requested the carrier buys or sells goods (or cancels such an order)
 
-- CarrierID: marketid 
-- BlackMarket: bool 
-- Commodity: name 
-- PurchaseOrder: quantity 
-- or SaleOrder: quantity (current stock) 
-- or CancelTrade: true 
-- Price: int 
+- CarrierID: marketid
+- BlackMarket: bool
+- Commodity: name
+- PurchaseOrder: quantity
+- or SaleOrder: quantity (current stock)
+- or CancelTrade: true
+- Price: int
 
-
-```
+```json
 {
 	"timestamp": "2020-03-16T14:52:36Z",
 	"event": "CarrierTradeOrder",
@@ -426,12 +415,11 @@ The carrier owner has requested the carrier buys or sells goods (or cancels such
 
 The carrier owner has changed the docking permission criteria
 
-- CarrierID: marketid 
-- DockingAccess: all/none/friends/squadron/squadronfriends 
-- AllowNotorious: bool 
+- CarrierID: marketid
+- DockingAccess: all/none/friends/squadron/squadronfriends
+- AllowNotorious: bool
 
-
-```
+```json
 {
 	"timestamp": "2020-03-11T15:07:25Z",
 	"event": "CarrierDockingPermission",
@@ -445,13 +433,12 @@ The carrier owner has changed the docking permission criteria
 
 This is logged when a carrier's name is changed
 
-- CarrierID 
-- Callsign 
-- Name 
-
+- CarrierID
+- Callsign
+- Name
 
 ## CarrierJumpCancelled
 
 This is logged when a jump is cancelled
 
-- CarrierID 
+- CarrierID

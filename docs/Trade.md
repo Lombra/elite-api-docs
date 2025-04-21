@@ -6,8 +6,7 @@ When written: when the player has broken up a 'Motherlode' asteroid for mining
 
 Parameters:
 
-- Body: name of nearest body 
-
+- Body: name of nearest body
 
 ## BuyTradeData
 
@@ -15,13 +14,12 @@ When Written: when buying trade data in the galaxy map
 
 Parameters:
 
-- System: star system requested 
-- Cost: cost of data 
-
+- System: star system requested
+- Cost: cost of data
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "BuyTradeData",
@@ -36,14 +34,13 @@ When Written: when scooping cargo from space or planet surface
 
 Parameters:
 
-- Type: cargo type 
-- Stolen: whether stolen goods 
-- MissionID; (if relevant) 
-
+- Type: cargo type
+- Stolen: whether stolen goods
+- MissionID; (if relevant)
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "CollectCargo",
@@ -58,19 +55,18 @@ When Written:
 
 Parameters:
 
-- Type: cargo type 
-- Count: number of units 
-- MissionID: (if relevant) 
-- Abandoned: whether 'abandoned' 
-
+- Type: cargo type
+- Count: number of units
+- MissionID: (if relevant)
+- Abandoned: whether 'abandoned'
 
 If the cargo is related to powerplay delivery _from outlying systems back to the centre_:
 
-- PowerplayOrigin: starsystem name 
+- PowerplayOrigin: starsystem name
 
 
 Examples:
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "EjectCargo",
@@ -80,7 +76,7 @@ Examples:
 }
 ```
 
-```
+```json
 {
 	"timestamp": "2016-09-21T14:18:23Z",
 	"event": "EjectCargo",
@@ -97,16 +93,15 @@ When Written: when purchasing goods in the market
 
 Parameters:
 
-- MarketID 
-- Type: cargo type 
-- Count: number of units 
-- BuyPrice: cost per unit 
-- TotalCost: total cost 
-
+- MarketID
+- Type: cargo type
+- Count: number of units
+- BuyPrice: cost per unit
+- TotalCost: total cost
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "MarketBuy",
@@ -123,20 +118,19 @@ When Written: when selling goods in the market
 
 Parameters:
 
-- MarketID 
-- Type: cargo type 
-- Count: number of units 
-- SellPrice: price per unit 
-- TotalSale: total sale value 
-- AvgPricePaid: average price paid 
-- IllegalGoods: (not always present) whether goods are illegal here 
-- StolenGoods: (not always present) whether goods were stolen 
-- BlackMarket: (not always present) whether selling in a black market 
-
+- MarketID
+- Type: cargo type
+- Count: number of units
+- SellPrice: price per unit
+- TotalSale: total sale value
+- AvgPricePaid: average price paid
+- IllegalGoods: (not always present) whether goods are illegal here
+- StolenGoods: (not always present) whether goods were stolen
+- BlackMarket: (not always present) whether selling in a black market
 
 Examples:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "MarketSell",
@@ -148,7 +142,7 @@ Examples:
 }
 ```
 
-```
+```json
 {
 	"event": "MarketSell",
 	"Type": "mineraloil",
@@ -167,12 +161,11 @@ When Written: when mining fragments are converted unto a unit of cargo by refine
 
 Parameters:
 
-- Type: cargo type 
-
+- Type: cargo type
 
 Example:
 
-```
+```json
 {
 	"timestamp": "2016-06-10T14:32:03Z",
 	"event": "MiningRefined",
