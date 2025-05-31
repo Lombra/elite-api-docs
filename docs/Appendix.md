@@ -139,6 +139,7 @@ _**Exobiologist Ranks**_:
 - X (=_exotic_)
 - SupermassiveBlackHole
 - A_BlueWhiteSuperGiant
+- B_BlueWhiteSuperGiant
 - F_WhiteSuperGiant
 - M_RedSuperGiant
 - M_RedGiant
