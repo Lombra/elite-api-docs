@@ -8,8 +8,8 @@ Parameters:
 
 - Flags: multiple flags encoded as bits in an integer (see below)
 - Flags2: more flags, mainly for when on foot
-- Pips: an array of 3 integers representing energy distribution (in half-pips)
-- Firegroup: the currently selected firegroup number
+- Pips: an array of 3 integers representing energy distribution [Sys, Eng, Wep] (in half-pips, 0-8)
+- Firegroup: the currently selected firegroup number A-H are 0-8
 - GuiFocus: the selected GUI screen
 - Fuel: { FuelMain, FuelReservoir} – both mass in tons
 - Cargo: mass in tons
@@ -60,7 +60,7 @@ Flags:
 |7|128|0000 0080|In Wing|
 |8|256|0000 0100|LightsOn|
 |9|512|0000 0200|Cargo Scoop Deployed|
-|10|1024|0000 0400|Silent Running,|
+|10|1024|0000 0400|Silent Running|
 |11|2048|0000 0800|Scooping Fuel|
 |12|4096|0000 1000|Srv Handbrake|
 |13|8192|0000 2000|Srv using Turret view|
@@ -109,6 +109,15 @@ Flags:
 |19|524288|0008 0000|Fsd hyperdrive charging|
 
 Examples:
+
+```json
+{
+{
+  "timestamp": "2025-10-30T20:54:38Z",
+  "event": "Status",
+  "Flags": 0
+}
+```
 
 ```json
 {
