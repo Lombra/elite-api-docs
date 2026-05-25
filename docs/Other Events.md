@@ -758,7 +758,7 @@ When dropping out of supercruise at a targeted destination.
 
 Parameters:
 
-- Type: The type fo destination being dropped into
+- Type: The type of destination being dropped into
 - Threat: threat level
 - MarketID: (Optional)The market id of the destination if dropping at a market
 
