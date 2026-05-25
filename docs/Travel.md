@@ -543,22 +543,30 @@ When written: leaving supercruise for normal space
 
 Parameters:
 
+- Taxi
+- Multicrew
 - Starsystem
+- SystemAddress
 - Body
 - BodyID
-- BodyType
+- BodyType (refer to appendix)
 
 Example:
 
 ```json
 {
-	"timestamp": "2016-06-10T14:32:03Z",
+	"timestamp": "2025-06-14T20:39:18Z",
 	"event": "SupercruiseExit",
-	"StarSystem": "Yuetu",
-	"Body": "Yuetu B"
+	"Taxi": false,
+	"Multicrew": false,
+	"StarSystem": "Ho Hsi",
+	"SystemAddress": 3412091472243,
+	"Body": "Ho Hsi 2",
+	"BodyID": 10,
+	"BodyType": "Planet"
 }
 ```
-
+				
 ## Touchdown
 
 When written: landing on a planet surface
