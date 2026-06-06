@@ -108,6 +108,7 @@ Flags:
 |18|262144|0004 0000|Physical Multicrew|
 |19|524288|0008 0000|Fsd hyperdrive charging|
 |20|1048576|0010 0000|Supercruise Overdrive (SCO) Active|
+|21|2097152|0020 0000|Supercruise Assist Active (SCA is enabled and active (aligned and throttled to blue zone))
 
 Examples:
 
